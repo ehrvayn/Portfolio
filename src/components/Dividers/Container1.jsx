@@ -30,7 +30,7 @@ function Container1() {
           <div className="flex gap-2 mt-1 justify-center md:justify-start">
             <a
               target="_blank"
-              href="/public/Ehrvayn_Rayven_Olivera_Resume.pdf"
+              href="Ehrvayn_Rayven_Olivera_Resume.pdf"
               className={`${darkMode ? "bg-white text-black hover:bg-[#5e5e5e]" : "bg-[#2e2e2e] hover:bg-gray-600 text-white hover:text-white"} text-sm shadow-[0_0_6px_rgba(0,0,0,0.25)] cursor-pointer rounded-md px-4 py-2`}
             >
               View Resume
