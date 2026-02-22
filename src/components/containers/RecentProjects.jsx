@@ -10,7 +10,7 @@ function RecentProjects() {
     },
     {
       name: "My Portfolio",
-      description: "My personal Portfolio Website",
+      description: "My personal portfolio website",
       link: "ehrvayn.vercel.app",
     },
     { name: "", description: "", link: "" },
