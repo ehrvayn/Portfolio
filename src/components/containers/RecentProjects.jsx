@@ -9,8 +9,8 @@ function RecentProjects() {
       link: "myqnotes.vercel.app",
     },
     {
-      name: "Portfolio Website",
-      description: "My personal Portdolio Website",
+      name: "My Portfolio",
+      description: "My personal Portfolio Website",
       link: "ehrvayn.vercel.app",
     },
     { name: "", description: "", link: "" },
