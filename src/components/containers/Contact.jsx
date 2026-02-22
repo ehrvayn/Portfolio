@@ -78,7 +78,7 @@ function Contact() {
 
       <div className="flex-1 flex flex-col gap-3">
         <strong>
-          <i className="bi bi-chat-dots"></i> Reach me
+          <i className="bi bi-chat-dots"></i> Contact me at your convenience
         </strong>
 
         {quickContacts.map((contact, index) => (
