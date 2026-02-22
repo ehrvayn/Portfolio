@@ -66,6 +66,7 @@ Hobbies:
 - Online Gaming
 - Watching and Reading series
 - Gym and Cycling
+- Basketball
 
 Personality:
 - Passionate about technology and continuous learning
