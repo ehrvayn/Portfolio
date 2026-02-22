@@ -48,7 +48,6 @@ function Certifications() {
                 title="View Certificate"
                 className="absolute top-3 right-3 text-gray-400 cursor-pointer text-lg"
               >
-                <i className="bi bi-file-image"></i>
               </button>
             )}
           </div>
