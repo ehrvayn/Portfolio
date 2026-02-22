@@ -20,22 +20,6 @@ A personal portfolio website built with React, Vite, and Tailwind CSS. Features 
 - Tailwind CSS
 - Bootstrap Icons
 - Groq SDK (Llama 3.3 70B)
-
-## 📦 Installation
-```bash
-npm install
-```
-
-## ▶️ Run Locally
-```bash
-npm run dev
-```
-
-## 🔑 Environment Variables
-
-Create a `.env` file in the root directory:
-```
-VITE_GROQ_API_KEY=your_groq_api_key_here
 ```
 
 ## 🌐 Live Demo
@@ -45,3 +29,4 @@ VITE_GROQ_API_KEY=your_groq_api_key_here
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
