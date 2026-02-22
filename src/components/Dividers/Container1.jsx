@@ -12,9 +12,9 @@ function Container1() {
           className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-cover rounded-full border-2 border-gray-300"
         />
         <div className="flex flex-col gap-1 text-center md:text-left">
-          <strong className="text-lg sm:text-xl md:text-1xl lg:text-2xl flex gap-2 items-center justify-center md:justify-start">
+          <strong className="text-lg sm:text-xl md:text-1xl lg:text-2xl flex gap-1 items-center justify-center md:justify-start">
             Ehrvayn Rayven P. Olivera{" "}
-            <i className="bi bi-patch-check-fill lg:text-sm text-[10px] text-blue-500 translate-y-[2px] lg:translate-y-[5px]"></i>
+            <i className="bi bi-patch-check-fill lg:text-sm text-[10px] text-blue-500 translate-y-[2px] lg:translate-y-[2px]"></i>
           </strong>
           <span
             className={`lg:text-sm text-[12px] ${darkMode ? "text-gray-400" : "text-gray-500"}`}
