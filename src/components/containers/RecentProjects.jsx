@@ -10,7 +10,7 @@ function RecentProjects() {
     },
     {
       name: "My Portfolio",
-      description: "My personal portfolio website",
+      description: "My personal portfolio website with Groq A.I chat bot",
       link: "ehrvayn.vercel.app",
     },
     { name: "", description: "", link: "" },
