@@ -63,7 +63,7 @@ function ChatBot() {
     <>
       {open && (
         <div
-className={`fixed bottom-24 right-4 md:right-6 w-[90%] sm:max-w-sm md:w-auto h-[60vh] max-h-[500px] rounded-xl shadow-xl z-50 flex flex-col ${darkMode ? "bg-[#3e3e3e] text-white" : "border border-gray-200 bg-white"}`}
+          className={`fixed bottom-24 right-4 md:right-6 w-[90%] sm:max-w-sm md:w-auto h-[60vh] max-h-[500px] rounded-xl shadow-xl z-50 flex flex-col ${darkMode ? "bg-[#3e3e3e] text-white" : "border border-gray-200 bg-white"}`}
         >
           <div
             className={`${darkMode ? "bg-[#3e3e3e] text-white border-b border-gray-500" : "bg-white text-black border-b border-gray-200"} p-4 rounded-t-2xl flex justify-between items-center`}
@@ -142,12 +142,12 @@ className={`fixed bottom-24 right-4 md:right-6 w-[90%] sm:max-w-sm md:w-auto h-[
               placeholder="Type a message..."
               className={`flex-1 rounded-lg px-3 py-2 text-sm outline-none border ${darkMode ? "bg-[#3e3e3e] border-gray-600 text-white" : "border-gray-300"}`}
             />
-            <button
+
+            <i
+              title="send"
               onClick={sendMessage}
-              className={`${darkMode ? "bg-white text-black" : "bg-[#2e2e2e] text-white"} px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-500`}
-            >
-              <i className="bi bi-send text-[20px]"></i>
-            </button>
+              className={`${!darkMode ? "text-black" : "text-white"} active:scale-90 active:opacity-70 cursor-pointer px-1 bi bi-send-fill text-[25px] md:text-[30px] `}
+            ></i>
           </div>
         </div>
       )}
