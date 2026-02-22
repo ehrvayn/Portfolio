@@ -29,7 +29,7 @@ function Education() {
               </p>
             </div>
             <span
-              className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-400"}`}
+              className={`lg:text-sm text-[12px] pl-5 ${darkMode ? "text-gray-400" : "text-gray-400"}`}
             >
               2026
             </span>
@@ -72,7 +72,7 @@ function Education() {
                 </p>
               </div>
               <span
-                className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-400"}`}
+                className={`lg:text-sm text-[12px] pl-5 ${darkMode ? "text-gray-400" : "text-gray-400"}`}
               >
                 {item.year}
               </span>
