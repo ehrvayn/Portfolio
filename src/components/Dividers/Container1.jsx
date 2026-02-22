@@ -14,7 +14,7 @@ function Container1() {
         <div className="flex flex-col gap-1 text-center md:text-left">
           <strong className="text-lg sm:text-xl md:text-1xl lg:text-2xl flex gap-1 items-center justify-center md:justify-start">
             Ehrvayn Rayven P. Olivera{" "}
-            <i className="bi bi-patch-check-fill lg:text-sm text-[10px] text-blue-500 translate-y-[2px] lg:translate-y-[2px]"></i>
+            <i className="bi bi-patch-check-fill lg:text-sm text-[10px] text-blue-500 translate-y-[1px] lg:translate-y-[2px]"></i>
           </strong>
           <span
             className={`lg:text-sm text-[12px] ${darkMode ? "text-gray-400" : "text-gray-500"}`}
