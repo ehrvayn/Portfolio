@@ -21,7 +21,7 @@ function Education() {
           </div>
           <div className="flex justify-between w-full pb-6">
             <div>
-              <strong>BS Information System 3rd-Year</strong>
+              <strong>BS Information Systems 3rd-Year</strong>
               <p
                 className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}
               >
@@ -45,12 +45,12 @@ function Education() {
           {
             title: "Junior High School",
             school: "Camarines Sur National High School",
-            year: "2018",
+            year: "2021",
           },
           {
             title: "Elementary",
             school: "Sta Cruz Elementary School",
-            year: "2021",
+            year: "2016",
           },
         ].map((item, index) => (
           <div key={index} className="flex gap-4 relative">
