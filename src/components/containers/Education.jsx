@@ -38,12 +38,12 @@ function Education() {
 
         {[
           {
-            title: "Senior High School",
+            title: "Senior High School - ICT",
             school: "Camarines Sur National High School",
             year: "2023",
           },
           {
-            title: "Junior High School",
+            title: "Junior High School - BEP",
             school: "Camarines Sur National High School",
             year: "2021",
           },

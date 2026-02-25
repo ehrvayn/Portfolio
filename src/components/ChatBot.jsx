@@ -74,7 +74,7 @@ function ChatBot() {
                 src={profilePic}
               />
               <div className="flex flex-col">
-                <span>Ask me anything</span>
+                <span>Say hi to Ehrvayn</span>
                 <span className="flex items-center gap-1 text-xs font-normal">
                   <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
                   Online
@@ -146,7 +146,7 @@ function ChatBot() {
             <i
               title="send"
               onClick={sendMessage}
-              className={`${!darkMode ? "text-black" : "text-white"} active:scale-90 active:opacity-70 cursor-pointer px-1 bi bi-send-fill text-[25px] md:text-[30px] `}
+              className={`${!darkMode ? "text-black" : "text-white"} active:scale-80 active:opacity-70 cursor-pointer px-1 bi bi-send-fill text-[25px] md:text-[30px] `}
             ></i>
           </div>
         </div>
