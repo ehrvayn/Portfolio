@@ -35,7 +35,7 @@ function Certifications() {
           <div
             onClick={() => setSelectedImg(cert.img)}
             key={index}
-            className={`${darkMode ? "bg-[#3e3e3e]" : "border-gray-200 shadow-[0_0_3px_rgba(0,0,0,0.25)]"} cursor-pointer rounded-lg p-4 relative`}
+            className={`${darkMode ? "bg-[#3e3e3e]" : "border-gray-200 shadow-[0_0_3px_rgba(0,0,0,0.25)]"} cursor-pointer rounded-lg p-4 pr-10 relative`}
           >
             <strong className="text-sm">{cert.name}</strong>
             <p
@@ -43,11 +43,13 @@ function Certifications() {
             >
               {cert.issuer}
             </p>
+
             {cert.img && (
               <button
                 title="View Certificate"
-                className="absolute top-3 right-3 text-gray-400 cursor-pointer text-lg"
+                className="absolute top-3 right-3 pl-10 text-gray-400 cursor-pointer text-lg"
               >
+                <i className="bi bi-arrows-angle-expand"></i>
               </button>
             )}
           </div>
