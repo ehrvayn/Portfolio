@@ -25,7 +25,7 @@ function Container1() {
           <span
             className={`lg:text-sm text-[12px] ${darkMode ? "text-gray-400" : "text-gray-500"}`}
           >
-            Aspiring Full Stack Web Developer
+            <strong>Aspiring Full Stack Web Developer</strong>
           </span>
           <div className="flex gap-2 mt-1 justify-center md:justify-start">
             <a
