@@ -6,7 +6,7 @@ function RecentProjects() {
     {
       name: "QuickNotes",
       description: "A lightweight note-taking app for quick thoughts and ideas",
-      link: "myqnotes.vercel.app",
+      link: "qcknotes.vercel.app",
     },
     {
       name: "My Portfolio",
