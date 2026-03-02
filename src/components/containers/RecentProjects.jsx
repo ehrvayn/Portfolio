@@ -5,7 +5,7 @@ function RecentProjects() {
   const projects = [
     {
       name: "QuickNotes",
-      description: "A lightweight note-taking app for quick thoughts and ideas",
+      description: "A lightweight full-stack notes app for quick thoughts and ideas",
       link: "qcknotes.vercel.app",
     },
     {

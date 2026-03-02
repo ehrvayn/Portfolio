@@ -10,6 +10,7 @@ import githubImg from "../../assets/img/github.png";
 import vscodeImg from "../../assets/img/vscode.png";
 import figmaImg from "../../assets/img/figma.png";
 import typescript from "../../assets/img/typescript.png";
+import postgres from "../../assets/img/postgres.png";
 
 function TechStack() {
   const { darkMode } = useDarkMode();
@@ -38,6 +39,7 @@ function TechStack() {
             techs: [
               { name: "Node.js", img: nodejsImg },
               { name: "MySQL", img: mysqlImg },
+              { name: "PostgreSQL", img: postgres },
             ],
           },
           {
