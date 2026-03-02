@@ -36,7 +36,7 @@ function Contact() {
 
   const innerCard = `${darkMode ? "bg-[#2e2e2e] border border-[#3e3e3e]" : "bg-gray-50 border border-gray-100 shadow-[0_0_3px_rgba(0,0,0,0.08)]"} p-3 rounded-lg text-sm`;
 
-  const SectionHeader = ({ icon, label }) => (
+  const SectionHeader = ({ label }) => (
     <div className="flex items-center gap-2 mb-1">
       <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
       <strong className="text-base tracking-tight">{label}</strong>
@@ -47,12 +47,12 @@ function Contact() {
     <div
       className={`${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"} w-full shadow-[0_0_6px_rgba(0,0,0,0.25)] p-4 md:p-6 rounded-lg flex flex-col md:flex-row gap-4 md:gap-5`}
     >
-      <div>
+      <div className="mb-16 md:mb-0">
         <Avatar />
       </div>
 
       <div className="flex-1 flex flex-col gap-3">
-        <SectionHeader icon="bi-link-45deg" label="Social Links" />
+        <SectionHeader label="Social Links" />
         {socialLinks.map((link, index) => (
           <a
             key={index}
@@ -62,17 +62,16 @@ function Contact() {
             className={`${innerCard} flex items-center gap-3 hover:border-gray-400 transition-all duration-200`}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <i className={`bi ${link.icon} text-lg ${darkMode ? "text-white" : "text-black"}`} />
+            <i
+              className={`bi ${link.icon} text-lg ${darkMode ? "text-white" : "text-black"}`}
+            />
             {link.name}
           </a>
         ))}
       </div>
 
       <div className="flex-1 flex flex-col gap-3">
-        <SectionHeader
-          icon="bi-chat-dots"
-          label="Contact me at your convenience"
-        />
+        <SectionHeader label="Contact me at your convenience" />
         {quickContacts.map((contact, index) => (
           <a
             key={index}
@@ -82,18 +81,25 @@ function Contact() {
             className={`${innerCard} flex items-center justify-between hover:border-gray-400 transition-all duration-200`}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <div className="flex items-center gap-3">
-              <i className={`bi ${contact.icon} text-lg ${darkMode ? "text-white" : "text-black"}`} />
-              <div>
-                <p className="text-sm font-semibold">{contact.label}</p>
+            <div className="flex items-center gap-3 w-full">
+              <i
+                className={`bi ${contact.icon} text-lg shrink-0 ${darkMode ? "text-white" : "text-black"}`}
+              />
+              <div className="flex items-center justify-between w-full gap-2">
+                <p className="text-sm font-semibold shrink-0">
+                  {contact.label}
+                </p>
+                <div
+                  className={`flex-1 h-[1px] ${darkMode ? "bg-[#3e3e3e]" : "bg-gray-200"}`}
+                />
                 <p
-                  className={`text-[11px] font-mono ${darkMode ? "text-gray-400" : "text-gray-500"}`}
+                  className={`text-[11px] font-mono shrink-0 ${darkMode ? "text-gray-400" : "text-gray-500"}`}
                 >
                   {contact.sub}
                 </p>
               </div>
             </div>
-            <i className="bi bi-chevron-right text-gray-400 text-xs" />
+            <i className="bi bi-chevron-right text-gray-400 text-xs ml-2 shrink-0" />
           </a>
         ))}
       </div>

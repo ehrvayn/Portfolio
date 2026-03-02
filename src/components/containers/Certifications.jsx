@@ -15,12 +15,12 @@ function Certifications() {
       img: JSCert,
     },
     {
-      name: "Dean's Lister Second Semester 2023-2024",
+      name: "Dean's Lister 2nd Semester 2023-2024",
       issuer: "Naga College Foundation Inc.",
       img: DL2ndSem,
     },
     {
-      name: "Dean's Lister First Semester 2023-2024",
+      name: "Dean's Lister 1st Semester 2023-2024",
       issuer: "Naga College Foundation Inc.",
       img: DL1stSem,
     },
