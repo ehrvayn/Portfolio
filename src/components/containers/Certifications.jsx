@@ -1,5 +1,5 @@
 import { useState } from "react";
-import profilePic from "../../assets/img/profile.jpg";
+import JSCert from "../../assets/img/JScertificate.png";
 import DL1stSem from "../../assets/img/DL-1stSem.jpg";
 import DL2ndSem from "../../assets/img/DL-2ndSem.jpg";
 import { useDarkMode } from "../../context/DarkmodeProvider";
@@ -10,16 +10,20 @@ function Certifications() {
 
   const certifications = [
     {
-      name: "2023-2024 Dean's Lister Second Semester",
+      name: "JavaScript Developer Certification 2026",
+      issuer: "freeCodeCamp",
+      img: JSCert,
+    },
+    {
+      name: "Dean's Lister Second Semester 2023-2024",
       issuer: "Naga College Foundation Inc.",
       img: DL2ndSem,
     },
     {
-      name: "2023-2024 Dean's Lister First Semester",
+      name: "Dean's Lister First Semester 2023-2024",
       issuer: "Naga College Foundation Inc.",
       img: DL1stSem,
     },
-    { name: "", issuer: "", img: null },
     { name: "", issuer: "", img: null },
   ];
 
