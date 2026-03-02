@@ -5,7 +5,8 @@ function RecentProjects() {
   const projects = [
     {
       name: "QuickNotes",
-      description: "A lightweight full-stack notes app for quick thoughts and ideas",
+      description:
+        "A lightweight full-stack notes app for quick thoughts and ideas",
       link: "qcknotes.vercel.app",
     },
     {
@@ -23,18 +24,22 @@ function RecentProjects() {
     <div
       className={`${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"} flex-1 shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-lg flex flex-col gap-5`}
     >
-      <strong>
-        <i className="bi bi-folder-fill"></i> Recent Projects
-      </strong>
+      <div className="flex items-center gap-2">
+        <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
+        <strong className="text-base tracking-tight">
+          <i className="bi bi-folder-fill mr-1" /> Recent Projects
+        </strong>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 h-[250px] p-2 overflow-y-auto gap-4">
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`${darkMode ? "bg-[#3e3e3e]" : "border-gray-200 shadow-[0_0_3px_rgba(0,0,0,0.25)]"} rounded-lg p-4 flex flex-col gap-2`}
+            className={`rounded-lg p-4 flex flex-col gap-2 ${darkMode ? "bg-[#2e2e2e] border border-[#3e3e3e]" : "shadow-[0_0_3px_rgba(0,0,0,0.15)] border border-gray-100"}`}
           >
             <strong className="text-sm">{project.name}</strong>
             <p
-              className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"}`}
+              className={`text-[12px] font-mono ${darkMode ? "text-gray-400" : "text-gray-500"}`}
             >
               {project.description}
             </p>
@@ -42,9 +47,10 @@ function RecentProjects() {
               <a
                 href={`https://${project.link}`}
                 target="_blank"
-                className={`${darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-100 text-gray-500"} text-xs px-2 py-1 rounded-md w-fit`}
+                rel="noreferrer"
+                className={`text-[11px] font-mono px-2 py-1 rounded-md w-fit ${darkMode ? "bg-[#3e3e3e] text-violet-400" : "bg-violet-50 text-violet-500"}`}
               >
-                {project.link}
+                ↗ {project.link}
               </a>
             )}
           </div>

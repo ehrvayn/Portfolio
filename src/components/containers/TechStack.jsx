@@ -14,14 +14,26 @@ import postgres from "../../assets/img/postgres.png";
 
 function TechStack() {
   const { darkMode } = useDarkMode();
+
+  const categoryColors = {
+    Frontend: "from-red-500 to-gray-500",
+    Backend: "from-red-500 to-gray-500",
+    "Tools & Frameworks": "from-red-500 to-gray-500",
+    "Foundational Skills": "from-red-500 to-gray-500",
+  };
+
   return (
     <div
       className={`shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-lg ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
     >
-      <strong>
-        <i className="bi bi-gear-fill"></i> Tech Stack
-      </strong>
-      <div className="flex flex-col gap-3 mt-3">
+      <div className="flex items-center gap-2 mb-4">
+        <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
+        <strong className="text-base tracking-tight">
+          <i className="bi bi-gear-fill mr-1" /> Tech Stack
+        </strong>
+      </div>
+
+      <div className="flex flex-col gap-4">
         {[
           {
             label: "Frontend",
@@ -52,12 +64,26 @@ function TechStack() {
           },
         ].map((section, i) => (
           <div key={i}>
-            <strong>{section.label}</strong>
-            <div className="flex flex-wrap gap-2 mt-2">
+            <div className="flex items-center gap-2 mb-2">
+              <span
+                className={`text-[10px] uppercase tracking-[0.15em] font-mono font-semibold bg-gradient-to-r ${categoryColors[section.label]} bg-clip-text text-transparent`}
+              >
+                {section.label}
+              </span>
+              <div
+                className={`flex-1 h-[1px] bg-gradient-to-r ${categoryColors[section.label]} opacity-20`}
+              />
+            </div>
+
+            <div className="flex flex-wrap gap-2">
               {section.techs.map((tech, index) => (
                 <span
                   key={index}
-                  className={`rounded-md px-3 py-1 text-sm flex items-center gap-1 ${darkMode ? " bg-[#3e3e3e]" : "border-gray-200 shadow-[0_0_3px_rgba(0,0,0,0.25)]"}`}
+                  className={`rounded-lg px-3 py-1.5 text-sm flex items-center gap-1.5 transition-all duration-200 ${
+                    darkMode
+                      ? "bg-[#2e2e2e] hover:bg-[#3a3a3a] border border-[#3e3e3e]"
+                      : "bg-gray-50 hover:bg-gray-100 shadow-[0_0_3px_rgba(0,0,0,0.15)] border border-gray-100"
+                  }`}
                 >
                   <img src={tech.img} className="w-4 h-4 object-contain" />
                   {tech.name}
@@ -68,8 +94,17 @@ function TechStack() {
         ))}
 
         <div>
-          <strong>Foundational Skills</strong>
-          <div className="flex flex-wrap gap-2 mt-2">
+          <div className="flex items-center gap-2 mb-2">
+            <span
+              className={`text-[10px] uppercase tracking-[0.15em] font-mono font-semibold bg-gradient-to-r ${categoryColors["Foundational Skills"]} bg-clip-text text-transparent`}
+            >
+              Foundational Skills
+            </span>
+            <div
+              className={`flex-1 h-[1px] bg-gradient-to-r ${categoryColors["Foundational Skills"]} opacity-20`}
+            />
+          </div>
+          <div className="flex flex-wrap gap-2">
             {[
               "UI Design Basics",
               "API Integration (Beginner)",
@@ -77,7 +112,11 @@ function TechStack() {
             ].map((skill, index) => (
               <span
                 key={index}
-                className={`rounded-md px-3 py-1 text-sm ${darkMode ? "bg-[#3e3e3e]" : "border-gray-200 shadow-[0_0_3px_rgba(0,0,0,0.25)]"}`}
+                className={`rounded-lg px-3 py-1.5 text-sm ${
+                  darkMode
+                    ? "bg-[#2e2e2e] border border-[#3e3e3e]"
+                    : "bg-gray-50 shadow-[0_0_3px_rgba(0,0,0,0.15)] border border-gray-100"
+                }`}
               >
                 {skill}
               </span>

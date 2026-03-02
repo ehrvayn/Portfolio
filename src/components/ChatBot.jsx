@@ -16,6 +16,8 @@ function ChatBot() {
   };
 
   const [open, setOpen] = useState(false);
+  const [showBanner, setShowBanner] = useState(false);
+  const [hasBeenOpened, setHasBeenOpened] = useState(false); // New: Tracks if chat was opened once
   const [messages, setMessages] = useState([welcomeMessage]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -24,8 +26,23 @@ function ChatBot() {
   const latestChat = useRef(null);
 
   useEffect(() => {
+    if (!hasBeenOpened && !open) {
+      const timer = setTimeout(() => setShowBanner(true), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [hasBeenOpened, open]);
+
+  useEffect(() => {
     latestChat.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  const handleToggleChat = () => {
+    if (!open) {
+      setHasBeenOpened(true); 
+      setShowBanner(false);
+    }
+    setOpen(!open);
+  };
 
   const sendMessage = async () => {
     if (!input.trim()) return;
@@ -55,7 +72,6 @@ function ChatBot() {
         { role: "bot", text: "Something went wrong. Try again!" },
       ]);
     }
-
     setLoading(false);
   };
 
@@ -70,7 +86,7 @@ function ChatBot() {
           >
             <span className="font-semibold gap-3 flex items-center">
               <img
-                className="h-10 w-10 rounded-full object-cover"
+                className="h-10 w-10 rounded-full object-cover border-2 border-gray-300"
                 src={profilePic}
               />
               <div className="flex flex-col">
@@ -81,59 +97,38 @@ function ChatBot() {
                 </span>
               </div>
             </span>
-            <button onClick={() => setOpen(false)} className="cursor-pointer">
-              ✕
-            </button>
+            <button onClick={() => setOpen(false)} className="cursor-pointer">✕</button>
           </div>
 
           <div className="flex-1 p-4 overflow-y-auto flex flex-col gap-2">
             {messages.map((msg, index) => (
-              <div
-                key={index}
-                className={`flex flex-col ${msg.role === "user" ? "items-end" : "items-start"}`}
-              >
+              <div key={index} className={`flex flex-col ${msg.role === "user" ? "items-end" : "items-start"}`}>
                 {msg.role === "bot" && (
                   <div className="flex items-center gap-1 mb-1">
-                    <img
-                      src={profilePic}
-                      className="w-5 h-5 rounded-full object-cover"
-                    />
-                    <span
-                      className={`text-xs font-semibold ${darkMode ? "text-gray-300" : "text-gray-600"}`}
-                    >
+                    <img src={profilePic} className="w-5 h-5 rounded-full object-cover border-2 border-gray-300" />
+                    <span className={`text-xs font-semibold ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
                       Ehrvayn
                     </span>
                   </div>
                 )}
-
-                <div
-                  className={`whitespace-pre-wrap break-words text-sm px-3 py-2 rounded-lg max-w-[80%] ${
-                    msg.role === "user"
-                      ? darkMode
-                        ? "bg-white text-black"
-                        : "bg-[#2e2e2e] text-white"
-                      : darkMode
-                        ? "bg-[#2e2e2e]"
-                        : "bg-gray-100"
-                  }`}
-                >
+                <div className={`whitespace-pre-wrap break-words text-sm px-3 py-2 rounded-lg max-w-[80%] ${
+                  msg.role === "user"
+                    ? darkMode ? "bg-white text-black" : "bg-[#2e2e2e] text-white"
+                    : darkMode ? "bg-[#2e2e2e]" : "bg-gray-100"
+                }`}>
                   {msg.text}
                 </div>
               </div>
             ))}
             {loading && (
-              <div
-                className={`text-sm px-3 py-2 rounded-lg max-w-[80%] self-start ${darkMode ? "bg-[#3e3e3e]" : "bg-gray-100"}`}
-              >
+              <div className={`text-sm px-3 py-2 rounded-lg max-w-[80%] self-start ${darkMode ? "bg-[#3e3e3e]" : "bg-gray-100"}`}>
                 Typing...
               </div>
             )}
             <div ref={latestChat}></div>
           </div>
 
-          <div
-            className={`${darkMode ? "bg-[#3e3e3e] text-white border-b border-gray-500" : "bg-white text-black border-b border-gray-200"} p-3 border-t rounded-b-2xl flex gap-2`}
-          >
+          <div className={`${darkMode ? "bg-[#3e3e3e] text-white border-b border-gray-500" : "bg-white text-black border-b border-gray-200"} p-3 border-t rounded-b-2xl flex gap-2`}>
             <input
               type="text"
               value={input}
@@ -142,19 +137,25 @@ function ChatBot() {
               placeholder="Type a message..."
               className={`flex-1 rounded-lg px-3 py-2 text-sm outline-none border ${darkMode ? "bg-[#3e3e3e] border-gray-600 text-white" : "border-gray-300"}`}
             />
-
-            <i
-              title="send"
-              onClick={sendMessage}
-              className={`${!darkMode ? "text-black" : "text-white"} active:scale-80 active:opacity-70 cursor-pointer px-1 bi bi-send-fill text-[25px] md:text-[30px] `}
-            ></i>
+            <i onClick={sendMessage} className={`${!darkMode ? "text-black" : "text-white"} active:scale-80 active:opacity-70 cursor-pointer px-1 bi bi-send-fill text-[25px] md:text-[30px]`}></i>
           </div>
         </div>
       )}
 
+      {showBanner && !open && !hasBeenOpened && (
+        <div
+          onClick={handleToggleChat}
+          className={`fixed bottom-24 right-6 px-4 py-2 rounded-2xl shadow-lg cursor-pointer animate-bounce z-50 text-sm font-medium flex items-center gap-2
+            ${darkMode ? "bg-white text-black" : "bg-[#3e3e3e] text-white"}`}
+        >
+          Hey there! Wanna chat? 👋
+          <div className={`absolute -bottom-2 right-6 w-4 h-4 rotate-45 ${darkMode ? "bg-white" : "bg-[#3e3e3e]"}`}></div>
+        </div>
+      )}
+
       <button
-        onClick={() => setOpen(!open)}
-        className={`fixed bottom-6 right-6 w-14 h-14 ${darkMode ? "bg-white hover:bg-[#3e3e3e] text-black" : "bg-[#3e3e3e] hover:bg-gray-500 text-white"} rounded-full shadow-lg flex items-center justify-center text-2xl cursor-pointer z-50`}
+        onClick={handleToggleChat}
+        className={`fixed bottom-6 right-6 w-14 h-14 ${darkMode ? "bg-white hover:bg-gray-200 text-black" : "bg-[#3e3e3e] hover:bg-gray-600 text-white"} rounded-full shadow-lg flex items-center justify-center text-2xl cursor-pointer z-50 transition-all duration-300`}
       >
         {open ? "✕" : <i className={`bi bi-chat-dots-fill`}></i>}
       </button>

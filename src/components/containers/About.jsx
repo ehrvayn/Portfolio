@@ -2,13 +2,18 @@ import { useDarkMode } from "../../context/DarkmodeProvider";
 
 function About() {
   const { darkMode } = useDarkMode();
+
   return (
     <div
-      className={`flex flex-1 flex-col shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-lg gap-3 ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
+      className={`flex flex-1 flex-col shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-lg gap-4 ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
     >
-      <strong>
-        <i className="bi bi-person-circle"></i> About
-      </strong>
+      <div className="flex items-center gap-2">
+        <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
+        <strong className="text-base tracking-tight">
+          <i className="bi bi-person-circle mr-1" /> About
+        </strong>
+      </div>
+
       <p
         className={`text-justify text-sm ${darkMode ? "text-gray-300" : "text-gray-700"}`}
       >
@@ -17,6 +22,7 @@ function About() {
         user-centered digital solutions by focusing on Full Stack Web
         Development.
       </p>
+
       <p
         className={`text-justify text-sm ${darkMode ? "text-gray-300" : "text-gray-700"}`}
       >
@@ -28,6 +34,7 @@ function About() {
         continuously learning, exploring new tools, and enhancing my skills to
         grow into a professional developer.
       </p>
+
       <p
         className={`text-justify text-sm ${darkMode ? "text-gray-300" : "text-gray-700"}`}
       >

@@ -17,6 +17,7 @@ function App() {
       document.body.classList.remove("dark");
     }
   }, [darkMode]);
+
   return (
     <>
       <div
@@ -27,6 +28,13 @@ function App() {
         <Container3 />
         <Container4 />
         <ChatBot />
+
+        <footer
+          className={`mt-10 pt-6 border-t text-center text-[11px] font-mono 
+            ${darkMode ? "border-[#333333] text-white" : "border-gray-200 text-black"}`}
+        >
+          Ehrvayn Rayven P. Olivera | Personal Portfolio 2026
+        </footer>
       </div>
     </>
   );

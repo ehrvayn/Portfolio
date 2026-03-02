@@ -22,11 +22,13 @@ function Container1() {
             <i className="bi bi-geo-alt-fill"></i> Naga City, Camarines Sur,
             Philippines
           </span>
-          <span
-            className={`lg:text-sm text-[12px] ${darkMode ? "text-gray-400" : "text-gray-500"}`}
-          >
-            <strong>Aspiring Full Stack Web Developer</strong>
-          </span>
+          <div className="flex items-center gap-3 justify-center md:justify-start mt-0.5">
+            <div className="w-[5px] h-4 rounded-full bg-gradient-to-b from-gray-300 to-gray-500 hidden md:block ml-1" />
+            <span className={`${darkMode ?  "text-gray-300" : "text-black"} text-[11px] tracking-[0.20em] uppercase font-mono to-gray-500 text-center md:text-left`}>
+              Aspiring Full Stack Developer
+            </span>
+          </div>
+
           <div className="flex gap-2 mt-1 justify-center md:justify-start">
             <a
               target="_blank"
