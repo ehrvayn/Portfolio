@@ -64,22 +64,7 @@ function Education() {
         ))}
       </div>
 
-      <div className={`mt-6 pt-4 border-t ${darkMode ? "border-[#3e3e3e]" : "border-gray-100"}`}>
-        <div className="flex items-center gap-2 mb-3">
-          <span className="text-[10px] uppercase tracking-[0.15em] font-mono font-semibold bg-gradient-to-r from-gray-300 to-gray-500 bg-clip-text text-transparent">
-            Coding Since
-          </span>
-          <div className="flex-1 h-[1px] bg-gradient-to-r from-violet-500 to-pink-500 opacity-20" />
-        </div>
-        <div className="flex items-end gap-2">
-          <span className="text-3xl font-bold bg-gradient-to-r from-violet-500 to-pink-500 bg-clip-text text-transparent">
-            {startYear}
-          </span>
-          <span className={`text-[12px] font-mono mb-1 ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
-            · {yearsOfCoding} year{yearsOfCoding !== 1 ? "s" : ""} of building & learning
-          </span>
-        </div>
-      </div>
+
     </div>
   );
 }
