@@ -1,5 +1,5 @@
 import { useState } from "react";
-import JSCert from "../../assets/img/JScertificate.png";
+import JSCert from "../../assets/img/JSCertificate.png";
 import DL1stSem from "../../assets/img/DL-1stSem.jpg";
 import DL2ndSem from "../../assets/img/DL-2ndSem.jpg";
 import { useDarkMode } from "../../context/DarkmodeProvider";
