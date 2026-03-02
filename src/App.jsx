@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <div
-        className={`${darkMode ? "bg-[#111111] text-white" : "bg-gray-50"} w-full h-full gap-5 flex flex-col px-4 md:px-[50px] lg:px-[70px] xl:px-[140px] py-6 md:py-8 lg:py-10`}
+        className={`${darkMode ? "bg-[#111111] text-white" : "bg-gray-50"} w-full h-full gap-5 flex flex-col px-6 md:px-[100px] lg:px-[130px] xl:px-[190px] py-6 md:py-8 lg:py-10`}
       >
         <Container1 />
         <Container2 />

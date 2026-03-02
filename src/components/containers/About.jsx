@@ -4,9 +4,7 @@ function About() {
   const { darkMode } = useDarkMode();
 
   return (
-    <div
-      className={`flex flex-1 flex-col shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-lg gap-4 ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
-    >
+<div className={`flex flex-col shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-lg gap-4 ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}>
       <div className="flex items-center gap-2">
         <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
         <strong className="text-base tracking-tight">

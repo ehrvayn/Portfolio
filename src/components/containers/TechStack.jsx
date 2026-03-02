@@ -24,7 +24,7 @@ function TechStack() {
 
   return (
     <div
-      className={`shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-lg ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
+      className={`shadow-[0_0_6px_rgba(0,0,0,0.25)] h-[55%] p-6 rounded-lg ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
     >
       <div className="flex items-center gap-2 mb-4">
         <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
