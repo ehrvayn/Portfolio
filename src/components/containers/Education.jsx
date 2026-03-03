@@ -18,7 +18,7 @@ function Education() {
 
       <div className="flex flex-wrap items-center gap-2 mb-4 shrink-0">
         <div className="flex items-center gap-2">
-          <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-violet-500 to-pink-500" />
+          <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
           <strong className="text-base tracking-tight">
             <i className="bi bi-backpack-fill mr-1" /> Education
           </strong>
@@ -40,7 +40,7 @@ function Education() {
       <div className="flex flex-col mt-2">
         <div className="flex gap-4 relative">
           <div className="flex flex-col items-center">
-            <div className="w-3 h-3 rounded-full mt-1 shrink-0 bg-gradient-to-br from-violet-500 to-pink-500" />
+            <div className="w-3 h-3 rounded-full mt-1 shrink-0 bg-gradient-to-br from-gray-300 to-gray-500" />
             <div className={`w-[2px] flex-1 ${darkMode ? "bg-[#4e4e4e]" : "bg-gray-200"}`} />
           </div>
           <div className="flex justify-between w-full pb-6">
@@ -50,7 +50,7 @@ function Education() {
                 Naga College Foundation Inc.
               </p>
             </div>
-            <span className={`text-[11px] font-mono pl-5 ${darkMode ? "text-violet-400" : "text-violet-500"}`}>
+            <span className={`text-[11px] font-mono pl-5 ${darkMode ? "text-white" : "text-black"}`}>
               2026
             </span>
           </div>
