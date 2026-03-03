@@ -29,7 +29,7 @@ function Experience() {
             active: false,
           },
           {
-            title: "Capstone Project Developer",
+            title: "Capstone Project",
             sub: "Intelligent Queue Management System for Wait Transparency",
             year: "Ongoing",
             active: false,

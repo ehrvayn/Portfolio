@@ -17,7 +17,7 @@ function ChatBot() {
 
   const [open, setOpen] = useState(false);
   const [showBanner, setShowBanner] = useState(false);
-  const [hasBeenOpened, setHasBeenOpened] = useState(false); // New: Tracks if chat was opened once
+  const [hasBeenOpened, setHasBeenOpened] = useState(false);
   const [messages, setMessages] = useState([welcomeMessage]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
