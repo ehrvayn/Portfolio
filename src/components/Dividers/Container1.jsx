@@ -25,7 +25,7 @@ function Container1() {
           <div className="flex items-center gap-3 justify-center md:justify-start mt-0.5">
             <div className="w-[5px] h-4 rounded-full bg-gradient-to-b from-gray-300 to-gray-500 hidden md:block ml-1" />
             <span className={`${darkMode ?  "text-gray-300" : "text-black"} text-[11px] tracking-[0.20em] uppercase font-mono to-gray-500 text-center md:text-left`}>
-              Aspiring Full Stack Web Developer
+              Aspiring Full Stack Web Developer | Mobile Developer
             </span>
           </div>
 

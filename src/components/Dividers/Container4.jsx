@@ -2,11 +2,9 @@ import Contact from "../containers/Contact";
 
 function Container4() {
   return (
-    <>
-      <div className="container2 flex justify-between gap-5 px-4 md:px-10 w-full">
-        <Contact />
-      </div>
-    </>
+    <div className="container2 grid grid-cols-1 lg:grid-cols-[35%_65%] gap-5">
+      <div className="col-span-2"><Contact /></div>
+    </div>
   );
 }
 

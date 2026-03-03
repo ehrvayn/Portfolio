@@ -52,20 +52,28 @@ function Contact() {
       </div>
 
       <div className="flex-1 flex flex-col gap-3">
-        <SectionHeader label="Social Links" />
+        <SectionHeader label="Find me on" />
         {socialLinks.map((link, index) => (
           <a
             key={index}
             href={link.url}
             target="_blank"
             rel="noreferrer"
-            className={`${innerCard} flex items-center gap-3 hover:border-gray-400 transition-all duration-200`}
+            className={`${innerCard} flex items-center justify-between hover:border-gray-400 transition-all duration-200`}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <i
-              className={`bi ${link.icon} text-lg ${darkMode ? "text-white" : "text-black"}`}
-            />
-            {link.name}
+            <div className="flex items-center gap-3 w-full">
+              <i
+                className={`bi ${link.icon} text-lg shrink-0 ${darkMode ? "text-white" : "text-black"}`}
+              />
+              <div className="flex items-center justify-between w-full gap-2">
+                <p className="text-sm font-semibold shrink-0">{link.name}</p>
+                <div
+                  className={`flex-1 h-[1px] ${darkMode ? "bg-[#3e3e3e]" : "bg-gray-200"}`}
+                />
+              </div>
+            </div>
+            <i className="bi bi-chevron-right text-gray-400 text-xs ml-2 shrink-0" />
           </a>
         ))}
       </div>

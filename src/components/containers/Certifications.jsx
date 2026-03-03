@@ -2,6 +2,7 @@ import { useState } from "react";
 import JSCert from "../../assets/img/JSCertificate.png";
 import DL1stSem from "../../assets/img/DL-1stSem.jpg";
 import DL2ndSem from "../../assets/img/DL-2ndSem.jpg";
+import responsiveCert from "../../assets/img/ResponsiveCert.png"
 import { useDarkMode } from "../../context/DarkmodeProvider";
 
 function Certifications() {
@@ -15,6 +16,11 @@ function Certifications() {
       img: JSCert,
     },
     {
+      name: "Responsive Web Design Developer Certification 2026",
+      issuer: "freeCodeCamp",
+      img: responsiveCert,
+    },
+    {
       name: "Dean's Lister 2nd Semester 2023-2024",
       issuer: "Naga College Foundation Inc.",
       img: DL2ndSem,
@@ -24,7 +30,6 @@ function Certifications() {
       issuer: "Naga College Foundation Inc.",
       img: DL1stSem,
     },
-    { name: "", issuer: "", img: null },
   ];
 
   return (

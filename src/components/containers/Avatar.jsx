@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useLayoutEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useDarkMode } from "../../context/DarkmodeProvider";
 
 import idle from "../../assets/vid/idle.mp4";
@@ -10,8 +10,9 @@ import surprise from "../../assets/vid/surprise.mp4";
 
 function Avatar() {
   const { darkMode } = useDarkMode();
-  const videoRef = useRef(null);
   const [current, setCurrent] = useState("idle");
+  const [active, setActive] = useState(0); // which video element is "on top"
+  const videoRefs = [useRef(null), useRef(null)];
   const clips = { idle, waving, laughing, typing, confused, surprise };
 
   const messages = {
@@ -23,30 +24,56 @@ function Avatar() {
     waving: "hey there! I'm so happy to see you!👋",
   };
 
+  useEffect(() => {
+    Object.values(clips).forEach((src) => {
+      const v = document.createElement("video");
+      v.src = src;
+      v.preload = "auto";
+    });
+  }, []);
+
   const playInstant = (name) => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.onended = null;
-    setCurrent(name);
-    video.load();
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {});
-    }
+    const nextActive = 1 - active;
+    const nextVideo = videoRefs[nextActive].current;
+    const currentVideo = videoRefs[active].current;
+    if (!nextVideo || !currentVideo) return;
+
+    nextVideo.src = clips[name];
+    nextVideo.load();
+
+    nextVideo.oncanplay = () => {
+      nextVideo.play().catch(() => {});
+      setActive(nextActive);
+      setCurrent(name);
+      nextVideo.oncanplay = null;
+
+      nextVideo.onended = () => {
+        const next = name === "idle" ? "confused" : "idle";
+        playInstant(next);
+      };
+    };
   };
 
-  useLayoutEffect(() => {
-    const video = videoRef.current;
+  useEffect(() => {
+    const video = videoRefs[active].current;
     if (!video) return;
     video.onended = () => {
       const next = current === "idle" ? "confused" : "idle";
       playInstant(next);
     };
-  }, [current]);
+  }, [active, current]);
+
+  useEffect(() => {
+    const video = videoRefs[0].current;
+    if (!video) return;
+    video.src = clips["idle"];
+    video.play().catch(() => {});
+    video.onended = () => playInstant("confused");
+  }, []);
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
-      const container = videoRef.current?.parentElement;
+      const container = videoRefs[0].current?.parentElement?.parentElement;
       if (container && !container.contains(e.target)) {
         playInstant("surprise");
       }
@@ -58,7 +85,7 @@ function Avatar() {
       window.removeEventListener("click", handleOutsideClick);
       window.removeEventListener("keydown", onKey);
     };
-  }, []);
+  }, [active, current]);
 
   const bgColor = darkMode ? "#4e4e4e" : "white";
   const borderColor = darkMode ? "transparent" : "#e5e7eb";
@@ -73,17 +100,27 @@ function Avatar() {
       onMouseEnter={() => playInstant("waving")}
       onMouseLeave={() => playInstant("idle")}
     >
-      <video
-        ref={videoRef}
-        key={current}
-        src={clips[current]}
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        className="rounded-xl object-cover"
-        style={{ width: 200, height: 220 }}
-      />
+      <div style={{ width: 200, height: 220, position: "relative" }}>
+        {[0, 1].map((i) => (
+          <video
+            key={i}
+            ref={videoRefs[i]}
+            muted
+            playsInline
+            preload="auto"
+            className="rounded-xl object-cover"
+            style={{
+              width: 200,
+              height: 220,
+              position: "absolute",
+              top: 0,
+              left: 0,
+              opacity: active === i ? 1 : 0,
+              transition: "opacity 0.1s ease-in-out",
+            }}
+          />
+        ))}
+      </div>
 
       <div className="absolute z-10" style={{ bottom: "-55px", left: "50%", transform: "translateX(-50%)" }}>
         <div
