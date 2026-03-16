@@ -11,6 +11,7 @@ import vscodeImg from "../../assets/img/vscode.png";
 import figmaImg from "../../assets/img/figma.png";
 import typescript from "../../assets/img/typescript.png";
 import postgres from "../../assets/img/postgres.png";
+import bootstrap from "../../assets/img/Bootstrap.png";
 
 function TechStack() {
   const { darkMode } = useDarkMode();
@@ -44,8 +45,9 @@ function TechStack() {
               { name: "CSS", img: cssImg },
               { name: "JavaScript", img: jsImg },
               { name: "TypeScript", img: typescript },
-              { name: "React (Vite)", img: reactImg },
+              { name: "React", img: reactImg },
               { name: "Tailwind CSS", img: tailwindImg },
+              { name: "Bootstrap", img: bootstrap },
             ],
           },
           {
