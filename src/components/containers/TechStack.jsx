@@ -46,7 +46,7 @@ function TechStack() {
               { name: "JavaScript", img: jsImg },
               { name: "TypeScript", img: typescript },
               { name: "React", img: reactImg },
-              { name: "Tailwind CSS", img: tailwindImg },
+              { name: "Tailwind", img: tailwindImg },
               { name: "Bootstrap", img: bootstrap },
             ],
           },
@@ -56,14 +56,7 @@ function TechStack() {
               { name: "Node.js", img: nodejsImg },
               { name: "MySQL", img: mysqlImg },
               { name: "PostgreSQL", img: postgres },
-            ],
-          },
-          {
-            label: "Tools",
-            techs: [
-              { name: "GitHub", img: githubImg },
-              { name: "VSCode", img: vscodeImg },
-              { name: "Figma", img: figmaImg },
+              { name: "ExpressJS", img: jsImg },
             ],
           },
           {
@@ -75,6 +68,14 @@ function TechStack() {
             techs: [
               { name: "JWT", img: null },
               { name: "bcrypt", img: null },
+            ],
+          },
+                    {
+            label: "Tools",
+            techs: [
+              { name: "GitHub", img: githubImg },
+              { name: "VSCode", img: vscodeImg },
+              { name: "Figma", img: figmaImg },
             ],
           },
         ].map((section, i) => (
@@ -90,7 +91,7 @@ function TechStack() {
               />
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 pb-2">
               {section.techs.map((tech, index) => (
                 <span
                   key={index}

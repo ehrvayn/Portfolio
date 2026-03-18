@@ -19,9 +19,9 @@ function Avatar() {
     idle: "zzz... I'm so bored😴",
     confused: "hello...? I wonder what they're up to 😐",
     surprise: "Woah! they're clicking something! 😮",
-    laughing: "HAHAHAHA! stop tickling me 😂",
+    laughing: "HAHAHAHA! stop clicking me 😂",
     typing: "Woahh😮! they're typing! I'll type too...",
-    waving: "hey there! I'm so happy to see you!👋",
+    waving: "hey there! Hope you like my Portfolio!👋",
   };
 
   useEffect(() => {
