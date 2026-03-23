@@ -4,17 +4,23 @@ function RecentProjects() {
   const { darkMode } = useDarkMode();
   const projects = [
     {
-      name: "QuickNotes",
+      name: "NavSumaro",
       description:
-        "A lightweight full-stack notes app for quick thoughts and ideas",
-      link: "qcknotes.vercel.app",
+        "A unified student ecosystem designed to eliminate fragmented campus tools. Built a secure marketplace, academic collaboration hub, and research grouping system authenticated via institutional email.",
+      link: "navsumaro.vercel.app",
     },
     {
       name: "My Portfolio",
-      description: "My personal portfolio website with Grok A.I chat bot",
+      description:
+        "I built this simple portfolio that uses a custom Grok AI assistant that answers questions about my tech stack and experience in real-time.",
       link: "ehrvayn.vercel.app",
     },
-    { name: "", description: "", link: "" },
+    {
+      name: "QuickNotes",
+      description:
+        "This is my first full-stack application, designed to provide a fast and reliable way to manage daily notes. I focused on building a clean REST API and a user-friendly interface.",
+      link: "qcknotes.vercel.app",
+    },
     { name: "", description: "", link: "" },
     { name: "", description: "", link: "" },
     { name: "", description: "", link: "" },
