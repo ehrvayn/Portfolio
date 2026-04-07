@@ -3,28 +3,21 @@
 A personal portfolio website built with React, Vite, and Tailwind CSS. Features a clean, responsive design with dark mode support and an AI-powered chatbot.
 
 ## 🚀 Features
-
 - Responsive design for mobile, tablet, and desktop
 - Dark mode toggle
 - AI chatbot powered by Groq (Llama 3.3 70B)
 - Project showcase
-- Experience and education timeline
-- Tech stack display with icons
-- Certificate gallery
-- Contact and social links section
-- Resume download
-
+- 
 ## 🛠️ Tech Stack
-
 - React (Vite)
 - Tailwind CSS
-- Bootstrap Icons
-- Groq SDK (Llama 3.3 70B)
+- JavaScript
+- Groq AI
 ```
 
 ## 🌐 Live Demo
 
-[ehrvayn-portfolio.vercel.app](https://ehrvayn-portfolio.vercel.app)
+[ehrvayn.vercel.app](https://ehrvayn-portfolio.vercel.app)
 
 ## 📄 License
 
