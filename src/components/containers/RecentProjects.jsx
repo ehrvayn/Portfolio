@@ -1,6 +1,6 @@
 import { useDarkMode } from "../../context/DarkmodeProvider";
 import { useState } from "react";
-import NavsumaroImg from "../../assets/img/NavsumaroImg.png";
+import NavsumaroImg from "../../assets/img/NavSumaroImg.png";
 import QuickNotesImg from "../../assets/img/QuickNotesImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
 
