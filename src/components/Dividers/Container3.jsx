@@ -3,9 +3,14 @@ import Certifications from "../containers/Certifications";
 
 function Container3() {
   return (
-    <div className="container2 grid grid-cols-1 lg:grid-cols-[35%_65%] gap-5">
-      <div><Certifications /></div>
-      <div><RecentProjects /></div>
+    <div className="flex flex-col lg:mr-[-20px] mr-[0px] gap-5">
+      <div>
+        <RecentProjects />
+      </div>
+
+      <div>
+        <Certifications />
+      </div>
     </div>
   );
 }

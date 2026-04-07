@@ -14,7 +14,7 @@ function Education() {
   const yearsOfCoding = currentYear - startYear;
 
   return (
-    <div className={`flex flex-col flex-1 shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-lg ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}>
+    <div className={`flex flex-col flex-1 shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-sm ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}>
 
       <div className="flex flex-wrap items-center gap-2 mb-4 shrink-0">
         <div className="flex items-center gap-2">
@@ -25,10 +25,10 @@ function Education() {
         </div>
         <div className={`flex-1 h-[1px] min-w-[20px] ${darkMode ? "bg-[#3e3e3e]" : "bg-gray-200"}`} />
         <div className="flex items-center gap-1">
-          <span className="text-[10px] uppercase  font-mono font-semibold bg-gradient-to-r from-violet-500 to-pink-500 bg-clip-text text-transparent">
+          <span className="text-[10px] uppercase  font-mono font-semibold bg-gradient-to-r from-red-500 to-gray-500 bg-clip-text text-transparent">
             Coding Since
           </span>
-          <span className="text-[12px] font-mono font-bold bg-gradient-to-r from-violet-500 to-pink-500 bg-clip-text text-transparent">
+          <span className="text-[12px] font-mono font-bold bg-gradient-to-r from-red-500 to-gray-500 bg-clip-text text-transparent">
             {startYear}
           </span>
           <span className={`text-[11px] font-mono ${darkMode ? "text-gray-400" : "text-gray-500"}`}>

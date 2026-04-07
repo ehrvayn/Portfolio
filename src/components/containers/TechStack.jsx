@@ -16,18 +16,9 @@ import bootstrap from "../../assets/img/Bootstrap.png";
 function TechStack() {
   const { darkMode } = useDarkMode();
 
-  const categoryColors = {
-    Frontend: "from-red-500 to-gray-500",
-    Backend: "from-red-500 to-gray-500",
-    Tools: "from-red-500 to-gray-500",
-    "Foundational Skills": "from-red-500 to-gray-500",
-    Mobile: "from-red-500 to-gray-500",
-    Security: "from-red-500 to-gray-500",
-  };
-
   return (
     <div
-      className={`shadow-[0_0_6px_rgba(0,0,0,0.25)] h-[420px] p-6 rounded-lg flex flex-col ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
+      className={`shadow-[0_0_6px_rgba(0,0,0,0.25)] h-[420px] p-6 rounded-sm flex flex-col ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
     >
       <div className="flex items-center gap-2 mb-4 shrink-0">
         <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
@@ -82,12 +73,12 @@ function TechStack() {
           <div key={i}>
             <div className="flex items-center gap-2 mb-2">
               <span
-                className={`text-[10px] uppercase tracking-[0.15em] font-mono font-semibold bg-gradient-to-r ${categoryColors[section.label]} bg-clip-text text-transparent`}
+                className={`text-[10px] uppercase tracking-[0.15em] font-mono font-semibold bg-gradient-to-r from-red-500 to-gray-500 bg-clip-text text-transparent`}
               >
                 {section.label}
               </span>
               <div
-                className={`flex-1 h-[1px] bg-gradient-to-r ${categoryColors[section.label]} opacity-20`}
+                className={`flex-1 h-[1px] bg-gradient-to-r from-red-500 to-gray-500 opacity-20`}
               />
             </div>
 

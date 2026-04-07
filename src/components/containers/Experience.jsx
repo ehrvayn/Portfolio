@@ -5,7 +5,7 @@ function Experience() {
 
   return (
     <div
-      className={`flex flex-col shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-lg overflow-hidden ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
+      className={`flex flex-col shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-sm overflow-hidden ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
     >
       <div className="flex items-center gap-2 mb-4 shrink-0">
         <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
@@ -34,7 +34,6 @@ function Experience() {
             year: "Ongoing",
             active: false,
           },
-          { title: "", sub: "", year: "", active: false },
           { title: "", sub: "", year: "", active: false },
         ].map((item, index, array) => (
           <div key={index} className="flex gap-4 relative">

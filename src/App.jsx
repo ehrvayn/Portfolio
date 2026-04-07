@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <div
-        className={`${darkMode ? "bg-[#111111] text-white" : "bg-gray-50"} w-full h-full gap-5 flex flex-col px-6 md:px-[120px] lg:px-[160px] xl:px-[300px] py-6 md:py-8 lg:py-10`}
+        className={`${darkMode ? "bg-[#111111] text-white" : "bg-gray-50"} w-full h-full gap-5 flex flex-col px-3 md:px-[100px] lg:px-[130px] xl:px-[150px] py-6 md:py-8 lg:py-10`}
       >
         <Container1 />
         <Container2 />
@@ -33,7 +33,7 @@ function App() {
           className={`mt-10 pt-6 border-t text-center text-[11px] font-mono 
             ${darkMode ? "border-[#333333] text-white" : "border-gray-200 text-black"}`}
         >
-          Ehrvayn Rayven P. Olivera | Personal Portfolio 2026
+          © Ehrvayn Rayven P. Olivera | Personal Portfolio 2026
         </footer>
       </div>
     </>

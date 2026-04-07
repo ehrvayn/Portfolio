@@ -1,5 +1,5 @@
 import { useDarkMode } from "../../context/DarkmodeProvider";
-import Avatar from "./Avatar";
+// import Avatar from "./Avatar";
 
 function Contact() {
   const { darkMode } = useDarkMode();
@@ -45,11 +45,11 @@ function Contact() {
 
   return (
     <div
-      className={`${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"} w-full shadow-[0_0_6px_rgba(0,0,0,0.25)] p-4 md:p-6 rounded-lg flex flex-col md:flex-row gap-4 md:gap-5`}
+      className={`${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"} w-full shadow-[0_0_6px_rgba(0,0,0,0.25)] p-4 md:p-6 rounded-sm flex flex-col md:flex-row gap-4 md:gap-5`}
     >
-      <div className="mb-16 md:mb-0">
+      {/* <div className="mb-16 md:mb-0">
         <Avatar />
-      </div>
+      </div> */}
 
       <div className="flex-1 flex flex-col gap-3">
         <SectionHeader label="Find me on" />
@@ -59,7 +59,11 @@ function Contact() {
             href={link.url}
             target="_blank"
             rel="noreferrer"
-            className={`${innerCard} flex items-center justify-between hover:border-gray-400 transition-all duration-200`}
+            className={`${innerCard} flex items-center justify-between ${
+              darkMode
+                ? "bg-[#2e2e2e] border border-[#3e3e3e] hover:border-red-500"
+                : "bg-gray-50 border border-gray-200 hover:border-red-300"
+            }`}
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <div className="flex items-center gap-3 w-full">
@@ -86,7 +90,11 @@ function Contact() {
             href={contact.url}
             target="_blank"
             rel="noreferrer"
-            className={`${innerCard} flex items-center justify-between hover:border-gray-400 transition-all duration-200`}
+            className={`${innerCard} flex items-center justify-between ${
+              darkMode
+                ? "bg-[#2e2e2e] border border-[#3e3e3e] hover:border-red-500"
+                : "bg-gray-50 border border-gray-200 hover:border-red-300"
+            }`}
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <div className="flex items-center gap-3 w-full">
