@@ -26,7 +26,7 @@ function RecentProjects() {
     {
       name: "My Portfolio",
       description:
-        "I built this simple portfolio to showcase my skills and has a custom Grok AI assistant that answers questions about my tech stack and experience in real-time.",
+        "I built this simple portfolio to showcase my skills that has a custom Grok AI assistant that answers questions about my tech stack and experience in real-time.",
       link: "ehrvayn.vercel.app",
       code: "github.com/ehrvayn/Portfolio",
       image: PortfolioImg,

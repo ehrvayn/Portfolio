@@ -43,7 +43,7 @@ function Certifications() {
         </strong>
       </div>
 
-      <div className="flex flex-col p-2 gap-3 h-[250px] overflow-y-auto">
+      <div className="flex flex-col p-2 gap-3 h-50 overflow-y-auto">
         {certifications.map((cert, index) => (
           <div
             onClick={() => setSelectedImg(cert.img)}

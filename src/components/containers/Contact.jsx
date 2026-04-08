@@ -45,7 +45,7 @@ function Contact() {
 
   return (
     <div
-      className={`${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"} w-full shadow-[0_0_6px_rgba(0,0,0,0.25)] p-4 md:p-6 rounded-sm flex flex-col md:flex-row gap-4 md:gap-5`}
+      className={`${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"} w-full h-full shadow-[0_0_6px_rgba(0,0,0,0.25)] p-4 md:p-6 rounded-sm flex flex-col md:flex-row gap-4 md:gap-5`}
     >
       {/* <div className="mb-16 md:mb-0">
         <Avatar />
@@ -83,7 +83,7 @@ function Contact() {
       </div>
 
       <div className="flex-1 flex flex-col gap-3">
-        <SectionHeader label="Contact me at your convenience" />
+        <SectionHeader label="Get in touch" />
         {quickContacts.map((contact, index) => (
           <a
             key={index}
