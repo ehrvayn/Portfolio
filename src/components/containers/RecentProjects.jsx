@@ -3,6 +3,7 @@ import { useState } from "react";
 import NavsumaroImg from "../../assets/img/NavSumaroImg.png";
 import QuickNotesImg from "../../assets/img/QuickNotesImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
+import { FaProjectDiagram } from "react-icons/fa";
 
 function RecentProjects() {
   const { darkMode } = useDarkMode();
@@ -64,8 +65,8 @@ function RecentProjects() {
     >
       <div className="flex items-center gap-3">
         <div className="w-1 h-6 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
-        <h2 className="text-lg md:text-xl font-semibold tracking-tight">
-          <i className="bi bi-folder-fill mr-2" /> Recent Projects
+        <h2 className="text-lg flex items-center gap-2 md:text-xl font-semibold tracking-tight">
+          <FaProjectDiagram /> Recent Projects
         </h2>
 
       </div>

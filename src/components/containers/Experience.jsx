@@ -3,15 +3,37 @@ import { useDarkMode } from "../../context/DarkmodeProvider";
 function Experience() {
   const { darkMode } = useDarkMode();
 
+  const startYear = 2022;
+  const currentYear = new Date().getFullYear();
+  const yearsOfCoding = currentYear - startYear;
+
   return (
     <div
       className={`flex flex-col shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 rounded-sm overflow-hidden ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
     >
-      <div className="flex items-center gap-2 mb-4 shrink-0">
-        <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
-        <strong className="text-base tracking-tight">
-          <i className="bi bi-person-workspace mr-1" /> Experience
-        </strong>
+      <div className="flex flex-wrap items-center gap-2 mb-4 shrink-0">
+        <div className="flex items-center gap-2">
+          <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
+          <strong className="text-base tracking-tight">
+            <i className="bi bi-person-workspace mr-1" /> Experience
+          </strong>
+        </div>
+        <div
+          className={`flex-1 h-[1px] min-w-[20px] ${darkMode ? "bg-[#3e3e3e]" : "bg-gray-200"}`}
+        />
+        <div className="flex items-center gap-1">
+          <span className="text-[10px] uppercase  font-mono font-semibold bg-gradient-to-r from-red-500 to-gray-500 bg-clip-text text-transparent">
+            Coding Since
+          </span>
+          <span className="text-[12px] font-mono font-bold bg-gradient-to-r from-red-500 to-gray-500 bg-clip-text text-transparent">
+            {startYear}
+          </span>
+          <span
+            className={`text-[11px] font-mono ${darkMode ? "text-gray-400" : "text-gray-500"}`}
+          >
+            · {yearsOfCoding}yrs
+          </span>
+        </div>
       </div>
 
       <div className="flex flex-col overflow-y-auto max-h-[380px] lg:max-h-[250px]">

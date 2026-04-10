@@ -24,7 +24,9 @@ function Container1() {
           </span>
           <div className="flex items-center gap-3 justify-center md:justify-start mt-0.5">
             <div className="w-[5px] h-4 rounded-full bg-gradient-to-b from-gray-300 to-gray-500 hidden md:block ml-1" />
-            <span className={`${darkMode ?  "text-gray-300" : "text-black"} text-[11px] tracking-[0.20em] uppercase font-mono to-gray-500 text-center md:text-left`}>
+            <span
+              className={`${darkMode ? "text-gray-300" : "text-black"} text-[11px] tracking-[0.20em] uppercase font-mono to-gray-500 text-center md:text-left`}
+            >
               Aspiring Full Stack Web Developer | Mobile Developer
             </span>
           </div>
@@ -33,14 +35,80 @@ function Container1() {
             <a
               target="_blank"
               href="Resume.pdf"
-              className={`${darkMode ? "bg-white text-black hover:bg-[#5e5e5e]" : "bg-[#2e2e2e] hover:bg-gray-600 text-white hover:text-white"} text-sm shadow-[0_0_6px_rgba(0,0,0,0.25)] cursor-pointer rounded-md px-4 py-2`}
+              className={`text-sm px-4 py-2 transition-all backdrop-blur-sm relative group ${
+                darkMode ? "text-white" : "text-black"
+              }`}
+              style={{
+                background: darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent)",
+                borderTop: darkMode
+                  ? "2px solid rgba(255,255,255,0.1)"
+                  : "2px solid rgba(0,0,0,0.1)",
+                borderBottom: darkMode
+                  ? "2px solid rgba(255,255,255,0.1)"
+                  : "2px solid rgba(0,0,0,0.1)",
+                borderImageSource: darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.5), transparent)",
+                borderImageSlice: 1,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.5), transparent)";
+                e.currentTarget.style.borderImageSource = darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.8), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.8), transparent)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent)";
+                e.currentTarget.style.borderImageSource = darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.5), transparent)";
+              }}
             >
               View Resume
             </a>
             <a
               target="_blank"
               href="https://mail.google.com/mail/?view=cm&to=rjmomong@gmail.com"
-              className={`text-sm shadow-[0_0_6px_rgba(0,0,0,0.25)] cursor-pointer rounded-md px-4 py-2 ${darkMode ? "bg-gray-600 text-white hover:text-black hover:bg-[#5e5e5e]" : "bg-white hover:bg-gray-500 hover:text-white"}`}
+              className={`text-sm px-4 py-2 transition-all backdrop-blur-sm relative group ${
+                darkMode ? "text-white" : "text-black"
+              }`}
+              style={{
+                background: darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent)",
+                borderTop: darkMode
+                  ? "2px solid rgba(255,255,255,0.1)"
+                  : "2px solid rgba(0,0,0,0.1)",
+                borderBottom: darkMode
+                  ? "2px solid rgba(255,255,255,0.1)"
+                  : "2px solid rgba(0,0,0,0.1)",
+                borderImageSource: darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.5), transparent)",
+                borderImageSlice: 1,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.5), transparent)";
+                e.currentTarget.style.borderImageSource = darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.8), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.8), transparent)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent)";
+                e.currentTarget.style.borderImageSource = darkMode
+                  ? "linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent)"
+                  : "linear-gradient(to right, transparent, rgba(0,0,0,0.5), transparent)";
+              }}
             >
               Send Email
             </a>
