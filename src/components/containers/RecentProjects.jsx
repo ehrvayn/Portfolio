@@ -4,7 +4,6 @@ import NavsumaroImg from "../../assets/img/NavSumaroImg.png";
 import QuickNotesImg from "../../assets/img/QuickNotesImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
 
-
 function RecentProjects() {
   const { darkMode } = useDarkMode();
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -21,7 +20,14 @@ function RecentProjects() {
       link: "navsumaro.vercel.app",
       code: "github.com/ehrvayn/navSumaro",
       image: NavsumaroImg,
-      tech: ["TypeScript", "React", "Tailwind", "Node.js", "ExpressJS", "Postgres"],
+      tech: [
+        "TypeScript",
+        "React",
+        "Tailwind",
+        "Node.js",
+        "ExpressJS",
+        "Postgres",
+      ],
     },
     {
       name: "My Portfolio",
@@ -39,7 +45,14 @@ function RecentProjects() {
       link: "qcknotes.vercel.app",
       code: "github.com/ehrvayn/QuickNotes",
       image: QuickNotesImg,
-      tech: ["JavaScript", "React", "Tailwind", "BootStrap", "Node.js", "MySQL"],
+      tech: [
+        "JavaScript",
+        "React",
+        "Tailwind",
+        "BootStrap",
+        "Node.js",
+        "MySQL",
+      ],
     },
   ];
 
@@ -54,6 +67,7 @@ function RecentProjects() {
         <h2 className="text-lg md:text-xl font-semibold tracking-tight">
           <i className="bi bi-folder-fill mr-2" /> Recent Projects
         </h2>
+
       </div>
 
       <div className="grid grid-cols-1 gap-6 auto-rows-max max-h-[750px] overflow-y-auto pr-2 custom-scrollbar">
@@ -69,7 +83,9 @@ function RecentProjects() {
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <div className="flex flex-col lg:flex-row gap-0 lg:items-center">
-              <div className={`w-full lg:w-[450px] h-[320px] md:h-[350px] flex-shrink-0 overflow-hidden bg-black/5 ${darkMode && "bg-black/20"} flex items-center justify-center`}>
+              <div
+                className={`w-full lg:w-[450px] h-[320px] md:h-[350px] flex-shrink-0 overflow-hidden bg-black/5 ${darkMode && "bg-black/20"} flex items-center justify-center`}
+              >
                 <img
                   src={project.image}
                   alt={project.name}
@@ -82,9 +98,11 @@ function RecentProjects() {
 
               <div className="flex flex-col gap-4 p-6 flex-1">
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-2 bg-gradient-to-r from-red-500 to-white bg-clip-text text-transparent">
-                    {project.name}
-                  </h3>
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-lg md:text-xl font-bold mb-2 bg-gradient-to-r from-red-500 to-gray-400 bg-clip-text text-transparent">
+                      {project.name}
+                    </h3>
+                  </div>
                   <p
                     className={`text-sm md:text-base text-justify leading-relaxed ${
                       darkMode ? "text-gray-400" : "text-gray-600"

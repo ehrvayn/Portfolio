@@ -59,6 +59,7 @@ function TechStack() {
             techs: [
               { name: "JWT", img: null },
               { name: "bcrypt", img: null },
+              { name: "OAuth", img: null },
             ],
           },
                     {
