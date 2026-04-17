@@ -3,6 +3,7 @@ import { useState } from "react";
 import NavsumaroImg from "../../assets/img/NavSumaroImg.png";
 import QuickNotesImg from "../../assets/img/QuickNotesImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
+import InterviewSparkImg from "../../assets/img/InterviewSparkImg.png";
 import { FaProjectDiagram } from "react-icons/fa";
 
 function RecentProjects() {
@@ -14,6 +15,23 @@ function RecentProjects() {
   };
 
   const projects = [
+    {
+      name: "InterviewSpark",
+      description:
+        "An AI-powered interview preparation platform that simulates realistic technical and behavioral interviews. The platform utilizes AI to score every individual answer based on users performance, culminating in a comprehensive final feedback report and performance score at the end of each session. It features a comprehensive analytics dashboard to track performance metrics and session history",
+      link: "interviewsparks.netlify.app",
+      code: "github.com/ehrvayn/InterviewSpark",
+      image: InterviewSparkImg,
+      tech: [
+        "Groq AI",
+        "TypeScript",
+        "React",
+        "Tailwind",
+        "Node.js",
+        "ExpressJS",
+        "Postgres",
+      ],
+    },
     {
       name: "NavSumaro",
       description:
@@ -37,7 +55,7 @@ function RecentProjects() {
       link: "ehrvayn.vercel.app",
       code: "github.com/ehrvayn/Portfolio",
       image: PortfolioImg,
-      tech: ["Grok AI", "JavaScript", "React", "Tailwind"],
+      tech: ["Groq AI", "JavaScript", "React", "Tailwind"],
     },
     {
       name: "QuickNotes",
@@ -68,7 +86,6 @@ function RecentProjects() {
         <h2 className="text-lg flex items-center gap-2 md:text-xl font-semibold tracking-tight">
           <FaProjectDiagram /> Recent Projects
         </h2>
-
       </div>
 
       <div className="grid grid-cols-1 gap-6 auto-rows-max max-h-[750px] overflow-y-auto pr-2 custom-scrollbar">

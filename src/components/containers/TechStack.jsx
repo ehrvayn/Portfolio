@@ -12,6 +12,7 @@ import figmaImg from "../../assets/img/figma.png";
 import typescript from "../../assets/img/typescript.png";
 import postgres from "../../assets/img/postgres.png";
 import bootstrap from "../../assets/img/Bootstrap.png";
+import canva from "../../assets/img/CanvaLogo.png";
 
 function TechStack() {
   const { darkMode } = useDarkMode();
@@ -68,6 +69,7 @@ function TechStack() {
               { name: "GitHub", img: githubImg },
               { name: "VSCode", img: vscodeImg },
               { name: "Figma", img: figmaImg },
+              { name: "Canva", img: canva },
             ],
           },
         ].map((section, i) => (
