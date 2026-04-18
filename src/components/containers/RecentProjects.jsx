@@ -67,10 +67,10 @@ function RecentProjects() {
       tech: [
         "JavaScript",
         "React",
-        "Tailwind",
         "BootStrap",
         "Node.js",
         "MySQL",
+                "ExpressJS",
       ],
     },
   ];
