@@ -18,7 +18,7 @@ function RecentProjects() {
     {
       name: "InterviewSpark",
       description:
-"InterviewSpark is an AI-powered interview coaching platform that simulates real-world technical and behavioral interviews. Get instant AI-driven feedback on every answer with detailed scoring across 6 performance metrics: clarity, confidence, relevance, communication, conciseness, and technical depth. Track your progress with an analytics dashboard that visualizes your improvement over time, identifies skill gaps, and provides actionable insights. Perfect for job seekers preparing for interviews at top tech companies.",
+        "InterviewSpark is an AI-powered interview coaching platform that simulates real-world technical and behavioral interviews. Get instant AI-driven feedback on every answer with detailed scoring across 6 performance metrics: clarity, confidence, relevance, communication, conciseness, and technical depth. Track your progress with an analytics dashboard that visualizes your improvement over time, identifies skill gaps, and provides actionable insights. Perfect for job seekers preparing for interviews at top tech companies.",
       link: "interviewsparks.netlify.app",
       code: "github.com/ehrvayn/InterviewSpark",
       image: InterviewSparkImg,
@@ -70,7 +70,7 @@ function RecentProjects() {
         "BootStrap",
         "Node.js",
         "MySQL",
-                "ExpressJS",
+        "ExpressJS",
       ],
     },
   ];
