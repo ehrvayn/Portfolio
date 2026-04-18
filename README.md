@@ -1,4 +1,4 @@
-# Ehrvayn Rayven P. Olivera — Portfolio
+# Ehrvayn Rayven P. Olivera // Portfolio
 
 A personal portfolio website built with React, Vite, and Tailwind CSS. Features a clean, responsive design with dark mode support and an AI-powered chatbot.
 
