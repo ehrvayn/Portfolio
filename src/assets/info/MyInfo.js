@@ -51,36 +51,53 @@ Career:
 Technical Skills:
 Frontend:
 - HTML, CSS, JavaScript, TypeScript
-- React, Tailwind CSS, Bootstrap
+- React, React Native, Tailwind CSS, Bootstrap, Vite
 
 Backend:
 - Node.js, Express.js
-- MySQL, PostgreSQL
+- PostgreSQL, MySQL
+- JWT, bcrypt, OAuth
+
+Database & ORM:
+- PostgreSQL, MySQL
+- Prisma
 
 Mobile:
 - React Native
 
-Security:
-- JWT, bcrypt, OAuth
-
-Tools:
+Tools & Platform:
 - GitHub, VSCode, Figma
+- Google Cloud
+- Web Speech Recognition API
 
 Projects:
-1. NavSumaro — Integrated Academic Platform (Team Lead - CTO)
+1. InterviewSpark — AI-powered interview coaching platform
+   - Real-time AI feedback on interview answers
+   - 6-metric scoring system (clarity, confidence, relevance, communication, conciseness, technical depth)
+   - Features: Session recording, performance analytics, feedback reports
+   - Tech Stack: React 18, TypeScript, Tailwind CSS, Node.js, Express, PostgreSQL
+   - Payment Integration: PayMongo
+   - Status: Active Development
+   - Live: interviewing-spark.vercel.app
+
+2. NavSumaro — Integrated Academic Platform (Team Lead - CTO)
    - All-in-one student platform for universities
    - Features: Forums & Q&A, Messaging, Marketplace, Email verification
-   - Tech Stack: React, Node.js, PostgreSQL
+   - Tech Stack: React, Node.js, PostgreSQL, Prisma
    - Status: Completed (PACUCOA Level 2 Presentation)
    - Team: 7 members (CEO, CIO, CMO, CFO, CHRO, COO, CTO)
 
-2. QuickNotes — lightweight note-taking app
-   - myqnotes.vercel.app
-   - Tech: React, Tailwind CSS
+3. QuickNotes — lightweight note-taking app
+   - Fast and secure note management platform
+   - Clean REST API with JWT authentication
+   - Tech: React, TypeScript, Tailwind CSS, Node.js, Express, PostgreSQL
+   - Live: myqnotes.vercel.app
 
-3. Portfolio Website — personal portfolio
-   - ehrvayn-portfolio.vercel.app
+4. Portfolio Website — personal portfolio with AI assistant
+   - Custom chatbot powered by Groq's API
+   - Instant answers about tech stack and experience
    - Tech: React, Tailwind CSS
+   - Live: ehrvayn-portfolio.vercel.app
 
 Social:
 - GitHub: github.com/ehrvayn

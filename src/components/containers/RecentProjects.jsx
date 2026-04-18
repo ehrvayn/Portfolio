@@ -18,7 +18,7 @@ function RecentProjects() {
     {
       name: "InterviewSpark",
       description:
-        "An AI-powered interview preparation platform that simulates realistic technical and behavioral interviews. The platform utilizes AI to score every individual answer based on users performance, culminating in a comprehensive final feedback report and performance score at the end of each session. It features a comprehensive analytics dashboard to track performance metrics and session history",
+"InterviewSpark is an AI-powered interview coaching platform that simulates real-world technical and behavioral interviews. Get instant AI-driven feedback on every answer with detailed scoring across 6 performance metrics: clarity, confidence, relevance, communication, conciseness, and technical depth. Track your progress with an analytics dashboard that visualizes your improvement over time, identifies skill gaps, and provides actionable insights. Perfect for job seekers preparing for interviews at top tech companies.",
       link: "interviewsparks.netlify.app",
       code: "github.com/ehrvayn/InterviewSpark",
       image: InterviewSparkImg,
@@ -35,7 +35,7 @@ function RecentProjects() {
     {
       name: "NavSumaro",
       description:
-        "A unified student ecosystem designed to eliminate fragmented campus tools. Built a secure marketplace, academic collaboration hub, and research grouping system authenticated via institutional email.",
+        "NavSumaro is the all-in-one student platform that replaces multiple fragmented campus tools. Access a verified academic Q&A forum, secure peer-to-peer marketplace for textbooks and supplies, and built-in collaboration tools all powered by institutional email verification for trust and safety. Connect with real classmates, buy and sell with confidence, and get academic help from verified students in your university community.",
       link: "navsumaro.vercel.app",
       code: "github.com/ehrvayn/navSumaro",
       image: NavsumaroImg,
@@ -51,7 +51,7 @@ function RecentProjects() {
     {
       name: "My Portfolio",
       description:
-        "I built this simple portfolio to showcase my skills that has a custom Grok AI assistant that answers questions about my tech stack and experience in real-time.",
+        "QuickNotes is my first full-stack application—a fast, secure note management platform. I built a clean REST API with robust authentication and a responsive user interface, focusing on performance and simplicity so users can capture and organize ideas without friction.",
       link: "ehrvayn.vercel.app",
       code: "github.com/ehrvayn/Portfolio",
       image: PortfolioImg,
