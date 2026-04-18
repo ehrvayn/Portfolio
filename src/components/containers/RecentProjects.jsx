@@ -51,7 +51,7 @@ function RecentProjects() {
     {
       name: "My Portfolio",
       description:
-        "QuickNotes is my first full-stack application—a fast, secure note management platform. I built a clean REST API with robust authentication and a responsive user interface, focusing on performance and simplicity so users can capture and organize ideas without friction.",
+        "QuickNotes is my first full-stack application a fast, secure note management platform. I built a clean REST API with robust authentication and a responsive user interface, focusing on performance and simplicity so users can capture and organize ideas without friction.",
       link: "ehrvayn.vercel.app",
       code: "github.com/ehrvayn/Portfolio",
       image: PortfolioImg,
