@@ -19,16 +19,39 @@ function TechStack() {
 
   return (
     <div
-      className={`shadow-[0_0_6px_rgba(0,0,0,0.25)] h-[420px] p-6 rounded-sm flex flex-col ${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"}`}
+      className={`p-6 rounded-md overflow-hidden backdrop-blur-sm border flex flex-col ${
+        darkMode
+          ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+      }`}
     >
-      <div className="flex items-center gap-2 mb-4 shrink-0">
-        <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
-        <strong className="text-base tracking-tight">
-          <i className="bi bi-gear-fill mr-1" /> Tech Stack
-        </strong>
+      <div className="flex flex-col gap-4 shrink-0 mb-3">
+        <div>
+          <div className="flex items-center gap-3 mb-1">
+            <div
+              className={`w-2 h-2 rounded-full ${
+                darkMode ? "bg-orange-400" : "bg-orange-500"
+              }`}
+            />
+            <h2
+              className={`text-lg font-bold tracking-tight ${
+                darkMode ? "text-white" : "text-black"
+              }`}
+            >
+              Tech Stack
+            </h2>
+          </div>
+          <p
+            className={`text-xs tracking-widest uppercase font-mono ${
+              darkMode ? "text-gray-500" : "text-gray-600"
+            }`}
+          >
+            Technologies I Use
+          </p>
+        </div>
       </div>
 
-      <div className="flex flex-col gap-4 overflow-y-auto pr-1">
+      <div className="flex flex-col gap-3 overflow-y-auto max-h-[300px] custom-scroll pr-2">
         {[
           {
             label: "Frontend",
@@ -63,7 +86,7 @@ function TechStack() {
               { name: "OAuth", img: null },
             ],
           },
-                    {
+          {
             label: "Tools",
             techs: [
               { name: "GitHub", img: githubImg },
@@ -76,27 +99,35 @@ function TechStack() {
           <div key={i}>
             <div className="flex items-center gap-2 mb-2">
               <span
-                className={`text-[10px] uppercase tracking-[0.15em] font-mono font-semibold bg-gradient-to-r from-red-500 to-gray-500 bg-clip-text text-transparent`}
+                className={`text-[9px] uppercase tracking-[0.15em] font-mono font-semibold bg-gradient-to-r ${
+                  darkMode
+                    ? "from-orange-400 to-pink-400"
+                    : "from-orange-500 to-pink-500"
+                } bg-clip-text text-transparent`}
               >
                 {section.label}
               </span>
               <div
-                className={`flex-1 h-[1px] bg-gradient-to-r from-red-500 to-gray-500 opacity-20`}
+                className={`flex-1 h-[1px] bg-gradient-to-r ${
+                  darkMode
+                    ? "from-orange-400 to-pink-400"
+                    : "from-orange-500 to-pink-500"
+                } opacity-20`}
               />
             </div>
 
-            <div className="flex flex-wrap gap-2 pb-2">
+            <div className="flex flex-wrap gap-1.5">
               {section.techs.map((tech, index) => (
                 <span
                   key={index}
-                  className={`rounded-lg px-3 py-1.5 text-sm flex items-center gap-1.5 transition-all duration-200 ${
+                  className={`rounded px-2 py-1 text-xs flex items-center gap-1 ${
                     darkMode
-                      ? "bg-[#2e2e2e] hover:bg-[#3a3a3a] border border-[#3e3e3e]"
-                      : "bg-gray-50 hover:bg-gray-100 shadow-[0_0_3px_rgba(0,0,0,0.15)] border border-gray-100"
+                      ? "bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-gray-200"
+                      : "bg-orange-50 hover:bg-orange-100 border border-orange-200 text-gray-800"
                   }`}
                 >
                   {tech.img && (
-                    <img src={tech.img} className="w-4 h-4 object-contain" />
+                    <img src={tech.img} className="w-3 h-3 object-contain" />
                   )}
                   {tech.name}
                 </span>

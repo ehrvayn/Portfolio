@@ -5,12 +5,12 @@ import Experience from "../containers/Experience";
 
 function Container2() {
   return (
-    <div className="container2 grid grid-cols-1 lg:grid-cols-[35%_65%] gap-5 items-stretch">
-      <div className="flex flex-col gap-5 h-full">
+    <div className="container2 grid grid-cols-1 lg:grid-cols-[35%_65%] gap-4">
+      <div className="flex flex-col gap-4">
         <Experience />
-        <Education className="flex-1" />
+        <Education />
       </div>
-      <div className="flex flex-col gap-5 ">
+      <div className="flex flex-col gap-4">
         <About />
         <TechStack />
       </div>

@@ -7,10 +7,6 @@ function Container3() {
       <div>
         <RecentProjects />
       </div>
-
-      {/* <div>
-        <Certifications />
-      </div> */}
     </div>
   );
 }

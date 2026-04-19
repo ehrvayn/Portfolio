@@ -1,5 +1,4 @@
 import { useDarkMode } from "../../context/DarkmodeProvider";
-// import Avatar from "./Avatar";
 
 function Contact() {
   const { darkMode } = useDarkMode();
@@ -34,90 +33,141 @@ function Contact() {
     },
   ];
 
-  const innerCard = `${darkMode ? "bg-[#2e2e2e] border border-[#3e3e3e]" : "bg-gray-50 border border-gray-100 shadow-[0_0_3px_rgba(0,0,0,0.08)]"} p-3 rounded-lg text-sm`;
-
-  const SectionHeader = ({ label }) => (
-    <div className="flex items-center gap-2 mb-1">
-      <div className="w-[4px] h-5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
-      <strong className="text-base tracking-tight">{label}</strong>
-    </div>
-  );
-
   return (
     <div
-      className={`${darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"} w-full h-full shadow-[0_0_6px_rgba(0,0,0,0.25)] p-4 md:p-6 rounded-sm flex flex-col md:flex-row gap-4 md:gap-5`}
+      className={`w-full p-6 rounded-md backdrop-blur-sm border flex flex-col gap-5 ${
+        darkMode
+          ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+      }`}
     >
-      {/* <div className="mb-16 md:mb-0">
-        <Avatar />
-      </div> */}
-
-      <div className="flex-1 flex flex-col gap-3">
-        <SectionHeader label="Find me on" />
-        {socialLinks.map((link, index) => (
-          <a
-            key={index}
-            href={link.url}
-            target="_blank"
-            rel="noreferrer"
-            className={`${innerCard} flex items-center justify-between ${
-              darkMode
-                ? "bg-[#2e2e2e] border border-[#3e3e3e] hover:border-red-500"
-                : "bg-gray-50 border border-gray-200 hover:border-red-300"
-            }`}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <div className="flex items-center gap-3 w-full">
-              <i
-                className={`bi ${link.icon} text-lg shrink-0 ${darkMode ? "text-white" : "text-black"}`}
+      <div className="flex flex-col gap-4 md:gap-5 md:flex-row">
+        <div className="flex-1 flex flex-col gap-3">
+          <div>
+            <div className="flex items-center gap-3 mb-1">
+              <div
+                className={`w-2 h-2 rounded-full ${
+                  darkMode ? "bg-pink-400" : "bg-pink-500"
+                }`}
               />
-              <div className="flex items-center justify-between w-full gap-2">
-                <p className="text-sm font-semibold shrink-0">{link.name}</p>
-                <div
-                  className={`flex-1 h-[1px] ${darkMode ? "bg-[#3e3e3e]" : "bg-gray-200"}`}
-                />
-              </div>
+              <h2
+                className={`text-lg font-bold tracking-tight ${
+                  darkMode ? "text-white" : "text-black"
+                }`}
+              >
+                Find me on
+              </h2>
             </div>
-            <i className="bi bi-chevron-right text-gray-400 text-xs ml-2 shrink-0" />
-          </a>
-        ))}
-      </div>
+            <p
+              className={`text-xs tracking-widest uppercase font-mono ${
+                darkMode ? "text-gray-500" : "text-gray-600"
+              }`}
+            >
+              Social Links
+            </p>
+          </div>
 
-      <div className="flex-1 flex flex-col gap-3">
-        <SectionHeader label="Get in touch" />
-        {quickContacts.map((contact, index) => (
-          <a
-            key={index}
-            href={contact.url}
-            target="_blank"
-            rel="noreferrer"
-            className={`${innerCard} flex items-center justify-between ${
-              darkMode
-                ? "bg-[#2e2e2e] border border-[#3e3e3e] hover:border-red-500"
-                : "bg-gray-50 border border-gray-200 hover:border-red-300"
-            }`}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <div className="flex items-center gap-3 w-full">
-              <i
-                className={`bi ${contact.icon} text-lg shrink-0 ${darkMode ? "text-white" : "text-black"}`}
-              />
-              <div className="flex items-center justify-between w-full gap-2">
-                <p className="text-sm font-semibold shrink-0">
-                  {contact.label}
-                </p>
-                <div
-                  className={`flex-1 h-[1px] ${darkMode ? "bg-[#3e3e3e]" : "bg-gray-200"}`}
+          {socialLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className={`p-3 py-4 rounded-lg  flex items-center justify-between ${
+                darkMode
+                  ? "bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-500/60"
+                  : "bg-cyan-50 border border-cyan-200 hover:border-cyan-300"
+              }`}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <div className="flex items-center gap-3">
+                <i
+                  className={`bi ${link.icon} text-lg shrink-0 ${
+                    darkMode ? "text-pink-400" : "text-pink-600"
+                  }`}
                 />
                 <p
-                  className={`text-[11px] font-mono shrink-0 ${darkMode ? "text-gray-400" : "text-gray-500"}`}
+                  className={`text-sm font-semibold ${
+                    darkMode ? "text-white" : "text-black"
+                  }`}
                 >
-                  {contact.sub}
+                  {link.name}
                 </p>
               </div>
+              <i
+                className={`bi bi-arrow-up-right text-xs ${darkMode ? "text-gray-500" : "text-gray-400"}`}
+              />
+            </a>
+          ))}
+        </div>
+
+        <div className="flex-1 flex flex-col gap-3">
+          <div>
+            <div className="flex items-center gap-3 mb-1">
+              <div
+                className={`w-2 h-2 rounded-full ${
+                  darkMode ? "bg-cyan-400" : "bg-cyan-500"
+                }`}
+              />
+              <h2
+                className={`text-lg font-bold tracking-tight ${
+                  darkMode ? "text-white" : "text-black"
+                }`}
+              >
+                Get in touch
+              </h2>
             </div>
-            <i className="bi bi-chevron-right text-gray-400 text-xs ml-2 shrink-0" />
-          </a>
-        ))}
+            <p
+              className={`text-xs tracking-widest uppercase font-mono ${
+                darkMode ? "text-gray-500" : "text-gray-600"
+              }`}
+            >
+              Quick Contact
+            </p>
+          </div>
+
+          {quickContacts.map((contact, index) => (
+            <a
+              key={index}
+              href={contact.url}
+              target="_blank"
+              rel="noreferrer"
+              className={`p-3 rounded-lg flex items-center justify-between ${
+                darkMode
+                  ? "bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-500/60"
+                  : "bg-cyan-50 border border-cyan-200 hover:border-cyan-300"
+              }`}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <div className="flex items-center gap-3 min-w-0">
+                <i
+                  className={`bi ${contact.icon} text-lg shrink-0 ${
+                    darkMode ? "text-cyan-400" : "text-cyan-600"
+                  }`}
+                />
+                <div className="flex flex-col min-w-0">
+                  <p
+                    className={`text-sm font-semibold ${
+                      darkMode ? "text-white" : "text-black"
+                    }`}
+                  >
+                    {contact.label}
+                  </p>
+                  <p
+                    className={`text-xs font-mono truncate ${
+                      darkMode ? "text-gray-400" : "text-gray-500"
+                    }`}
+                  >
+                    {contact.sub}
+                  </p>
+                </div>
+              </div>
+              <i
+                className={`bi bi-arrow-up-right text-xs shrink-0 ml-2 ${darkMode ? "text-gray-500" : "text-gray-400"}`}
+              />
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

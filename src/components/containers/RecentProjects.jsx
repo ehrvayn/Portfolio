@@ -4,7 +4,6 @@ import NavsumaroImg from "../../assets/img/NavSumaroImg.png";
 import QuickNotesImg from "../../assets/img/QuickNotesImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
 import InterviewSparkImg from "../../assets/img/InterviewSparkImg.png";
-import { FaProjectDiagram } from "react-icons/fa";
 
 function RecentProjects() {
   const { darkMode } = useDarkMode();
@@ -18,7 +17,7 @@ function RecentProjects() {
     {
       name: "InterviewSpark",
       description:
-        "InterviewSpark is an AI-powered interview coaching platform that simulates real-world technical and behavioral interviews. Get instant AI-driven feedback on every answer with detailed scoring across 6 performance metrics: clarity, confidence, relevance, communication, conciseness, and technical depth. Track your progress with an analytics dashboard that visualizes your improvement over time, identifies skill gaps, and provides actionable insights. Perfect for job seekers preparing for interviews at top tech companies.",
+        "InterviewSpark is an AI-powered interview coaching platform that simulates real-world technical and behavioral interviews. Get instant AI-driven feedback on every answer with detailed scoring across 6 performance metrics: clarity, confidence, relevance, communication, conciseness, and technical depth. Track your progress with an analytics dashboard that visualizes your improvement over time, identifies skill gaps, and provides actionable insights.",
       link: "interviewsparks.netlify.app",
       code: "github.com/ehrvayn/InterviewSpark",
       image: InterviewSparkImg,
@@ -77,52 +76,73 @@ function RecentProjects() {
 
   return (
     <div
-      className={`${
-        darkMode ? "bg-[#1e1e1e] text-white" : "bg-white"
-      } shadow-[0_0_6px_rgba(0,0,0,0.25)] p-6 md:p-8 rounded-sm flex flex-col gap-6 md:gap-8`}
+      className={`p-6 rounded-md overflow-hidden backdrop-blur-sm border flex flex-col gap-5 ${
+        darkMode
+          ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+      }`}
     >
-      <div className="flex items-center gap-3">
-        <div className="w-1 h-6 rounded-full bg-gradient-to-b from-gray-300 to-gray-500" />
-        <h2 className="text-lg flex items-center gap-2 md:text-xl font-semibold tracking-tight">
-          <FaProjectDiagram /> Recent Projects
-        </h2>
+      <div>
+        <div className="flex items-center gap-3 mb-1">
+          <div
+            className={`w-2 h-2 rounded-full ${
+              darkMode ? "bg-red-400" : "bg-red-500"
+            }`}
+          />
+          <h2
+            className={`text-lg font-bold tracking-tight ${
+              darkMode ? "text-white" : "text-black"
+            }`}
+          >
+            Recent Projects
+          </h2>
+        </div>
+        <p
+          className={`text-xs tracking-widest uppercase font-mono ${
+            darkMode ? "text-gray-500" : "text-gray-600"
+          }`}
+        >
+          Featured Work
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 auto-rows-max max-h-[750px] overflow-y-auto pr-2 custom-scrollbar">
+      <div className="grid grid-cols-1 gap-4 max-h-[750px] overflow-y-auto pr-2">
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`relative rounded-md overflow-hidden transition-all duration-300 cursor-pointer ${
+            className={`relative rounded-lg overflow-hidden cursor-pointer border ${
               darkMode
-                ? "bg-[#2e2e2e] border border-[#3e3e3e] hover:border-red-500"
-                : "bg-gray-50 border border-gray-200 hover:border-red-300"
+                ? "bg-[#1a1a1a] border-gray-700 hover:border-red-500/50"
+                : "bg-gray-50 border-gray-200 hover:border-red-300"
             }`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <div className="flex flex-col lg:flex-row gap-0 lg:items-center">
+            <div className="flex flex-col lg:flex-row gap-0">
               <div
-                className={`w-full lg:w-[450px] h-[320px] md:h-[350px] flex-shrink-0 overflow-hidden bg-black/5 ${darkMode && "bg-black/20"} flex items-center justify-center`}
+                className={`lg:w-90 w-full p-5 flex-shrink-0 overflow-hidden ${
+                  darkMode ? "bg-black/30" : "bg-gray-100"
+                } flex items-center justify-center`}
               >
                 <img
                   src={project.image}
                   alt={project.name}
-                  className={`h-100 object-contain transition-transform pl-2 duration-500 mt-[-50px] ${
-                    hoveredIndex === index ? "scale-105" : "scale-100"
+                  className={`lg:h-full sm:h-70 h-40 object-cover ${
+                    hoveredIndex === index ? "scale-110" : "scale-100"
                   }`}
                   onError={handleImageError}
                 />
               </div>
 
-              <div className="flex flex-col gap-4 p-6 flex-1">
+              <div className="flex flex-col gap-3 p-5 flex-1">
                 <div>
-                  <div className="flex items-center gap-3">
-                    <h3 className="text-lg md:text-xl font-bold mb-2 bg-gradient-to-r from-red-500 to-gray-400 bg-clip-text text-transparent">
-                      {project.name}
-                    </h3>
-                  </div>
+                  <h3
+                    className={`text-lg font-bold mb-2 bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent`}
+                  >
+                    {project.name}
+                  </h3>
                   <p
-                    className={`text-sm md:text-base text-justify leading-relaxed ${
+                    className={`text-sm leading-relaxed line-clamp-3 ${
                       darkMode ? "text-gray-400" : "text-gray-600"
                     }`}
                   >
@@ -134,10 +154,10 @@ function RecentProjects() {
                   {project.tech?.map((tech, i) => (
                     <span
                       key={i}
-                      className={`text-xs px-3 py-1 rounded-md font-medium ${
+                      className={`text-xs px-2.5 py-1 rounded font-medium ${
                         darkMode
-                          ? "bg-white/5 text-gray-300 border border-white/10"
-                          : "bg-gray-200 text-gray-700"
+                          ? "bg-red-500/10 text-red-300 border border-red-500/30"
+                          : "bg-red-100 text-red-700 border border-red-200"
                       }`}
                     >
                       {tech}
@@ -145,29 +165,45 @@ function RecentProjects() {
                   ))}
                 </div>
 
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-4 items-center pt-2">
                   {project.link && (
                     <a
                       href={`https://${project.link}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-violet-500 hover:underline mt-2"
+                      className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors ${
+                        darkMode
+                          ? "text-red-400 hover:text-red-300"
+                          : "text-red-600 hover:text-red-700"
+                      }`}
                     >
-                      <span>View Project</span>
+                      View Project
                       <i className="bi bi-arrow-up-right text-xs" />
                     </a>
                   )}
-                  <span className="text-gray-500 text-[20px]">|</span>
                   {project.code && (
-                    <a
-                      href={`https://${project.code}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-violet-500 hover:underline mt-2"
-                    >
-                      <span>View Code</span>
-                      <i className="bi bi-arrow-up-right text-xs" />
-                    </a>
+                    <>
+                      <span
+                        className={`${
+                          darkMode ? "text-gray-600" : "text-gray-400"
+                        }`}
+                      >
+                        |
+                      </span>
+                      <a
+                        href={`https://${project.code}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors ${
+                          darkMode
+                            ? "text-red-400 hover:text-red-300"
+                            : "text-red-600 hover:text-red-700"
+                        }`}
+                      >
+                        View Code
+                        <i className="bi bi-arrow-up-right text-xs" />
+                      </a>
+                    </>
                   )}
                 </div>
               </div>

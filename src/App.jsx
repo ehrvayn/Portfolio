@@ -21,11 +21,25 @@ function App() {
   return (
     <>
       <div
-        className={`${darkMode ? "bg-[#111111] text-white" : "bg-gray-50"} w-full h-full gap-5 flex flex-col px-3 md:px-[100px] lg:px-[130px] xl:px-[150px] py-6 md:py-8 lg:py-10`}
+        className={`${darkMode ? "bg-[#111111] text-white" : "bg-gray-50"} transition-colors duration-500 w-full h-full gap-5 flex flex-col px-1 md:px-[100px] lg:px-[130px] xl:px-[150px] py-6 md:py-8 lg:py-10`}
       >
         <Container1 />
         <Container2 />
+        <div className="flex items-center w-full max-w-5xl mx-auto opacity-80">
+          <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-orange-500/50" />
+          <span className="px-4 text-[8px] lg:text-[10px] font-mono tracking-[0.4em] uppercase whitespace-nowrap text-orange-500">
+            ITERATE. BUILD. DEPLOY.
+          </span>
+          <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-orange-500/50" />
+        </div>
         <Container3 />
+        <div className="flex items-center w-full max-w-5xl mx-auto opacity-80">
+          <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-orange-500/50" />
+          <span className="px-4 text-[8px] lg:text-[10px] font-mono tracking-[0.4em] uppercase whitespace-nowrap text-orange-500">
+            RECOGNITION | SOCIALS
+          </span>
+          <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-orange-500/50" />
+        </div>
         <Container4 />
         <ChatBot />
 
