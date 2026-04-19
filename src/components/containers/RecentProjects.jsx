@@ -127,7 +127,7 @@ function RecentProjects() {
                 <img
                   src={project.image}
                   alt={project.name}
-                  className={`lg:h-full sm:h-70 h-40 object-cover ${
+                  className={`lg:h-full sm:h-70 h-40 object-cover transition-transform duration-500 ${
                     hoveredIndex === index ? "scale-110" : "scale-100"
                   }`}
                   onError={handleImageError}
