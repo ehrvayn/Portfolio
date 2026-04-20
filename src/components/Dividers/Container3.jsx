@@ -3,7 +3,7 @@ import Certifications from "../containers/Certifications";
 
 function Container3() {
   return (
-    <div className="flex flex-col lg:mr-[-20px] mr-[0px] gap-5">
+    <div className="flex flex-col gap-5">
       <div>
         <RecentProjects />
       </div>

@@ -127,7 +127,6 @@ function RecentProjects() {
                 <img
                   src={project.image}
                   alt={project.name}
-                  /* Changed object-cover to object-contain and ensured h-full is consistent */
                   className={`w-full h-full object-contain transition-transform duration-500 ${
                     hoveredIndex === index ? "scale-110" : "scale-100"
                   }`}
