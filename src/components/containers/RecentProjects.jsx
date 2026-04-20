@@ -106,7 +106,7 @@ function RecentProjects() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 max-h-[750px] overflow-y-auto pr-2">
+      <div className="grid grid-cols-1 gap-4 max-h-[750px] overflow-y-auto custom-scroll">
         {projects.map((project, index) => (
           <div
             key={index}
