@@ -13,7 +13,7 @@ function RecentProjects() {
     {
       name: "InterviewSpark",
       description:
-        "InterviewSpark is an AI-powered interview coaching platform that simulates real-world technical and behavioral interviews.",
+        "InterviewSpark is an AI-powered interview coaching platform that simulates real-world technical and behavioral interviews. Get instant AI-driven feedback on every answer with detailed scoring across 6 performance metrics: clarity, confidence, relevance, communication, conciseness, and technical depth. Track your progress with an analytics dashboard that visualizes your improvement over time, identifies skill gaps, and provides actionable insights. Perfect for job seekers preparing for interviews at top tech companies.",
       link: "interviewsparks.netlify.app",
       code: "github.com/ehrvayn/InterviewSpark",
       image: InterviewSparkImg,
@@ -30,7 +30,7 @@ function RecentProjects() {
     {
       name: "NavSumaro",
       description:
-        "NavSumaro is the all-in-one student platform that replaces multiple fragmented campus tools.",
+        "NavSumaro is the all-in-one student platform that replaces multiple fragmented campus tools. Access a verified academic Q&A forum, secure peer-to-peer marketplace for textbooks and supplies, and built-in collaboration tools all powered by institutional email verification for trust and safety. Connect with real classmates, buy and sell with confidence, and get academic help from verified students in your university community.",
       link: "navsumaro.vercel.app",
       code: "github.com/ehrvayn/navSumaro",
       image: NavsumaroImg,
@@ -46,7 +46,7 @@ function RecentProjects() {
     {
       name: "My Portfolio",
       description:
-        "QuickNotes is my first full-stack application a fast, secure note management platform.",
+        "My Portfolio showcases my full-stack development work with a clean, responsive design highlighting my projects, certifications, and technical skills. It features an AI-powered chatbot built with Groq API integration, demonstrating my ability to create engaging interfaces and implement advanced technologies.",
       link: "ehrvayn.vercel.app",
       code: "github.com/ehrvayn/Portfolio",
       image: PortfolioImg,
@@ -55,7 +55,7 @@ function RecentProjects() {
     {
       name: "QuickNotes",
       description:
-        "This is my first full-stack application, designed to provide a fast and reliable way to manage daily notes.",
+        "QuickNotes is my first full-stack application a fast, secure note management platform. I built a clean REST API with robust authentication and a responsive user interface, focusing on performance and simplicity so users can capture and organize ideas without friction.",
       link: "qcknotes.vercel.app",
       code: "github.com/ehrvayn/QuickNotes",
       image: QuickNotesImg,
@@ -72,7 +72,7 @@ function RecentProjects() {
 
   return (
     <section
-      className={`w-full rounded-lg backdrop-blur-sm border flex flex-col gap-6 p-6 ${
+      className={`w-full rounded-lg backdrop-blur-sm border flex flex-col gap-6 px-2 sm:px-6 py-6 ${
         darkMode
           ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
           : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
@@ -100,24 +100,24 @@ function RecentProjects() {
         {projects.map((project, index) => (
           <article
             key={index}
-            className={`rounded-lg border p-5 transition-all duration-200 cursor-pointer ${
+            className={`rounded-lg border p-5 transition-all duration-200 ${
               darkMode
-                ? "bg-[#1a1a1a] border-gray-700 hover:border-red-500/50"
-                : "bg-gray-50 border-gray-200 hover:border-red-300"
+                ? "bg-[#1a1a1a] border-gray-700 hover:border-orange-500/50"
+                : "bg-gray-50 border-gray-200 hover:border-orange-300"
             }`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col lg:flex-row gap-4">
               <div
-                className={`w-full md:w-64 h-48 rounded flex-shrink-0 overflow-hidden ${
+                className={`w-full lg:w-100 h-70 p-3 rounded flex-shrink-0 overflow-hidden ${
                   darkMode ? "bg-black/30" : "bg-gray-100"
                 } flex items-center justify-center`}
               >
                 <img
                   src={project.image}
                   alt={project.name}
-                  className={`w-full h-full object-contain transition-transform duration-500 ${
+                  className={`h-full object-contain transition-transform duration-500 ${
                     hoveredIndex === index ? "scale-110" : "scale-100"
                   }`}
                   onError={(e) => (e.target.style.display = "none")}
@@ -126,7 +126,7 @@ function RecentProjects() {
 
               <div className="flex flex-col gap-3 flex-1">
                 <div>
-                  <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">
+                  <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-400/70 to-orange-400/70 bg-clip-text text-transparent">
                     {project.name}
                   </h3>
                   <p
@@ -142,8 +142,8 @@ function RecentProjects() {
                       key={i}
                       className={`text-xs px-2.5 py-1 rounded font-medium ${
                         darkMode
-                          ? "bg-red-500/10 text-red-300 border border-red-500/30"
-                          : "bg-red-100 text-red-700 border border-red-200"
+                      ? "bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-gray-200"
+                      : "bg-orange-50 hover:bg-orange-100 border border-orange-200 text-gray-800"
                       }`}
                     >
                       {tech}
@@ -159,8 +159,8 @@ function RecentProjects() {
                       rel="noreferrer"
                       className={`font-semibold transition-colors ${
                         darkMode
-                          ? "text-red-400 hover:text-red-300"
-                          : "text-red-600 hover:text-red-700"
+                          ? "text-orange-400/70 hover:text-orange-300/70"
+                          : "text-orange-600/70 hover:text-orange-700/70"
                       }`}
                     >
                       View Project <i className="bi bi-arrow-up-right ml-1" />
@@ -179,8 +179,8 @@ function RecentProjects() {
                         rel="noreferrer"
                         className={`font-semibold transition-colors ${
                           darkMode
-                            ? "text-red-400 hover:text-red-300"
-                            : "text-red-600 hover:text-red-700"
+                            ? "text-orange-400/70 hover:text-orange-300/70"
+                            : "text-orange-600/70 hover:text-orange-700/70"
                         }`}
                       >
                         View Code <i className="bi bi-arrow-up-right ml-1" />

@@ -25,7 +25,7 @@ function Education() {
           : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
-      <div className="flex flex-col gap-4">
+      <div className="flex  h-full flex-col gap-4">
         <div className="shrink-0">
           <div className="flex items-center gap-3 mb-1">
             <div
@@ -50,7 +50,7 @@ function Education() {
           </p>
         </div>
 
-        <div className="flex flex-col px-1 overflow-y-auto custom-scroll">
+        <div className="flex flex-col  h-full justify-between px-1 overflow-y-auto custom-scroll">
           <div className="flex gap-3 relative">
             <div className="flex flex-col items-center">
               <div
@@ -97,10 +97,14 @@ function Education() {
             <div key={index} className="flex gap-3 relative">
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-3 h-3 rounded-full mt-4 ring-3${
-                    darkMode
-                      ? "bg-gray-700 ring-gray-700/30"
-                      : "bg-gray-300 ring-gray-300/30"
+                  className={`w-3 h-3 rounded-full mt-4 ring-2 ${
+                    item.active
+                      ? darkMode
+                        ? "bg-blue-400 ring-orange-400/30"
+                        : "bg-blue-500 ring-blue-500/30"
+                      : darkMode
+                        ? " ring-gray-700/30"
+                        : " ring-gray-300/30"
                   }`}
                 />
                 {index !== data.length - 1 && (

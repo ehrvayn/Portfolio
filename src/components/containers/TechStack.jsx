@@ -25,7 +25,7 @@ function TechStack() {
           : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
-      <div className="flex flex-col gap-4 shrink-0 mb-3">
+      <div className="flex flex-col mb-0 md:mb-[43px] gap-4 shrink-0 mb-3">
         <div>
           <div className="flex items-center gap-3 mb-1">
             <div

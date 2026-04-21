@@ -106,14 +106,14 @@ function Experience() {
                   {item.title && (
                     <>
                       <div
-                        className={`w-3 h-3 rounded-full mt-4 ring-3 ${
+                        className={`w-3 h-3 rounded-full mt-4 ring-2 ${
                           item.active
                             ? darkMode
-                              ? "bg-blue-400 ring-blue-400/30"
+                              ? "bg-blue-400 ring-orange-400/30"
                               : "bg-blue-500 ring-blue-500/30"
                             : darkMode
-                              ? "bg-gray-700 ring-gray-700/30"
-                              : "bg-gray-300 ring-gray-300/30"
+                              ? " ring-gray-700/30"
+                              : " ring-gray-300/30"
                         }`}
                       />
                       {index !== experiences.length - 1 && (
