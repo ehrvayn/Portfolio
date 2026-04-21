@@ -7,7 +7,7 @@ function Container4() {
       <div className="flex-1">
         <Certifications />
       </div>
-      <div className="flex-1 lg:mr-[-20px] mx-0">
+      <div className="flex-1 mx-0">
         <Contact />
       </div>
     </div>

@@ -96,7 +96,7 @@ function RecentProjects() {
         </p>
       </header>
 
-      <div className="space-y-4 h-auto">
+      <div className="space-y-4 h-[800px] overflow-y-auto">
         {projects.map((project, index) => (
           <article
             key={index}

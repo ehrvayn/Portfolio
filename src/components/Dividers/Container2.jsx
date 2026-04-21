@@ -10,7 +10,7 @@ function Container2() {
         <Experience />
         <Education />
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col w-[98.4%] gap-4">
         <About />
         <TechStack />
       </div>

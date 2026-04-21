@@ -2,7 +2,7 @@ import RecentProjects from "../containers/RecentProjects";
 
 function Container3() {
   return (
-    <div className="w-full flex flex-col gap-5">
+    <div className="w-full flex mr-[-15px] flex-col gap-5">
       <RecentProjects />
     </div>
   );
