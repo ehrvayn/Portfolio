@@ -7,7 +7,7 @@ A personal portfolio website built with React, Vite, and Tailwind CSS. Features 
 - Dark mode toggle
 - AI chatbot powered by Groq (Llama 3.3 70B)
 - Project showcase
-- 
+
 ## 🛠️ Tech Stack
 - React (Vite)
 - Tailwind CSS
