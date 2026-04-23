@@ -93,7 +93,7 @@ function Container1() {
                   darkMode ? "text-gray-400" : "text-gray-600"
                 }`}
               >
-                Aspiring Full Stack & Mobile Developer
+                Aspiring Full Stack Web & Mobile Developer
               </p>
 
               <div
