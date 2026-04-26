@@ -4,12 +4,29 @@ import NavsumaroImg from "../../assets/img/NavSumaroImg.png";
 import QuickNotesImg from "../../assets/img/QuickNotesImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
 import InterviewSparkImg from "../../assets/img/InterviewSparkImg.png";
+import StartSmartImg from "../../assets/img/StartSmartImg.png";
 
 function RecentProjects() {
   const { darkMode } = useDarkMode();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const projects = [
+    {
+      name: "StartSmart",
+      description:
+        "StartSmart is an AI-powered business idea analyzer that breaks down any concept into a full viability report no sign-up needed. Just type your idea and instantly get a viability score, startup cost breakdown, launch timeline, market and risk assessment, and a legal compliance checklist. Plus, an AI chatbot that knows your idea and can answer any follow-up questions. Turn your idea into a roadmap in seconds.",
+      link: "startsmartgo.vercel.app",
+      code: "github.com/ehrvayn/StartSmart",
+      image: StartSmartImg,
+      tech: [
+        "Groq AI",
+        "TypeScript",
+        "React",
+        "Tailwind",
+        "Node.js",
+        "ExpressJS",
+      ],
+    },
     {
       name: "InterviewSpark",
       description:
@@ -142,8 +159,8 @@ function RecentProjects() {
                       key={i}
                       className={`text-xs px-2.5 py-1 rounded font-medium ${
                         darkMode
-                      ? "bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-gray-200"
-                      : "bg-orange-50 hover:bg-orange-100 border border-orange-200 text-gray-800"
+                          ? "bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-gray-200"
+                          : "bg-orange-50 hover:bg-orange-100 border border-orange-200 text-gray-800"
                       }`}
                     >
                       {tech}
