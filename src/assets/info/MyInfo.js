@@ -70,8 +70,15 @@ Tools & Platform:
 - Google Cloud
 - Web Speech Recognition API
 
-Projects:
-1. InterviewSpark — AI-powered interview coaching platform
+Projects: (latest is the highest number)
+5. StartSmart — AI-powered business idea analyzer
+   - Instant viability analysis with score, cost breakdown, timeline, and risk assessment
+   - AI chatbot powered by Groq's API with full business idea context
+   - Tech: React, Tailwind, Node.js, Express.js, Groq API, TypeScript
+   - Status: Completed
+   - Live: startsmartgo.vercel.app
+
+4. InterviewSpark — AI-powered interview coaching platform
    - Real-time AI feedback on interview answers
    - 6-metric scoring system (clarity, confidence, relevance, communication, conciseness, technical depth)
    - Features: Session recording, performance analytics, feedback reports
@@ -80,23 +87,23 @@ Projects:
    - Status: Active Development
    - Live: interviewing-spark.vercel.app
 
-2. NavSumaro — Integrated Academic Platform (Team Lead - CTO)
+3. NavSumaro — Integrated Academic Platform (Team Lead - CTO)
    - All-in-one student platform for universities
    - Features: Forums & Q&A, Messaging, Marketplace, Email verification
    - Tech Stack: React, Node.js, PostgreSQL, Prisma
    - Status: Completed (PACUCOA Level 2 Presentation)
    - Team: 7 members (CEO, CIO, CMO, CFO, CHRO, COO, CTO)
 
-3. QuickNotes — lightweight note-taking app
+2. QuickNotes — lightweight note-taking app
    - Fast and secure note management platform
    - Clean REST API with JWT authentication
    - Tech: React, TypeScript, Tailwind CSS, Node.js, Express, PostgreSQL
    - Live: myqnotes.vercel.app
 
-4. Portfolio Website — personal portfolio with AI assistant
+1. Portfolio Website — personal portfolio with AI assistant
    - Custom chatbot powered by Groq's API
    - Instant answers about tech stack and experience
-   - Tech: React, Tailwind CSS
+   - Tech: React, Tailwind CSS, groq API
    - Live: ehrvayn-portfolio.vercel.app
 
 Social:
