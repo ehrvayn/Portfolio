@@ -6,25 +6,25 @@ import PortfolioImg from "../../assets/img/PortfolioImg.png";
 import InterviewSparkImg from "../../assets/img/InterviewSparkImg.png";
 import StartSmartImg from "../../assets/img/StartSmartImg.png";
 
-function RecentProjects() {
+function FeaturedProjects() {
   const { darkMode } = useDarkMode();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const projects = [
     {
-      name: "StartSmart",
+      name: "NavSumaro",
       description:
-        "StartSmart is an AI-powered business idea analyzer that breaks down any concept into a full viability report no sign-up needed. Just type your idea and instantly get a viability score, startup cost breakdown, launch timeline, market and risk assessment, and a legal compliance checklist. Plus, an AI chatbot that knows your idea and can answer any follow-up questions. Turn your idea into a roadmap in seconds.",
-      link: "startsmartgo.vercel.app",
-      code: "github.com/ehrvayn/StartSmart",
-      image: StartSmartImg,
+        "NavSumaro is the all-in-one student platform that replaces multiple fragmented campus tools. Access a verified academic Q&A forum, secure peer-to-peer marketplace for textbooks and supplies, and built-in collaboration tools all powered by institutional email verification for trust and safety. Connect with real classmates, buy and sell with confidence, and get academic help from verified students in your university community.",
+      link: "navsumaro.vercel.app",
+      code: "github.com/ehrvayn/navSumaro",
+      image: NavsumaroImg,
       tech: [
-        "Groq AI",
         "TypeScript",
         "React",
         "Tailwind",
         "Node.js",
         "ExpressJS",
+        "Postgres",
       ],
     },
     {
@@ -45,19 +45,19 @@ function RecentProjects() {
       ],
     },
     {
-      name: "NavSumaro",
+      name: "StartSmart",
       description:
-        "NavSumaro is the all-in-one student platform that replaces multiple fragmented campus tools. Access a verified academic Q&A forum, secure peer-to-peer marketplace for textbooks and supplies, and built-in collaboration tools all powered by institutional email verification for trust and safety. Connect with real classmates, buy and sell with confidence, and get academic help from verified students in your university community.",
-      link: "navsumaro.vercel.app",
-      code: "github.com/ehrvayn/navSumaro",
-      image: NavsumaroImg,
+        "StartSmart is an AI-powered business idea analyzer that breaks down any concept into a full viability report no sign-up needed. Just type your idea and instantly get a viability score, startup cost breakdown, launch timeline, market and risk assessment, and a legal compliance checklist. Plus, an AI chatbot that knows your idea and can answer any follow-up questions. Turn your idea into a roadmap in seconds.",
+      link: "startsmartgo.vercel.app",
+      code: "github.com/ehrvayn/StartSmart",
+      image: StartSmartImg,
       tech: [
+        "Groq AI",
         "TypeScript",
         "React",
         "Tailwind",
         "Node.js",
         "ExpressJS",
-        "Postgres",
       ],
     },
     {
@@ -68,22 +68,6 @@ function RecentProjects() {
       code: "github.com/ehrvayn/Portfolio",
       image: PortfolioImg,
       tech: ["Groq AI", "JavaScript", "React", "Tailwind"],
-    },
-    {
-      name: "QuickNotes",
-      description:
-        "QuickNotes is my first full-stack application a fast, secure note management platform. I built a clean REST API with robust authentication and a responsive user interface, focusing on performance and simplicity so users can capture and organize ideas without friction.",
-      link: "qcknotes.vercel.app",
-      code: "github.com/ehrvayn/QuickNotes",
-      image: QuickNotesImg,
-      tech: [
-        "JavaScript",
-        "React",
-        "BootStrap",
-        "Node.js",
-        "MySQL",
-        "ExpressJS",
-      ],
     },
   ];
 
@@ -103,7 +87,7 @@ function RecentProjects() {
           <h2
             className={`text-lg font-bold tracking-tight ${darkMode ? "text-white" : "text-black"}`}
           >
-            Recent Projects
+            Featured Projects
           </h2>
         </div>
         <p
@@ -214,4 +198,4 @@ function RecentProjects() {
   );
 }
 
-export default RecentProjects;
+export default FeaturedProjects;
