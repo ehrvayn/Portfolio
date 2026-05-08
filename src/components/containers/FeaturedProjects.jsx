@@ -5,6 +5,7 @@ import QuickNotesImg from "../../assets/img/QuickNotesImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
 import InterviewSparkImg from "../../assets/img/InterviewSparkImg.png";
 import StartSmartImg from "../../assets/img/StartSmartImg.png";
+import { ChevronDown } from "lucide-react";
 
 function FeaturedProjects() {
   const { darkMode } = useDarkMode();
@@ -80,15 +81,41 @@ function FeaturedProjects() {
       }`}
     >
       <header>
-        <div className="flex items-center gap-3 mb-1">
-          <div
-            className={`w-2 h-2 rounded-full ${darkMode ? "bg-red-400" : "bg-red-500"}`}
-          />
-          <h2
-            className={`text-lg font-bold tracking-tight ${darkMode ? "text-white" : "text-black"}`}
-          >
-            Featured Projects
-          </h2>
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <div
+              className={`w-2 h-2 rounded-full ${darkMode ? "bg-red-400" : "bg-red-500"}`}
+            />
+            <h2
+              className={`text-lg font-bold tracking-tight ${darkMode ? "text-white" : "text-black"}`}
+            >
+              Featured Projects
+            </h2>
+          </div>
+          <div className="relative flex flex-col gap-1.5">
+            <div className="relative group">
+              <select
+                className="input-base w-full cursor-pointer rounded-md appearance-none bg-base-surface border-2 border-[#953E00] outline-none px-3 py-2 text-sm text-text-primary transition-all pr-10"
+                style={{ colorScheme: "dark" }}
+              >
+                <option
+                  value="volvo"
+                  className="text-black cursor-pointer"
+                >
+                  Full-stack
+                </option>
+                <option
+                  value="saab"
+                  className="text-black cursor-pointer"
+                >
+                  Front-end
+                </option>
+              </select>
+              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-text-muted group-hover:text-text-primary transition-colors">
+                <ChevronDown size={14} />
+              </div>
+            </div>
+          </div>
         </div>
         <p
           className={`text-xs tracking-widest uppercase font-mono ${darkMode ? "text-gray-500" : "text-gray-600"}`}

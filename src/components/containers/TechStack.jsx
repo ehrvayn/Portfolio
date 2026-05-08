@@ -79,6 +79,15 @@ function TechStack() {
             techs: [{ name: "React Native", img: reactImg }],
           },
           {
+            label: "Tools",
+            techs: [
+              { name: "GitHub", img: githubImg },
+              { name: "VSCode", img: vscodeImg },
+              { name: "Figma", img: figmaImg },
+              { name: "Canva", img: canva },
+            ],
+          },
+          {
             label: "Security",
             techs: [
               { name: "JWT", img: null },
@@ -87,12 +96,9 @@ function TechStack() {
             ],
           },
           {
-            label: "Tools",
+            label: "Cloud",
             techs: [
-              { name: "GitHub", img: githubImg },
-              { name: "VSCode", img: vscodeImg },
-              { name: "Figma", img: figmaImg },
-              { name: "Canva", img: canva },
+              { name: "GCP", img: null },
             ],
           },
         ].map((section, i) => (
