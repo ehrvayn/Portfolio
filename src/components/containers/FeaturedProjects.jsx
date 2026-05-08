@@ -93,7 +93,7 @@ function FeaturedProjects() {
         <p
           className={`text-xs tracking-widest uppercase font-mono ${darkMode ? "text-gray-500" : "text-gray-600"}`}
         >
-          Featured Work
+          Selected works
         </p>
       </header>
 
