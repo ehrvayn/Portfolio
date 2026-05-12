@@ -13,6 +13,7 @@ import typescript from "../../assets/img/typescript.png";
 import postgres from "../../assets/img/postgres.png";
 import bootstrap from "../../assets/img/Bootstrap.png";
 import canva from "../../assets/img/CanvaLogo.png";
+import nextLogo from "../../assets/img/NextLogo.png";
 
 function TechStack() {
   const { darkMode } = useDarkMode();
@@ -63,6 +64,7 @@ function TechStack() {
               { name: "React", img: reactImg },
               { name: "Tailwind", img: tailwindImg },
               { name: "Bootstrap", img: bootstrap },
+              { name: "Next.js", img: nextLogo },
             ],
           },
           {
@@ -97,9 +99,7 @@ function TechStack() {
           },
           {
             label: "Cloud",
-            techs: [
-              { name: "GCP", img: null },
-            ],
+            techs: [{ name: "GCP", img: null }],
           },
         ].map((section, i) => (
           <div key={i}>
