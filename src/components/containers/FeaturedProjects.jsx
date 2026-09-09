@@ -1,7 +1,7 @@
 import { useDarkMode } from "../../context/DarkmodeProvider";
 import { useState } from "react";
 import NavsumaroImg from "../../assets/img/NavSumaroImg.png";
-import QuickNotesImg from "../../assets/img/QuickNotesImg.png";
+import TechHubImg from "../../assets/img/TechHubImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
 import InterviewSparkImg from "../../assets/img/InterviewSparkImg.png";
 import StartSmartImg from "../../assets/img/StartSmartImg.png";
@@ -12,6 +12,15 @@ function FeaturedProjects() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const projects = [
+    {
+      name: "TechHub",
+      description:
+        "TechHub is a full end-to-end e-commerce architecture, built from the database schema up through a layered backend to a complete customer storefront and admin back office. Customers browse products, manage a cart, check out, track real-time order status, and leave verified purchase reviews. Admins get a live dashboard with revenue analytics, order and inventory management, customer insights, and sales reports, all backed by real-time notifications via server-sent events. Authentication runs through Auth0 with role-based access control separating customer and admin experiences across every layer of the stack.",
+      link: "techhub.vercel.app",
+      code: "github.com/ehrvayn/TechHub",
+      image: TechHubImg,
+      tech: ["TypeScript", "Next.js", "React", "Tailwind", "Postgres", "Auth0", "Groq AI"],
+    },
     {
       name: "NavSumaro",
       description:
@@ -98,16 +107,10 @@ function FeaturedProjects() {
                 className="input-base w-full cursor-pointer rounded-md appearance-none bg-base-surface border-2 border-[#953E00] outline-none px-3 py-2 text-sm text-text-primary transition-all pr-10"
                 style={{ colorScheme: "dark" }}
               >
-                <option
-                  value="volvo"
-                  className="text-black cursor-pointer"
-                >
+                <option value="volvo" className="text-black cursor-pointer">
                   Full-stack
                 </option>
-                <option
-                  value="saab"
-                  className="text-black cursor-pointer"
-                >
+                <option value="saab" className="text-black cursor-pointer">
                   Front-end
                 </option>
               </select>
