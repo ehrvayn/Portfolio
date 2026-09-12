@@ -19,20 +19,15 @@ function Education() {
 
   return (
     <div
-      className={`flex flex-col flex-1 p-6 rounded-md overflow-hidden backdrop-blur-sm border ${
+      className={`flex flex-col flex-1 p-6  overflow-hidden backdrop-blur-sm border ${
         darkMode
-          ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
-      <div className="flex  h-full flex-col gap-4">
+      <div className="flex h-full flex-col gap-4">
         <div className="shrink-0">
           <div className="flex items-center gap-3 mb-1">
-            <div
-              className={`w-2 h-2 rounded-full ${
-                darkMode ? "bg-emerald-400" : "bg-emerald-500"
-              }`}
-            />
             <h2
               className={`text-lg font-bold tracking-tight ${
                 darkMode ? "text-white" : "text-black"
@@ -50,23 +45,24 @@ function Education() {
           </p>
         </div>
 
-        <div className="flex flex-col  h-full justify-between px-1 overflow-y-auto custom-scroll">
-          <div className="flex gap-3 relative">
-            <div className="flex flex-col items-center">
+        <div className="relative flex flex-col h-full justify-between px-1 overflow-y-auto custom-scroll">
+          <div
+            className={`absolute left-[9px] top-7 bottom-4 w-0.5 ${
+              darkMode ? "bg-gray-700" : "bg-gray-300"
+            }`}
+          />
+
+          <div className="flex gap-3 relative pb-3">
+            <div className="shrink-0 pt-4">
               <div
-                className={`w-3 h-3 rounded-full mt-4 ring-3 ${
+                className={`relative z-10 w-3 h-3 rounded-full ring-2 ${
                   darkMode
-                    ? "bg-emerald-400 ring-emerald-400/30"
-                    : "bg-emerald-500 ring-emerald-500/30"
-                }`}
-              />
-              <div
-                className={`w-0.5 flex-1 mt-1 ${
-                  darkMode ? "bg-gray-700" : "bg-gray-300"
+                    ? "bg-orange-400/70 ring-orange-400/30"
+                    : "bg-orange-400/80 ring-gray-400"
                 }`}
               />
             </div>
-            <div className="flex justify-between w-full pb-3">
+            <div className="flex justify-between w-full">
               <div className="min-w-0">
                 <h3
                   className={`font-bold text-xs mb-0.5 ${
@@ -94,30 +90,26 @@ function Education() {
           </div>
 
           {data.map((item, index) => (
-            <div key={index} className="flex gap-3 relative">
-              <div className="flex flex-col items-center">
+            <div
+              key={index}
+              className={`flex gap-3 relative ${
+                index === data.length - 1 ? "pb-0" : "pb-3"
+              }`}
+            >
+              <div className="shrink-0 pt-4">
                 <div
-                  className={`w-3 h-3 rounded-full mt-4 ring-2 ${
+                  className={`relative z-10 w-3 h-3 rounded-full ring-2 ${
                     item.active
                       ? darkMode
                         ? "bg-blue-400 ring-orange-400/30"
                         : "bg-blue-500 ring-blue-500/30"
                       : darkMode
-                        ? " ring-gray-700/30"
-                        : " ring-gray-300/30"
+                        ? "bg-[#0f0f0f] ring-gray-700/90"
+                        : "bg-white ring-gray-300"
                   }`}
                 />
-                {index !== data.length - 1 && (
-                  <div
-                    className={`w-0.5 flex-1 mt-1 ${
-                      darkMode ? "bg-gray-700" : "bg-gray-300"
-                    }`}
-                  />
-                )}
               </div>
-              <div
-                className={`flex justify-between w-full ${index === data.length - 1 ? "pb-0" : "pb-3"}`}
-              >
+              <div className="flex justify-between w-full">
                 <div className="min-w-0">
                   <h3
                     className={`font-bold text-xs mb-0.5 ${

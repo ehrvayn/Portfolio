@@ -19,7 +19,15 @@ function FeaturedProjects() {
       link: "techhub.vercel.app",
       code: "github.com/ehrvayn/TechHub",
       image: TechHubImg,
-      tech: ["TypeScript", "Next.js", "React", "Tailwind", "Postgres", "Auth0", "Groq AI"],
+      tech: [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Tailwind",
+        "Postgres",
+        "Auth0",
+        "Groq AI",
+      ],
     },
     {
       name: "NavSumaro",
@@ -83,41 +91,20 @@ function FeaturedProjects() {
 
   return (
     <section
-      className={`w-full rounded-lg backdrop-blur-sm border flex flex-col gap-6 px-2 sm:px-6 py-6 ${
+      className={`w-full backdrop-blur-sm border flex flex-col gap-6 px-2 sm:px-6 py-6 ${
         darkMode
-          ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
       <header>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div
-              className={`w-2 h-2 rounded-full ${darkMode ? "bg-red-400" : "bg-red-500"}`}
-            />
             <h2
               className={`text-lg font-bold tracking-tight ${darkMode ? "text-white" : "text-black"}`}
             >
               Featured Projects
             </h2>
-          </div>
-          <div className="relative flex flex-col gap-1.5">
-            <div className="relative group">
-              <select
-                className="input-base w-full cursor-pointer rounded-md appearance-none bg-base-surface border-2 border-[#953E00] outline-none px-3 py-2 text-sm text-text-primary transition-all pr-10"
-                style={{ colorScheme: "dark" }}
-              >
-                <option value="volvo" className="text-black cursor-pointer">
-                  Full-stack
-                </option>
-                <option value="saab" className="text-black cursor-pointer">
-                  Front-end
-                </option>
-              </select>
-              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-text-muted group-hover:text-text-primary transition-colors">
-                <ChevronDown size={14} />
-              </div>
-            </div>
           </div>
         </div>
         <p
@@ -131,7 +118,7 @@ function FeaturedProjects() {
         {projects.map((project, index) => (
           <article
             key={index}
-            className={`rounded-lg border p-5 transition-all duration-200 ${
+            className={` border p-5 transition-all duration-200 ${
               darkMode
                 ? "bg-[#1a1a1a] border-gray-700 hover:border-orange-500/50"
                 : "bg-gray-50 border-gray-200 hover:border-orange-300"
@@ -171,7 +158,7 @@ function FeaturedProjects() {
                   {project.tech?.map((tech, i) => (
                     <span
                       key={i}
-                      className={`text-xs px-2.5 py-1 rounded font-medium ${
+                      className={`text-xs px-2.5 py-1 font-medium ${
                         darkMode
                           ? "bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-gray-200"
                           : "bg-orange-50 hover:bg-orange-100 border border-orange-200 text-gray-800"

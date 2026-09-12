@@ -20,20 +20,15 @@ function TechStack() {
 
   return (
     <div
-      className={`p-6 rounded-md overflow-hidden backdrop-blur-sm border flex flex-col ${
+      className={`p-6  overflow-hidden backdrop-blur-sm border flex flex-col ${
         darkMode
-          ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
       <div className="flex flex-col mb-0 md:mb-[43px] gap-4 shrink-0 mb-3">
         <div>
           <div className="flex items-center gap-3 mb-1">
-            <div
-              className={`w-2 h-2 rounded-full ${
-                darkMode ? "bg-orange-400" : "bg-orange-500"
-              }`}
-            />
             <h2
               className={`text-lg font-bold tracking-tight ${
                 darkMode ? "text-white" : "text-black"
@@ -96,7 +91,6 @@ function TechStack() {
               { name: "bcrypt", img: null },
               { name: "OAuth", img: null },
               { name: "Auth0", img: null },
-
             ],
           },
           {
@@ -107,19 +101,15 @@ function TechStack() {
           <div key={i}>
             <div className="flex items-center gap-2 mb-2">
               <span
-                className={`text-[9px] uppercase tracking-[0.15em] font-mono font-semibold bg-gradient-to-r ${
-                  darkMode
-                    ? "from-orange-400 to-pink-400"
-                    : "from-orange-500 to-pink-500"
-                } bg-clip-text text-transparent`}
+                className={`text-[9px] uppercase tracking-[0.15em] font-mono font-semibold ${
+                  darkMode ? "text-orange-400/60" : "text-orange-500/60"
+                }`}
               >
                 {section.label}
               </span>
               <div
-                className={`flex-1 h-[1px] bg-gradient-to-r ${
-                  darkMode
-                    ? "from-orange-400 to-pink-400"
-                    : "from-orange-500 to-pink-500"
+                className={`flex-1 h-[1px] ${
+                  darkMode ? "bg-orange-400/60" : "bg-orange-500/60"
                 } opacity-20`}
               />
             </div>
@@ -128,7 +118,7 @@ function TechStack() {
               {section.techs.map((tech, index) => (
                 <span
                   key={index}
-                  className={`rounded px-2 py-1 text-xs flex items-center gap-1 ${
+                  className={` px-2 py-1 text-xs flex items-center gap-1 ${
                     darkMode
                       ? "bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-gray-200"
                       : "bg-orange-50 hover:bg-orange-100 border border-orange-200 text-gray-800"

@@ -5,20 +5,15 @@ function About() {
 
   return (
     <div
-      className={`flex flex-col p-6 rounded-md overflow-hidden backdrop-blur-sm border ${
+      className={`flex flex-col p-6  overflow-hidden backdrop-blur-sm border ${
         darkMode
-          ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
       <div className="flex flex-col gap-4 overflow-y-auto custom-scroll">
         <div className="shrink-0">
           <div className="flex items-center gap-3 mb-1">
-            <div
-              className={`w-2 h-2 rounded-full ${
-                darkMode ? "bg-violet-400" : "bg-violet-500"
-              }`}
-            />
             <h2
               className={`text-lg font-bold tracking-tight ${
                 darkMode ? "text-white" : "text-black"
@@ -38,7 +33,7 @@ function About() {
 
         <div className="flex flex-col gap-3">
           <p
-            className={`text-xs leading-relaxed ${
+            className={`text-sm leading-relaxed ${
               darkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >
@@ -50,7 +45,7 @@ function About() {
           </p>
 
           <p
-            className={`text-xs leading-relaxed ${
+            className={`text-sm leading-relaxed ${
               darkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >
@@ -60,7 +55,7 @@ function About() {
           </p>
 
           <p
-            className={`text-xs leading-relaxed ${
+            className={`text-sm leading-relaxed ${
               darkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >

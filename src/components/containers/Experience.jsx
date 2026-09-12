@@ -5,7 +5,6 @@ function Experience() {
 
   const startYear = 2022;
   const currentYear = new Date().getFullYear();
-  const yearsOfCoding = currentYear - startYear;
 
   const experiences = [
     {
@@ -27,26 +26,20 @@ function Experience() {
       active: false,
     },
     { title: "", sub: "", year: "", active: false },
-
   ];
 
   return (
     <div
-      className={`flex flex-col p-6 rounded-md overflow-hidden backdrop-blur-sm border ${
+      className={`flex flex-col p-6  overflow-hidden backdrop-blur-sm border ${
         darkMode
-          ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
       <div className="flex flex-col gap-4">
         <div className="flex items-start justify-between shrink-0">
           <div>
             <div className="flex items-center gap-3 mb-1">
-              <div
-                className={`w-2 h-2 rounded-full ${
-                  darkMode ? "bg-blue-400" : "bg-blue-500"
-                }`}
-              />
               <h2
                 className={`text-lg font-bold tracking-tight ${
                   darkMode ? "text-white" : "text-black"
@@ -66,59 +59,41 @@ function Experience() {
 
           <div
             className={`flex flex-col items-end gap-0.5 px-3 py-2 rounded text-center shrink-0 ${
-              darkMode ? "bg-blue-500/10" : "bg-blue-50"
+              darkMode ? "bg-orange-500/10" : "bg-blue-50"
             }`}
           >
-            <span className="text-lg font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              {yearsOfCoding}+
-            </span>
             <span
-              className={`text-xs font-mono ${
+              className={`text-xs uppercase font-mono ${
                 darkMode ? "text-gray-400" : "text-gray-600"
               }`}
             >
-              Years
+              Coding since
             </span>
-            <span
-              className={`text-[9px] font-mono ${
-                darkMode ? "text-gray-500" : "text-gray-500"
-              }`}
-            >
-              Since {startYear}
-            </span>
+            <span className="text-lg font-bold font-mono">{startYear}</span>
           </div>
         </div>
 
         <div className="flex flex-col p-1 overflow-y-auto max-h-[280px] custom-scroll">
           <div className="relative">
             {experiences.map((item, index) => (
-              <div
-                key={index}
-                className={`relative pl-6 py-3 ${
-                  item.active && item.title
-                    ? darkMode
-                      ? "bg-blue-500/5"
-                      : "bg-blue-50/50"
-                    : ""
-                }`}
-              >
-                <div className="absolute left-0 top-0 bottom-0 flex flex-col items-center">
+              <div key={index} className={`relative pl-6 py-3 `}>
+                <div className="absolute -left-1 top-0 bottom-0 w-6 flex flex-col items-center">
                   {item.title && (
                     <>
                       <div
-                        className={`w-3 h-3 rounded-full mt-4 ring-2 ${
+                        className={`w-3 h-3 rounded-full mt-4 shrink-0 ring-2 ${
                           item.active
                             ? darkMode
-                              ? "bg-blue-400 ring-orange-400/30"
-                              : "bg-blue-500 ring-blue-500/30"
+                              ? "bg-orange-400/70 ring-orange-400/30"
+                              : "bg-orange-500/70 ring-gray-400/80"
                             : darkMode
-                              ? " ring-gray-700/30"
-                              : " ring-gray-300/30"
+                              ? " ring-gray-700/90"
+                              : " ring-gray-600/30"
                         }`}
                       />
                       {index !== experiences.length - 1 && (
                         <div
-                          className={`w-0.5 flex-1 mt-1 ${
+                          className={`w-0.5 flex-1 -mb-4 ${
                             darkMode ? "bg-gray-700" : "bg-gray-300"
                           }`}
                         />
@@ -149,10 +124,10 @@ function Experience() {
                     <div className="text-right shrink-0">
                       {item.active ? (
                         <span
-                          className={`inline-block px-1.5 py-0.5 text-xs font-mono rounded ${
+                          className={`inline-block px-1.5 py-0.5 text-xs font-mono ${
                             darkMode
-                              ? "bg-blue-500/20 text-blue-300"
-                              : "bg-blue-100 text-blue-700"
+                              ? "bg-orange-500/20 text-white"
+                              : "bg-orange-500/30 text-black"
                           }`}
                         >
                           Current

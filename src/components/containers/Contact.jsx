@@ -35,21 +35,16 @@ function Contact() {
 
   return (
     <div
-      className={`w-full p-6 rounded-md backdrop-blur-sm border flex flex-col gap-5 ${
+      className={`w-full p-6  backdrop-blur-sm border flex flex-col gap-5 ${
         darkMode
-          ? "bg-[#0f0f0f] border-gray-800 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-gray-200 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
       <div className="flex flex-col gap-4 md:gap-5 md:flex-row">
         <div className="flex-1 flex flex-col gap-3">
           <div>
             <div className="flex items-center gap-3 mb-1">
-              <div
-                className={`w-2 h-2 rounded-full ${
-                  darkMode ? "bg-pink-400" : "bg-pink-500"
-                }`}
-              />
               <h2
                 className={`text-lg font-bold tracking-tight ${
                   darkMode ? "text-white" : "text-black"
@@ -73,17 +68,13 @@ function Contact() {
               href={link.url}
               target="_blank"
               rel="noreferrer"
-              className={`p-3 py-4 rounded-lg  flex items-center justify-between ${
-                darkMode
-                  ? "bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-500/60"
-                  : "bg-cyan-50 border border-cyan-200 hover:border-cyan-300"
-              }`}
+              className={`p-3 py-4  flex items-center justify-between bg-orange-800/10 hover:bg-orange-500/20 border border-orange-600/30 text-gray-200`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <div className="flex items-center gap-3">
                 <i
                   className={`bi ${link.icon} text-lg shrink-0 ${
-                    darkMode ? "text-pink-400" : "text-pink-600"
+                    darkMode ? "text-cyan-400" : "text-cyan-600"
                   }`}
                 />
                 <p
@@ -104,11 +95,6 @@ function Contact() {
         <div className="flex-1 flex flex-col gap-3">
           <div>
             <div className="flex items-center gap-3 mb-1">
-              <div
-                className={`w-2 h-2 rounded-full ${
-                  darkMode ? "bg-cyan-400" : "bg-cyan-500"
-                }`}
-              />
               <h2
                 className={`text-lg font-bold tracking-tight ${
                   darkMode ? "text-white" : "text-black"
@@ -132,11 +118,7 @@ function Contact() {
               href={contact.url}
               target="_blank"
               rel="noreferrer"
-              className={`p-3 rounded-lg flex items-center justify-between ${
-                darkMode
-                  ? "bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-500/60"
-                  : "bg-cyan-50 border border-cyan-200 hover:border-cyan-300"
-              }`}
+              className={`p-3 flex items-center justify-between bg-orange-800/10 hover:bg-orange-500/20 border border-orange-600/30 text-gray-200`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <div className="flex items-center gap-3 min-w-0">

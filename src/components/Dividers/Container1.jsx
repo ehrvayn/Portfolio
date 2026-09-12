@@ -41,7 +41,7 @@ function Container1() {
           <div className="flex flex-col md:flex-row gap-8 sm:gap-12 lg:gap-16 items-center">
             <div className="flex-shrink-0 w-full sm:w-auto flex justify-center sm:justify-start">
               <div className="relative group p-2">
-                <div className="absolute -inset-[1px] bg-gradient-to-r from-orange-500/70 to-orange-500/40 rounded-md blur opacity-50 group-hover:opacity-0 transition-opacity"></div>
+                <div className="absolute -inset-[1px] bg-gradient-to-r from-orange-500/70 to-orange-500/40 blur opacity-50 group-hover:opacity-0 transition-opacity"></div>
                 <div
                   className="relative overflow-hidden rounded-md cursor-pointer"
                   onMouseEnter={handleMouseEnter}
@@ -50,7 +50,7 @@ function Container1() {
                   <img
                     src={darkMode ? DarkprofilePic : LightprofilePic}
                     alt="Profile"
-                    className="relative h-56 w-56 sm:h-64 sm:w-69 md:h-80 md:w-55 lg:h-100 lg:w-75 object-cover rounded-md transition-opacity duration-300 group-hover:opacity-0"
+                    className="relative h-56 w-56 sm:h-64 sm:w-69 md:h-80 md:w-55 lg:h-100 lg:w-75 object-cover transition-opacity duration-300 group-hover:opacity-0"
                   />
 
                   <video
@@ -66,22 +66,7 @@ function Container1() {
             </div>
 
             <div className="flex flex-col items-center md:items-start w-full sm:flex-1 gap-2 sm:gap-3">
-              <div className="flex items-center gap-2 group cursor-default">
-                <span className="h-[2px] w-3 sm:w-4 bg-orange-500/70"></span>
-                <span
-                  className={`text-[11px] sm:text-[12px] italic font-light tracking-wide ${
-                    darkMode ? "text-gray-400" : "text-gray-500"
-                  }`}
-                >
-                  Let's build something{" "}
-                  <span className="text-orange-500/70 font-medium">
-                    remarkable
-                  </span>{" "}
-                  together.
-                </span>
-              </div>
-
-              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center sm:text-left leading-tight">
+              <h1 className="text-4xl font-mono sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center sm:text-left leading-tight">
                 Ehrvayn Rayven{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500/70 to-orange-500/40">
                   Olivera
