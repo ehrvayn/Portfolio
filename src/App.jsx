@@ -1,4 +1,3 @@
-import "./assets/styles/App.css";
 import Container1 from "./components/Dividers/Container1";
 import Container2 from "./components/Dividers/Container2";
 import Container3 from "./components/Dividers/Container3";

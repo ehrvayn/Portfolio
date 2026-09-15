@@ -15,25 +15,18 @@ function About() {
         <div className="shrink-0">
           <div className="flex items-center gap-3 mb-1">
             <h2
-              className={`text-lg font-bold tracking-tight ${
+              className={`text-lg uppercase font-mono font-bold tracking-tight ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
               About
             </h2>
           </div>
-          <p
-            className={`text-xs tracking-widest uppercase font-mono ${
-              darkMode ? "text-gray-500" : "text-gray-600"
-            }`}
-          >
-            Who I Am
-          </p>
         </div>
 
         <div className="flex flex-col gap-3">
           <p
-            className={`text-sm leading-relaxed ${
+            className={`text-sm font-mono leading-relaxed ${
               darkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >

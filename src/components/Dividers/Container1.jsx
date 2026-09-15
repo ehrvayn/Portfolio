@@ -1,17 +1,22 @@
 import LightprofilePic from "../../assets/img/profile.jpg";
-import DarkprofilePic from "../../assets/img/DarkProfile.png";
+import DarkprofilePic from "../../assets/img/DarkProfile.jpg";
 import { useDarkMode } from "../../context/DarkmodeProvider";
 import AnimeBlack from "../../assets/vid/AnimeBlack.mp4";
 import AnimeWhite from "../../assets/vid/AnimeWhite.mp4";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { IoSunny } from "react-icons/io5";
+import { IoMoon } from "react-icons/io5";
+import { FaLocationDot } from "react-icons/fa6";
 
 function Container1() {
   const { darkMode, toggleDarkMode } = useDarkMode();
+  const [isHovered, setIshovered] = useState(false);
   const videoRef = useRef(null);
 
   const handleMouseEnter = () => {
     if (videoRef.current) {
       videoRef.current.play();
+      setIshovered(true);
     }
   };
 
@@ -19,6 +24,7 @@ function Container1() {
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
+      setIshovered(false);
     }
   };
 
@@ -31,7 +37,7 @@ function Container1() {
       <div className="flex items-center sm:mt-[-20px] mt-[-10px] w-full max-w-5xl mx-auto opacity-80">
         <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-orange-500" />
         <span className="px-4 text-[8px] lg:text-[10px] font-mono tracking-[0.4em] uppercase whitespace-nowrap text-orange-500">
-          EHRVAYN RAYVEN // PORTFOLIO 2026
+          EHRVAYN RAYVEN || PORTFOLIO 2026
         </span>
         <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-orange-500" />
       </div>
@@ -41,9 +47,10 @@ function Container1() {
           <div className="flex flex-col md:flex-row gap-8 sm:gap-12 lg:gap-16 items-center">
             <div className="flex-shrink-0 w-full sm:w-auto flex justify-center sm:justify-start">
               <div className="relative group p-2">
-                <div className="absolute -inset-[1px] bg-gradient-to-r from-orange-500/70 to-orange-500/40 blur opacity-50 group-hover:opacity-0 transition-opacity"></div>
                 <div
-                  className="relative overflow-hidden rounded-md cursor-pointer"
+                  className={`relative overflow-hidden rounded-md cursor-pointer  ${!isHovered && "border "} ${
+                    darkMode ? "border-orange-500/30" : "border-orange-500/80"
+                  }`}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -67,10 +74,7 @@ function Container1() {
 
             <div className="flex flex-col items-center md:items-start w-full sm:flex-1 gap-2 sm:gap-3">
               <h1 className="text-4xl font-mono sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center sm:text-left leading-tight">
-                Ehrvayn Rayven{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500/70 to-orange-500/40">
-                  Olivera
-                </span>
+                Ehrvayn Rayven Olivera
               </h1>
 
               <p
@@ -82,11 +86,11 @@ function Container1() {
               </p>
 
               <div
-                className={`flex items-center gap-2 text-[12px] sm:text-[13px] md:text-[14px] ${
+                className={`flex items-center gap-1 text-[12px] sm:text-[13px] md:text-[14px] ${
                   darkMode ? "text-gray-500" : "text-gray-400"
                 }`}
               >
-                <i className="bi bi-geo-alt text-xs sm:text-sm"></i>
+                <FaLocationDot />
                 <span>Naga City, Camarines Sur, Philippines</span>
               </div>
 
@@ -105,7 +109,7 @@ function Container1() {
                 </a>
 
                 <a
-                  href="https://mail.google.com/mail/?view=cm&to=rjmomong@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&to=ehrvayn@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full sm:w-auto px-10 py-4 text-center text-xs sm:text-sm font-bold tracking-[0.2em] uppercase border transition-all duration-300 hover:scale-105 active:scale-95 ${
@@ -133,7 +137,7 @@ function Container1() {
                         : "translate-x-0 bg-white"
                     }`}
                   >
-                    {darkMode ? "🌙" : "☀️"}
+                    {darkMode ? <IoMoon size={15} /> : <IoSunny size={18} />}
                   </div>
                 </button>
               </div>

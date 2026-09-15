@@ -55,7 +55,7 @@ function ChatBot() {
 
     try {
       const result = await groq.chat.completions.create({
-        model: "llama-3.3-70b-versatile",
+        model: "openai/gpt-oss-20b",
         messages: [
           { role: "system", content: MyInfo },
           { role: "user", content: input },

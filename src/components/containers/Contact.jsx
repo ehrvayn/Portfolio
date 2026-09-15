@@ -46,20 +46,13 @@ function Contact() {
           <div>
             <div className="flex items-center gap-3 mb-1">
               <h2
-                className={`text-lg font-bold tracking-tight ${
+                className={`text-lg uppercase font-mono font-bold tracking-tight ${
                   darkMode ? "text-white" : "text-black"
                 }`}
               >
                 Find me on
               </h2>
             </div>
-            <p
-              className={`text-xs tracking-widest uppercase font-mono ${
-                darkMode ? "text-gray-500" : "text-gray-600"
-              }`}
-            >
-              Social Links
-            </p>
           </div>
 
           {socialLinks.map((link, index) => (
@@ -96,20 +89,13 @@ function Contact() {
           <div>
             <div className="flex items-center gap-3 mb-1">
               <h2
-                className={`text-lg font-bold tracking-tight ${
+                className={`text-lg uppercase font-mono font-bold tracking-tight ${
                   darkMode ? "text-white" : "text-black"
                 }`}
               >
                 Get in touch
               </h2>
             </div>
-            <p
-              className={`text-xs tracking-widest uppercase font-mono ${
-                darkMode ? "text-gray-500" : "text-gray-600"
-              }`}
-            >
-              Quick Contact
-            </p>
           </div>
 
           {quickContacts.map((contact, index) => (

@@ -30,20 +30,13 @@ function TechStack() {
         <div>
           <div className="flex items-center gap-3 mb-1">
             <h2
-              className={`text-lg font-bold tracking-tight ${
+              className={`text-lg uppercase font-mono font-bold tracking-tight ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
               Tech Stack
             </h2>
           </div>
-          <p
-            className={`text-xs tracking-widest uppercase font-mono ${
-              darkMode ? "text-gray-500" : "text-gray-600"
-            }`}
-          >
-            Technologies I Use
-          </p>
         </div>
       </div>
 
@@ -102,14 +95,14 @@ function TechStack() {
             <div className="flex items-center gap-2 mb-2">
               <span
                 className={`text-[9px] uppercase tracking-[0.15em] font-mono font-semibold ${
-                  darkMode ? "text-orange-400/60" : "text-orange-500/60"
+                  darkMode ? "text-white" : "text-black"
                 }`}
               >
                 {section.label}
               </span>
               <div
                 className={`flex-1 h-[1px] ${
-                  darkMode ? "bg-orange-400/60" : "bg-orange-500/60"
+                  darkMode ? "bg-white" : "bg-black"
                 } opacity-20`}
               />
             </div>

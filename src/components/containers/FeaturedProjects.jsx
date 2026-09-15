@@ -5,7 +5,6 @@ import TechHubImg from "../../assets/img/TechHubImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
 import InterviewSparkImg from "../../assets/img/InterviewSparkImg.png";
 import StartSmartImg from "../../assets/img/StartSmartImg.png";
-import { ChevronDown } from "lucide-react";
 
 function FeaturedProjects() {
   const { darkMode } = useDarkMode();
@@ -16,7 +15,7 @@ function FeaturedProjects() {
       name: "TechHub",
       description:
         "TechHub is a full end-to-end e-commerce architecture, built from the database schema up through a layered backend to a complete customer storefront and admin back office. Customers browse products, manage a cart, check out, track real-time order status, and leave verified purchase reviews. Admins get a live dashboard with revenue analytics, order and inventory management, customer insights, and sales reports, all backed by real-time notifications via server-sent events. Authentication runs through Auth0 with role-based access control separating customer and admin experiences across every layer of the stack.",
-      link: "techhub.vercel.app",
+      link: "techhub-shop.vercel.app",
       code: "github.com/ehrvayn/TechHub",
       image: TechHubImg,
       tech: [
@@ -101,17 +100,12 @@ function FeaturedProjects() {
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <h2
-              className={`text-lg font-bold tracking-tight ${darkMode ? "text-white" : "text-black"}`}
+              className={`text-lg uppercase font-mono font-bold tracking-tight ${darkMode ? "text-white" : "text-black"}`}
             >
               Featured Projects
             </h2>
           </div>
         </div>
-        <p
-          className={`text-xs tracking-widest uppercase font-mono ${darkMode ? "text-gray-500" : "text-gray-600"}`}
-        >
-          Selected works
-        </p>
       </header>
 
       <div className="space-y-4 h-[800px] overflow-y-auto">
@@ -148,7 +142,7 @@ function FeaturedProjects() {
                     {project.name}
                   </h3>
                   <p
-                    className={`text-sm leading-relaxed ${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                    className={`text-sm text-justify leading-relaxed ${darkMode ? "text-gray-400" : "text-gray-600"}`}
                   >
                     {project.description}
                   </p>

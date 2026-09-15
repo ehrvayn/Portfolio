@@ -29,20 +29,14 @@ function Education() {
         <div className="shrink-0">
           <div className="flex items-center gap-3 mb-1">
             <h2
-              className={`text-lg font-bold tracking-tight ${
+              className={`text-lg uppercase font-mono font-bold tracking-tight ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
               Education
             </h2>
           </div>
-          <p
-            className={`text-xs tracking-widest uppercase font-mono ${
-              darkMode ? "text-gray-500" : "text-gray-600"
-            }`}
-          >
-            Academic Background
-          </p>
+
         </div>
 
         <div className="relative flex flex-col h-full justify-between px-1 overflow-y-auto custom-scroll">
@@ -69,7 +63,7 @@ function Education() {
                     darkMode ? "text-white" : "text-black"
                   }`}
                 >
-                  BS Information Systems 3rd-Year
+                  BS Information Systems 4th-Year
                 </h3>
                 <p
                   className={`text-xs font-mono leading-tight ${

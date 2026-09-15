@@ -8,7 +8,7 @@ function Experience() {
 
   const experiences = [
     {
-      title: "BS Information System - 3rd Year",
+      title: "BS Information System - 4th Year",
       sub: "Naga College Foundation Inc.",
       year: "2026",
       active: true,
@@ -41,26 +41,17 @@ function Experience() {
           <div>
             <div className="flex items-center gap-3 mb-1">
               <h2
-                className={`text-lg font-bold tracking-tight ${
+                className={`text-lg uppercase font-bold tracking-tight ${
                   darkMode ? "text-white" : "text-black"
                 }`}
               >
                 Experience
               </h2>
             </div>
-            <p
-              className={`text-xs tracking-widest uppercase font-mono ${
-                darkMode ? "text-gray-500" : "text-gray-600"
-              }`}
-            >
-              Professional Journey
-            </p>
           </div>
 
           <div
-            className={`flex flex-col items-end gap-0.5 px-3 py-2 rounded text-center shrink-0 ${
-              darkMode ? "bg-orange-500/10" : "bg-blue-50"
-            }`}
+            className={`flex justify-center items-center gap-2 px-3 py-2 rounded text-center shrink-0`}
           >
             <span
               className={`text-xs uppercase font-mono ${

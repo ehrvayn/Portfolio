@@ -41,10 +41,10 @@ function Certifications() {
       } flex-1 shadow-[0_0_6px_rgba(0,0,0,0.25)] border p-6  flex flex-col gap-4`}
     >
       <div className="flex items-center gap-2">
-        <strong className="text-base tracking-tight">Certifications</strong>
+        <strong className="text-base uppercase font-mono tracking-tight">Certifications</strong>
       </div>
 
-      <div className="flex flex-col p-2 gap-3 h-57 overflow-y-auto">
+      <div className="flex flex-col p-2 gap-3 h-53.5 overflow-y-auto">
         {certifications.map((cert, index) => (
           <div
             onClick={() => setSelectedImg(cert.img)}
