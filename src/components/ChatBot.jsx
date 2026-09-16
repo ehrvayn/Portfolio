@@ -169,7 +169,7 @@ function ChatBot() {
       {showBanner && !open && !hasBeenOpened && (
         <div
           onClick={handleToggleChat}
-          className={`fixed bottom-24 right-6 px-4 py-2 rounded-2xl shadow-lg cursor-pointer animate-bounce z-50 text-sm font-medium flex items-center gap-2
+          className={`fixed bottom-24 right-6 px-4 py-2 shadow-lg cursor-pointer animate-bounce z-50 text-sm font-medium flex items-center gap-2
             ${darkMode ? "bg-white text-black" : "bg-[#3e3e3e] text-white"}`}
         >
           Hey there! Wanna chat?

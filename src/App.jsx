@@ -2,14 +2,14 @@ import Container1 from "./components/Dividers/Container1";
 import Container2 from "./components/Dividers/Container2";
 import Container3 from "./components/Dividers/Container3";
 import Container4 from "./components/Dividers/Container4";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useDarkMode } from "./context/DarkmodeProvider";
 import ChatBot from "./components/ChatBot";
 
 function App() {
   const { darkMode } = useDarkMode();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (darkMode) {
       document.body.classList.add("dark");
     } else {
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <div
-        className={`${darkMode ? "bg-black text-white" : "bg-white"} transition-colors duration-500 w-full min-h-screen flex flex-col gap-5 px-1 md:px-[100px] lg:px-[130px] xl:px-[150px] py-6 md:py-8 lg:py-10`}
+        className={`${darkMode ? "bg-black text-white" : "bg-white"} w-full min-h-screen flex flex-col gap-5 px-1 md:px-[100px] lg:px-[130px] xl:px-[150px] py-6 md:py-8 lg:py-10`}
       >
         <Container1 />
         <Container2 />

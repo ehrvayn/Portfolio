@@ -12,6 +12,7 @@ function Container1() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   const [isHovered, setIshovered] = useState(false);
   const videoRef = useRef(null);
+  const toggleBtnRef = useRef(null);
 
   const handleMouseEnter = () => {
     if (videoRef.current) {
@@ -26,6 +27,39 @@ function Container1() {
       videoRef.current.currentTime = 0;
       setIshovered(false);
     }
+  };
+
+  const handleThemeToggle = () => {
+    const btn = toggleBtnRef.current;
+
+    if (!btn || !document.startViewTransition) {
+      toggleDarkMode();
+      return;
+    }
+
+    const rect = btn.getBoundingClientRect();
+
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+
+    document.documentElement.style.setProperty("--ripple-x", `${x}px`);
+    document.documentElement.style.setProperty("--ripple-y", `${y}px`);
+
+    const transition = document.startViewTransition(() => {
+      toggleDarkMode();
+    });
+
+    transition.ready.then(() => {
+      const endRadius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y),
+      );
+
+      document.documentElement.style.setProperty(
+        "--ripple-radius",
+        `${endRadius}px`,
+      );
+    });
   };
 
   return (
@@ -124,7 +158,8 @@ function Container1() {
 
               <div className="pt-4 sm:pt-6">
                 <button
-                  onClick={toggleDarkMode}
+                  ref={toggleBtnRef}
+                  onClick={handleThemeToggle}
                   aria-label="Toggle Theme"
                   className={`relative w-14 h-7 cursor-pointer rounded-full flex items-center px-1 shadow-inner transition-colors ${
                     darkMode ? "bg-zinc-800" : "bg-zinc-200"

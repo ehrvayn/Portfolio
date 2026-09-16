@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 ::-webkit-scrollbar {
@@ -35,3 +37,21 @@ body.dark ::-webkit-scrollbar-thumb:hover {
   background: #888;
 }
 
+::view-transition-old(root) {
+  animation: none;
+}
+
+::view-transition-new(root) {
+  animation: ripple-reveal 0.7s ease-in-out;
+  z-index: 9999;
+}
+
+@keyframes ripple-reveal {
+  from {
+    clip-path: circle(0px at var(--ripple-x) var(--ripple-y));
+  }
+
+  to {
+    clip-path: circle(var(--ripple-radius) at var(--ripple-x) var(--ripple-y));
+  }
+}
