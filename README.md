@@ -10,7 +10,7 @@ A personal portfolio website built with React, Vite, and Tailwind CSS. Features 
 
 ## 🌐 Live Demo
 
-[ehrvayn.vercel.app](https://ehrvayn-portfolio.vercel.app)
+[ehrvayn.vercel.app](https://ehrvayn.vercel.app/)
 
 ## 📄 License
 
