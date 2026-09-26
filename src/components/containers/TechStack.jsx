@@ -14,6 +14,7 @@ import postgres from "../../assets/img/postgres.png";
 import bootstrap from "../../assets/img/Bootstrap.png";
 import canva from "../../assets/img/CanvaLogo.png";
 import nextLogo from "../../assets/img/NextLogo.png";
+import expoImg from "../../assets/img/ExpoLogo.png";
 
 function TechStack() {
   const { darkMode } = useDarkMode();
@@ -66,7 +67,10 @@ function TechStack() {
           },
           {
             label: "Mobile",
-            techs: [{ name: "React Native", img: reactImg }],
+            techs: [
+              { name: "React Native", img: reactImg },
+              { name: "Expo", img: expoImg },
+            ],
           },
           {
             label: "Tools",
@@ -84,6 +88,13 @@ function TechStack() {
               { name: "bcrypt", img: null },
               { name: "OAuth", img: null },
               { name: "Auth0", img: null },
+            ],
+          },
+          {
+            label: "AI",
+            techs: [
+              { name: "Gemini", img: null },
+              { name: "Groq", img: null },
             ],
           },
           {

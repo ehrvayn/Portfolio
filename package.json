@@ -17,7 +17,7 @@
     "@tailwindcss/vite": "^4.2.0",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
-    "groq-sdk": "^0.37.0",
+    "groq-sdk": "^1.6.0",
     "lucide-react": "^1.14.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
