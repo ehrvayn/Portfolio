@@ -1,20 +1,4 @@
 import { useDarkMode } from "../../context/DarkmodeProvider";
-import htmlImg from "../../assets/img/html.png";
-import cssImg from "../../assets/img/css.png";
-import jsImg from "../../assets/img/js.png";
-import reactImg from "../../assets/img/react.png";
-import tailwindImg from "../../assets/img/tailwind.png";
-import nodejsImg from "../../assets/img/nodejs.png";
-import mysqlImg from "../../assets/img/mysql.png";
-import githubImg from "../../assets/img/github.png";
-import vscodeImg from "../../assets/img/vscode.png";
-import figmaImg from "../../assets/img/figma.png";
-import typescript from "../../assets/img/typescript.png";
-import postgres from "../../assets/img/postgres.png";
-import bootstrap from "../../assets/img/Bootstrap.png";
-import canva from "../../assets/img/CanvaLogo.png";
-import nextLogo from "../../assets/img/NextLogo.png";
-import expoImg from "../../assets/img/ExpoLogo.png";
 
 function TechStack() {
   const { darkMode } = useDarkMode();
@@ -46,60 +30,61 @@ function TechStack() {
           {
             label: "Frontend",
             techs: [
-              { name: "HTML", img: htmlImg },
-              { name: "CSS", img: cssImg },
-              { name: "JavaScript", img: jsImg },
-              { name: "TypeScript", img: typescript },
-              { name: "React", img: reactImg },
-              { name: "Tailwind", img: tailwindImg },
-              { name: "Bootstrap", img: bootstrap },
-              { name: "Next.js", img: nextLogo },
+              { name: "HTML" },
+              { name: "CSS" },
+              { name: "JavaScript" },
+              { name: "TypeScript" },
+              { name: "React" },
+              { name: "Tailwind" },
+              { name: "Bootstrap" },
+              { name: "Next.js" },
             ],
           },
           {
             label: "Backend",
             techs: [
-              { name: "Node.js", img: nodejsImg },
-              { name: "MySQL", img: mysqlImg },
-              { name: "PostgreSQL", img: postgres },
-              { name: "ExpressJS", img: jsImg },
+              { name: "Node.js" },
+              { name: "MySQL" },
+              { name: "PostgreSQL" },
+              { name: "ExpressJS" },
             ],
           },
           {
             label: "Mobile",
             techs: [
-              { name: "React Native", img: reactImg },
-              { name: "Expo", img: expoImg },
+              { name: "React Native" },
+              { name: "Expo" },
+              { name: "NativeWind" },
             ],
           },
           {
             label: "Tools",
             techs: [
-              { name: "GitHub", img: githubImg },
-              { name: "VSCode", img: vscodeImg },
-              { name: "Figma", img: figmaImg },
-              { name: "Canva", img: canva },
+              { name: "GitHub" },
+              { name: "VSCode" },
+              { name: "Figma" },
+              { name: "Canva" },
             ],
           },
           {
             label: "Security",
             techs: [
-              { name: "JWT", img: null },
-              { name: "bcrypt", img: null },
-              { name: "OAuth", img: null },
-              { name: "Auth0", img: null },
+              { name: "JWT" },
+              { name: "bcrypt" },
+              { name: "OAuth" },
+              { name: "Auth0" },
             ],
           },
           {
             label: "AI",
             techs: [
-              { name: "Gemini", img: null },
-              { name: "Groq", img: null },
+              { name: "Gemini" }, 
+              { name: "Groq" }
             ],
           },
           {
             label: "Cloud",
-            techs: [{ name: "GCP", img: null }],
+            techs: [{ name: "GCP" }],
           },
         ].map((section, i) => (
           <div key={i}>
