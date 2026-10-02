@@ -67,7 +67,7 @@ function Contact() {
               <div className="flex items-center gap-3">
                 <i
                   className={`bi ${link.icon} text-lg shrink-0 ${
-                    darkMode ? "text-cyan-400" : "text-cyan-600"
+                    darkMode ? "text-white" : "text-black"
                   }`}
                 />
                 <p
@@ -110,7 +110,7 @@ function Contact() {
               <div className="flex items-center gap-3 min-w-0">
                 <i
                   className={`bi ${contact.icon} text-lg shrink-0 ${
-                    darkMode ? "text-cyan-400" : "text-cyan-600"
+                    darkMode ? "text-white" : "text-black"
                   }`}
                 />
                 <div className="flex flex-col min-w-0">

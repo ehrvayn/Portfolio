@@ -25,7 +25,7 @@ function TechStack() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 overflow-y-auto max-h-[300px] custom-scroll pr-2">
+      <div className="flex flex-col gap-3 overflow-y-auto max-h-[300px] custom-scroll pb-4 pr-2">
         {[
           {
             label: "Frontend",
