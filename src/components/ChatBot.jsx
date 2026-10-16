@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useDarkMode } from "../context/DarkmodeProvider";
 import Groq from "groq-sdk";
 import MyInfo from "../assets/info/MyInfo";
-import profilePic from "../assets/img/profile.jpg";
+import profilePic from "../assets/img/originalProfilePicture.png";
 import { BiSolidMessageDots } from "react-icons/bi";
 
 const groq = new Groq({
@@ -116,7 +116,7 @@ function ChatBot() {
                       className="w-5 h-5 rounded-full object-cover border-2 border-gray-300"
                     />
                     <span
-                      className={`text-xs font-semibold ${darkMode ? "text-gray-300" : "text-gray-600"}`}
+                      className={`text-xs font-semibold ${darkMode ? "text-gray-400" : "text-gray-600"}`}
                     >
                       Ehrvayn
                     </span>
@@ -160,7 +160,7 @@ function ChatBot() {
             />
             <i
               onClick={sendMessage}
-              className={`${!darkMode ? "text-black" : "text-white"} active:scale-80 active:opacity-70 cursor-pointer px-1 bi bi-send-fill text-[25px] md:text-[30px]`}
+              className={`${!darkMode ? "text-gray-900" : "text-gray-200"} active:scale-80 active:opacity-70 cursor-pointer px-1 bi bi-send-fill text-[25px] md:text-[30px]`}
             ></i>
           </div>
         </div>

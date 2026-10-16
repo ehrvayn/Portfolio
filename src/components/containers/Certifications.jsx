@@ -36,23 +36,23 @@ function Certifications() {
     <div
       className={`${
         darkMode
-          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
-      } flex-1 shadow-[0_0_6px_rgba(0,0,0,0.25)] border p-6  flex flex-col gap-4`}
+          ? "bg-[#17171a] border-gray-500/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-gray-500/40 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+      } w-full flex-1 min-h-0 shadow-[0_0_6px_rgba(0,0,0,0.25)] border  p-6 flex flex-col gap-4`}
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 shrink-0">
         <strong className="text-base uppercase font-mono tracking-tight">Certifications</strong>
       </div>
 
-      <div className="flex flex-col p-2 gap-3 h-53.5 overflow-y-auto">
+      <div className="flex flex-col p-2 gap-3 max-h-[214px] overflow-y-auto ">
         {certifications.map((cert, index) => (
           <div
             onClick={() => setSelectedImg(cert.img)}
             key={index}
             className={`cursor-pointer p-4 pr-10 relative border ${
               darkMode
-                ? "bg-orange-800/10 hover:bg-orange-500/20 border border-orange-600/30 text-gray-200"
-                : "bg-orange-800/10 hover:bg-orange-500/20 border border-orange-600/30 text-gray-800"
+                ? "bg-gray-500/10 hover:bg-gray-500/20 border border-gray-600/30 text-gray-200"
+                : "bg-gray-500/10 hover:bg-gray-500/20 border border-gray-600/30 text-gray-800"
             }`}
           >
             <strong className="text-sm">{cert.name}</strong>

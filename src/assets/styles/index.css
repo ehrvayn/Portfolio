@@ -4,6 +4,11 @@
   --font-sans:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
+  --font-display:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-pixel: "Pixelify Sans", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-distressed: "Pirata One", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 ::-webkit-scrollbar {

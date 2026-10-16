@@ -4,7 +4,6 @@ function Experience() {
   const { darkMode } = useDarkMode();
 
   const startYear = 2022;
-  const currentYear = new Date().getFullYear();
 
   const experiences = [
     {
@@ -30,19 +29,19 @@ function Experience() {
 
   return (
     <div
-      className={`flex flex-col p-6  overflow-hidden backdrop-blur-sm border ${
+      className={`flex flex-col p-6 flex-1  backdrop-blur-sm border ${
         darkMode
-          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+          ? "bg-[#17171a] border-gray-500/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-gray-500/40 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 flex-1 min-h-0">
         <div className="flex items-start justify-between shrink-0">
           <div>
             <div className="flex items-center gap-3 mb-1">
               <h2
                 className={`text-lg uppercase font-bold tracking-tight ${
-                  darkMode ? "text-white" : "text-black"
+                  darkMode ? "text-gray-200" : "text-gray-900"
                 }`}
               >
                 Experience
@@ -55,7 +54,7 @@ function Experience() {
           >
             <span
               className={`text-xs uppercase font-mono ${
-                darkMode ? "text-gray-400" : "text-gray-600"
+                darkMode ? "text-gray-200" : "text-gray-900"
               }`}
             >
               Coding since
@@ -64,7 +63,7 @@ function Experience() {
           </div>
         </div>
 
-        <div className="flex flex-col p-1 overflow-y-auto max-h-[280px] custom-scroll">
+        <div className="flex flex-col p-1 overflow-y-auto flex-1 min-h-0 custom-scroll">
           <div className="relative">
             {experiences.map((item, index) => (
               <div key={index} className={`relative pl-6 py-3 `}>
@@ -75,8 +74,8 @@ function Experience() {
                         className={`w-3 h-3 rounded-full mt-4 shrink-0 ring-2 ${
                           item.active
                             ? darkMode
-                              ? "bg-orange-400/70 ring-orange-400/30"
-                              : "bg-orange-500/70 ring-gray-400/80"
+                              ? "bg-gray-300 ring-gray-500/30"
+                              : "bg-gray-400 ring-gray-400/80"
                             : darkMode
                               ? " ring-gray-700/90"
                               : " ring-gray-600/30"
@@ -98,14 +97,14 @@ function Experience() {
                     <div className="flex-1 min-w-0">
                       <h3
                         className={`font-bold text-xs mb-0.5 ${
-                          darkMode ? "text-white" : "text-black"
+                          darkMode ? "text-gray-200" : "text-gray-900"
                         }`}
                       >
                         {item.title}
                       </h3>
                       <p
                         className={`text-xs font-mono leading-tight ${
-                          darkMode ? "text-gray-400" : "text-gray-600"
+                          darkMode ? "text-gray-200" : "text-gray-900"
                         }`}
                       >
                         {item.sub}
@@ -117,8 +116,8 @@ function Experience() {
                         <span
                           className={`inline-block px-1.5 py-0.5 text-xs font-mono ${
                             darkMode
-                              ? "bg-orange-500/20 text-white"
-                              : "bg-orange-500/30 text-black"
+                              ? "bg-gray-500/25 text-gray-200"
+                              : "bg-gray-300 text-black"
                           }`}
                         >
                           Current
@@ -131,7 +130,7 @@ function Experience() {
                                 ? "text-gray-500"
                                 : "text-gray-500"
                               : darkMode
-                                ? "text-gray-400"
+                                ? "text-gray-300"
                                 : "text-gray-600"
                           }`}
                         >

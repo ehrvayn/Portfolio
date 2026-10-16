@@ -5,12 +5,30 @@ import TechHubImg from "../../assets/img/TechHubImg.png";
 import PortfolioImg from "../../assets/img/PortfolioImg.png";
 import InterviewSparkImg from "../../assets/img/InterviewSparkImg.png";
 import StartSmartImg from "../../assets/img/StartSmartImg.png";
+import MochikuImg from "../../assets/img/Mochiku-Img.png";
 
 function FeaturedProjects() {
   const { darkMode } = useDarkMode();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const projects = [
+    {
+      name: "Mochiku",
+      description:
+        "An offline-first mobile app that turns photos of bills, receipts, and notices into structured, reviewable data. A vision-AI backend extracts each item's title, category, and deadline with a confidence score per field, flagging low-confidence results for review instead of silently trusting them. Deadline items require confirmation before a local reminder is scheduled; the rest auto-files into a photo grid, filterable by category. Photos save instantly to on-device SQLite regardless of connectivity, and failed uploads retry automatically once the device is back online.",
+      link: "",
+      code: "",
+      image: MochikuImg,
+      tech: [
+        "TypeScript",
+        "React Native",
+        "Expo",
+        "NativeWind",
+        "Node.js",
+        "SQLite",
+        "Groq AI",
+      ],
+    },
     {
       name: "TechHub",
       description:
@@ -92,15 +110,15 @@ function FeaturedProjects() {
     <section
       className={`w-full backdrop-blur-sm border flex flex-col gap-6 px-2 sm:px-6 py-6 ${
         darkMode
-          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+          ? "bg-[#17171a] border-gray-500/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-gray-500/40 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
       <header>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <h2
-              className={`text-lg uppercase font-mono font-bold tracking-tight ${darkMode ? "text-white" : "text-black"}`}
+              className={`text-lg uppercase font-mono font-bold tracking-tight ${darkMode ? "text-gray-200" : "text-gray-900"}`}
             >
               Featured Projects
             </h2>
@@ -108,22 +126,22 @@ function FeaturedProjects() {
         </div>
       </header>
 
-      <div className="space-y-4 h-[800px] overflow-y-auto">
+      <div className="space-y-4 h-[60vh] lg:h-[800px] max-h-[800px] overflow-y-auto custom-scroll">
         {projects.map((project, index) => (
           <article
             key={index}
             className={` border p-5 transition-all duration-200 ${
               darkMode
-                ? "bg-[#1a1a1a] border-gray-700 hover:border-orange-500/50"
-                : "bg-gray-50 border-gray-200 hover:border-orange-300"
+                ? "bg-[#212124] border-gray-700 hover:border-gray-500"
+                : "bg-gray-50 border-gray-200 hover:border-gray-400"
             }`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <div className="flex flex-col lg:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <div
-                className={`w-full lg:w-100 h-70 p-3 rounded flex-shrink-0 overflow-hidden ${
-                  darkMode ? "bg-black/30" : "bg-gray-100"
+                className={`w-full sm:w-1/2 lg:w-2/5 h-56 sm:h-64 lg:h-70 p-3 rounded flex-shrink-0 overflow-hidden ${
+                  darkMode ? "bg-black/40" : "bg-gray-100"
                 } flex items-center justify-center`}
               >
                 <img
@@ -136,13 +154,13 @@ function FeaturedProjects() {
                 />
               </div>
 
-              <div className="flex flex-col gap-3 flex-1">
+              <div className="flex flex-col gap-3 flex-1 min-w-0">
                 <div>
-                  <h3 className="text-lg font-bold mb-2 bg-gradient-to-r from-orange-400/70 to-orange-400/70 bg-clip-text text-transparent">
+                  <h3 className={`text-lg font-bold mb-2 ${darkMode ? "text-gray-200" : "text-gray-900"}`}>
                     {project.name}
                   </h3>
                   <p
-                    className={`text-sm text-justify leading-relaxed ${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                    className={`text-sm text-justify leading-relaxed ${darkMode ? "text-gray-200" : "text-gray-900"}`}
                   >
                     {project.description}
                   </p>
@@ -154,8 +172,8 @@ function FeaturedProjects() {
                       key={i}
                       className={`text-xs px-2.5 py-1 font-medium ${
                         darkMode
-                          ? "bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-gray-200"
-                          : "bg-orange-50 hover:bg-orange-100 border border-orange-200 text-gray-800"
+                          ? "bg-gray-500/10 hover:bg-gray-500/20 border border-gray-600/30 text-gray-200"
+                          : "bg-gray-100 hover:bg-gray-200 border border-gray-300 text-gray-800"
                       }`}
                     >
                       {tech}
@@ -171,8 +189,8 @@ function FeaturedProjects() {
                       rel="noreferrer"
                       className={`font-semibold transition-colors ${
                         darkMode
-                          ? "text-orange-400/70 hover:text-orange-300/70"
-                          : "text-orange-600/70 hover:text-orange-700/70"
+                          ? "text-gray-200 hover:text-gray-100"
+                          : "text-gray-900 hover:text-gray-700"
                       }`}
                     >
                       View Project <i className="bi bi-arrow-up-right ml-1" />
@@ -181,7 +199,7 @@ function FeaturedProjects() {
                   {project.code && (
                     <>
                       <span
-                        className={darkMode ? "text-gray-600" : "text-gray-400"}
+                        className={darkMode ? "text-gray-500" : "text-gray-400"}
                       >
                         |
                       </span>
@@ -191,8 +209,8 @@ function FeaturedProjects() {
                         rel="noreferrer"
                         className={`font-semibold transition-colors ${
                           darkMode
-                            ? "text-orange-400/70 hover:text-orange-300/70"
-                            : "text-orange-600/70 hover:text-orange-700/70"
+                            ? "text-gray-200 hover:text-gray-100"
+                            : "text-gray-900 hover:text-gray-700"
                         }`}
                       >
                         View Code <i className="bi bi-arrow-up-right ml-1" />

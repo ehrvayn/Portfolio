@@ -5,18 +5,18 @@ function TechStack() {
 
   return (
     <div
-      className={`p-6  overflow-hidden backdrop-blur-sm border flex flex-col ${
+      className={`p-6 flex-1 min-h-0 backdrop-blur-sm border flex flex-col ${
         darkMode
-          ? "bg-[#0f0f0f] border-orange-800/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-          : "bg-white border-orange-800/30 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+          ? "bg-[#17171a] border-gray-500/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+          : "bg-white border-gray-500/40 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
-      <div className="flex flex-col mb-0 md:mb-[43px] gap-4 shrink-0 mb-3">
+      <div className="flex flex-col mb-0 md:mb-[20px] gap-4 shrink-0 mb-3">
         <div>
           <div className="flex items-center gap-3 mb-1">
             <h2
               className={`text-lg uppercase font-mono font-bold tracking-tight ${
-                darkMode ? "text-white" : "text-black"
+                darkMode ? "text-gray-200" : "text-gray-900"
               }`}
             >
               Tech Stack
@@ -25,7 +25,7 @@ function TechStack() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 overflow-y-auto max-h-[300px] custom-scroll pb-4 pr-2">
+      <div className="flex flex-col gap-3 overflow-y-auto sm:h-[450px] md:h-[450px] lg:h-[400px] xl:h-[300px] 2xl:h-[320px] custom-scroll pb-4 pr-2">
         {[
           {
             label: "Frontend",
@@ -55,6 +55,7 @@ function TechStack() {
               { name: "React Native" },
               { name: "Expo" },
               { name: "NativeWind" },
+              { name: "SQLite" },
             ],
           },
           {
@@ -64,6 +65,7 @@ function TechStack() {
               { name: "VSCode" },
               { name: "Figma" },
               { name: "Canva" },
+              { name: "Postman" },
             ],
           },
           {
@@ -78,8 +80,12 @@ function TechStack() {
           {
             label: "AI",
             techs: [
-              { name: "Gemini" }, 
-              { name: "Groq" }
+              { name: "Gemini" },
+              { name: "Groq" },
+              { name: "Anthropic" },
+              { name: "OpenCode" },
+              { name: "OpenAI" },
+
             ],
           },
           {
@@ -91,7 +97,7 @@ function TechStack() {
             <div className="flex items-center gap-2 mb-2">
               <span
                 className={`text-[9px] uppercase tracking-[0.15em] font-mono font-semibold ${
-                  darkMode ? "text-white" : "text-black"
+                  darkMode ? "text-gray-200" : "text-gray-900"
                 }`}
               >
                 {section.label}
@@ -109,8 +115,8 @@ function TechStack() {
                   key={index}
                   className={` px-2 py-1 text-xs flex items-center gap-1 ${
                     darkMode
-                      ? "bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-gray-200"
-                      : "bg-orange-50 hover:bg-orange-100 border border-orange-200 text-gray-800"
+                      ? "bg-gray-500/10 hover:bg-gray-500/20 border border-gray-600/30 text-gray-200"
+                      : "bg-gray-100 hover:bg-gray-200 border border-gray-300 text-gray-800"
                   }`}
                 >
                   {tech.img && (
