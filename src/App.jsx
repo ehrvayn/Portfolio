@@ -6,9 +6,12 @@ import { useLayoutEffect } from "react";
 import { useDarkMode } from "./context/DarkmodeProvider";
 import ChatBot from "./components/ChatBot";
 import StackMarquee from "./components/StackMarquee";
+import StickyHeader from "./components/StickyHeader";
+import { useRef } from "react";
 
 function App() {
   const { darkMode } = useDarkMode();
+  const heroRef = useRef(null);
 
   useLayoutEffect(() => {
     if (darkMode) {
@@ -20,10 +23,13 @@ function App() {
 
   return (
     <>
+      <StickyHeader sentinelRef={heroRef} />
       <div
         className={`${darkMode ? "bg-[#0e0e11] text-gray-200" : "bg-white"} w-full min-h-screen flex flex-col gap-5 px-1 md:px-[100px] lg:px-[150px] xl:px-[180px] 2xl:px-[350px] py-6 md:py-8 lg:py-10`}
       >
-        <Container1 />
+        <div ref={heroRef}>
+          <Container1 />
+        </div>
         <StackMarquee />
         <Container2 />
         <div className="flex items-center w-full opacity-80">

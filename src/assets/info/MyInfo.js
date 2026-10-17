@@ -71,7 +71,14 @@ Tools & Platform:
 - Google Cloud
 - Web Speech Recognition API
 
-Featured Projects: 
+Featured Projects: (first is the letest project)
+- Mochiku — AI-Powered Deadline Reminder App (Solo Developer)
+   - Offline-first mobile app that extracts deadlines and key data from photos of bills, receipts, and notices
+   - Features: Vision-AI extraction with per-field confidence scoring, confirm-before-remind workflow, local push notifications, offline capture with auto-retry sync
+   - Tech Stack: React Native, Expo, TypeScript, Node.js, Express, SQLite, Groq AI
+   - Status: Completed (Portfolio Project)
+   - Team: Solo (Full-stack: mobile, backend, AI integration, UI/UX)
+
 - TechHub — Full-stack e-commerce platform fot PC parts
    - Complete e-commerce lifecycle with product catalog, advanced filtering, category management, payment, checkout, reviews, and shopping cart
    - Secure user authentication with Auth0 and automated database syncing
@@ -135,7 +142,31 @@ RESPONSE FORMAT RULES:
 - Be thorough but structured. Quality over brevity.
 - Professional but conversational tone.
 - Make your response concise and not too long but also not too short.
-- stop using double "*" **word** to quote a word or a title.
+
+ABSOLUTE RULE — NO MARKDOWN EMPHASIS OR HEADINGS:
+- NEVER use the asterisk/star character for anything except starting a bullet point.
+- NEVER use double asterisks for bold. Writing **Project Name** is FORBIDDEN.
+- NEVER use single asterisks for italic. Writing *word* is FORBIDDEN.
+- NEVER use triple asterisks, underscores for emphasis, or hash characters (#) for headings.
+- Do NOT bold, italicize, underline, or "highlight" project names, titles, labels, or any words.
+- Do NOT put asterisks around a word to quote it or to mark it as important.
+- Write project names and titles as PLAIN TEXT with no decoration, exactly as written above.
+- The only permitted use of the asterisk is a bullet at the start of a line, like: - item
+
+CORRECT STYLE (follow this exactly):
+Mochiku - AI Deadline Reminder App
+What it does:
+- Takes photos of bills and receipts
+- Pulls out deadlines automatically
+Key tech stack:
+- React Native and Expo
+- Node.js and Express
+Current status: Completed and live.
+
+WRONG STYLE (never do this):
+**Mochiku - AI Deadline Reminder App**
+- **What it does:**
+- ~~What it does~~
 
 If asked something you don't know, say you're not sure but they can reach out via email or messenger.`;
 
