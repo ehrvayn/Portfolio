@@ -145,7 +145,7 @@ function Container1() {
             </a>
           </div>
         </div>
-        <div className="pt-2 sm:self-center self-start sm:pt-10">
+        <div className="pt-2 lg:self-start self-center sm:pt-10">
           <button
             ref={toggleBtnRef}
             onClick={handleThemeToggle}
