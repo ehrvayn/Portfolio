@@ -5,8 +5,8 @@
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   --font-display:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+    "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --font-pixel: "Pixelify Sans", ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-distressed: "Pirata One", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
@@ -49,6 +49,32 @@ body.dark ::-webkit-scrollbar-thumb:hover {
 ::view-transition-new(root) {
   animation: ripple-reveal 0.7s ease-in-out;
   z-index: 9999;
+}
+
+.marquee-track {
+  animation: marquee-scroll 45s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .marquee-track,
+.marquee-container:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 @keyframes ripple-reveal {

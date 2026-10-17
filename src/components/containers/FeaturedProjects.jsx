@@ -10,6 +10,8 @@ import MochikuImg from "../../assets/img/Mochiku-Img.png";
 function FeaturedProjects() {
   const { darkMode } = useDarkMode();
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  // On small screens descriptions are clamped behind a "View Details" toggle.
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
   const projects = [
     {
@@ -160,10 +162,33 @@ function FeaturedProjects() {
                     {project.name}
                   </h3>
                   <p
-                    className={`text-sm text-justify leading-relaxed ${darkMode ? "text-gray-200" : "text-gray-900"}`}
+                    className={`text-sm text-justify leading-relaxed ${
+                      expandedIndex === index ? "" : "line-clamp-3 sm:line-clamp-none"
+                    } ${darkMode ? "text-gray-200" : "text-gray-900"}`}
                   >
                     {project.description}
                   </p>
+
+                  {/* toggle only where the text is actually clamped */}
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setExpandedIndex(expandedIndex === index ? null : index)
+                    }
+                    aria-expanded={expandedIndex === index}
+                    className={`mt-2 sm:hidden inline-flex items-center gap-1 text-[11px] font-mono uppercase tracking-[0.15em] transition-colors ${
+                      darkMode
+                        ? "text-gray-300 hover:text-gray-100"
+                        : "text-gray-700 hover:text-gray-900"
+                    }`}
+                  >
+                    {expandedIndex === index ? "View Less" : "View Details"}
+                    <i
+                      className={`bi bi-chevron-${
+                        expandedIndex === index ? "up" : "down"
+                      } transition-transform`}
+                    />
+                  </button>
                 </div>
 
                 <div className="flex flex-wrap gap-2">

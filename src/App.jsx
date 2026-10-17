@@ -5,6 +5,7 @@ import Container4 from "./components/Dividers/Container4";
 import { useLayoutEffect } from "react";
 import { useDarkMode } from "./context/DarkmodeProvider";
 import ChatBot from "./components/ChatBot";
+import StackMarquee from "./components/StackMarquee";
 
 function App() {
   const { darkMode } = useDarkMode();
@@ -23,6 +24,7 @@ function App() {
         className={`${darkMode ? "bg-[#0e0e11] text-gray-200" : "bg-white"} w-full min-h-screen flex flex-col gap-5 px-1 md:px-[100px] lg:px-[150px] xl:px-[180px] 2xl:px-[350px] py-6 md:py-8 lg:py-10`}
       >
         <Container1 />
+        <StackMarquee />
         <Container2 />
         <div className="flex items-center w-full opacity-80">
           <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-gray-500/70" />

@@ -15,13 +15,13 @@ function Experience() {
     {
       title: "OJT / Internship",
       sub: "Actively seeking",
-      year: "Ongoing",
+      year: "2026",
       active: false,
     },
     {
-      title: "Capstone Project",
+      title: "Capstone UI/UX developer",
       sub: "Intelligent Queue Management System for Wait Transparency",
-      year: "Ongoing",
+      year: "2026",
       active: false,
     },
     { title: "", sub: "", year: "", active: false },
@@ -29,7 +29,7 @@ function Experience() {
 
   return (
     <div
-      className={`flex flex-col p-6 flex-1  backdrop-blur-sm border ${
+      className={`flex flex-col p-6 flex-1 backdrop-blur-sm border ${
         darkMode
           ? "bg-[#17171a] border-gray-500/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
           : "bg-white border-gray-500/40 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"

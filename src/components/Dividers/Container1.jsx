@@ -1,8 +1,8 @@
 import ProfilePic from "../../assets/img/originalProfilePicture.png";
 import Halftone from "../Halftone";
 import { useDarkMode } from "../../context/DarkmodeProvider";
-import AnimeBlack from "../../assets/vid/AnimeBlack.mp4";
-import AnimeWhite from "../../assets/vid/AnimeWhite.mp4";
+import AnimeBlack from "../../assets/vid/AnimeDark.mp4";
+import AnimeWhite from "../../assets/vid/AnimeLight.mp4";
 import { useRef, useState } from "react";
 import { IoSunny } from "react-icons/io5";
 import { IoMoon } from "react-icons/io5";
@@ -65,44 +65,41 @@ function Container1() {
     <main className="flex items-center justify-center w-full">
       <div className="flex flex-col md:flex-row md:gap-5 items-center w-full">
         <div className="flex-shrink-0 w-full sm:w-auto flex justify-center sm:justify-start">
-          <div className="relative group p-2">
-            <div
-              className={`relative overflow-hidden cursor-pointer border ${isHovered && "border-transparent"} ${
+          <div
+            className={`relative group p-2 overflow-hidden cursor-pointer rounded-md`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Halftone
+              src={ProfilePic}
+              cell={9}
+              gamma={10}
+              levels={[0, 0.4]}
+              dotScale={0.9}
+              intensity={0.3}
+              photoOpacity={1}
+              background="transparent"
+              dotColor={"rgba(255,255,255,0.80)"}
+              className={`relative h-36 w-36 sm:h-44 sm:w-44 md:h-50 md:w-50 lg:h-60 lg:w-60 border transition-opacity duration-300 group-hover:opacity-0 ${isHovered && "border-transparent"} ${
                 darkMode ? " border-gray-500/40" : " border-gray-500/40 "
               }`}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Halftone
-                src={ProfilePic}
-                cell={9}
-                gamma={10}
-                levels={[0, 0.4]}
-                dotScale={0.9}
-                intensity={0.3}
-                photoOpacity={1}
-                background="transparent"
-                dotColor={"rgba(255,255,255,0.80)"}
-                className="relative h-36 w-36 sm:h-44 sm:w-44 md:h-50 md:w-50 lg:h-60 lg:w-60 transition-opacity duration-300 group-hover:opacity-0"
-              />
+            />
 
-              <video
-                ref={videoRef}
-                src={darkMode ? AnimeBlack : AnimeWhite}
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 h-full w-full object-cover rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-              />
-            </div>
+            <video
+              ref={videoRef}
+              src={darkMode ? AnimeBlack : AnimeWhite}
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            />
           </div>
         </div>
 
         <div className="flex flex-col items-center md:items-start w-full sm:flex-1 gap-2 sm:gap-3">
-          <h1 className="font-display text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-light  text-center sm:text-left leading-tight">
+          <h1 className="font-display font-light text-2xl sm:text-3xl md:text-3xl lg:text-5xl text-center sm:text-left leading-tight">
             Ehrvayn Rayven Olivera
           </h1>
-
           <p
             className={`text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] font-mono uppercase tracking-[0.25em] sm:tracking-[0.3em] ${
               darkMode ? "text-gray-200" : "text-gray-900"
