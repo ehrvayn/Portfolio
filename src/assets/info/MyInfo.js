@@ -119,8 +119,8 @@ Live: techhub.vercel.app
 
 Social:
 - GitHub: github.com/ehrvayn
-- Facebook: facebook.com/ehrvayn.rayven.1
-- Messenger: m.me/ehrvayn.rayven.1
+- Facebook: facebook.com/ehrvayn.rayven
+- Messenger: m.me/ehrvayn.rayven
 
 Hobbies:
 - Playing Guitar
