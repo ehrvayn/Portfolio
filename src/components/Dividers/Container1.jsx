@@ -128,7 +128,7 @@ function Container1() {
                   : "bg-gray-900 text-gray-100 hover:bg-gray-700"
               }`}
             >
-              GET RESUME
+              GET CV
             </a>
 
             <a

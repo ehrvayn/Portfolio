@@ -87,11 +87,11 @@ function ChatBot() {
           >
             <span className="font-semibold gap-3 flex items-center">
               <img
-                className="h-10 w-10 rounded-full object-cover border-2 border-gray-300"
+                className="h-10 w-10 rounded-full object-cover border border-gray-300"
                 src={profilePic}
               />
               <div className="flex flex-col">
-                <span>Ehrvayn Rayven</span>
+                <span>Ehrvayn Rayven Olivera</span>
                 <span className="flex items-center gap-1 text-xs font-normal">
                   <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
                   Online
@@ -113,7 +113,7 @@ function ChatBot() {
                   <div className="flex items-center gap-1 mb-1">
                     <img
                       src={profilePic}
-                      className="w-5 h-5 rounded-full object-cover border-2 border-gray-300"
+                      className="w-5 h-5 rounded-full object-cover border-1 border-gray-300"
                     />
                     <span
                       className={`text-xs font-semibold ${darkMode ? "text-gray-400" : "text-gray-600"}`}
