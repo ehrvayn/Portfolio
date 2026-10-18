@@ -80,7 +80,7 @@ function Container1() {
               photoOpacity={1}
               background="transparent"
               dotColor={"rgba(255,255,255,0.80)"}
-              className={`relative h-36 w-36 sm:h-44 sm:w-44 md:h-50 md:w-50 lg:h-60 lg:w-60 border transition-opacity duration-300 group-hover:opacity-0 ${isHovered && "border-transparent"} ${
+              className={`relative h-36 w-36 sm:h-30 sm:w-30 md:h-40 md:w-40 lg:h-50 lg:w-50 xl:h-60 xl:w-60 border transition-opacity duration-300 group-hover:opacity-0 ${isHovered && "border-transparent"} ${
                 darkMode ? " border-gray-500/40" : " border-gray-500/40 "
               }`}
             />
@@ -97,11 +97,11 @@ function Container1() {
         </div>
 
         <div className="flex flex-col items-center md:items-start w-full sm:flex-1 gap-2 sm:gap-3">
-          <h1 className="font-display font-light text-2xl sm:text-3xl md:text-3xl lg:text-5xl text-center sm:text-left leading-tight">
+          <h1 className="font-display font-light text-xl sm:text-2xl md:text-2xl lg:text-4xl text-center sm:text-left leading-tight">
             Ehrvayn Rayven Olivera
           </h1>
           <p
-            className={`text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] font-mono uppercase tracking-[0.25em] sm:tracking-[0.3em] ${
+            className={`text-[9px] sm:text-[10px] md:text-[11px] lg:text-[15px] font-mono uppercase tracking-[0.25em] sm:tracking-[0.3em] ${
               darkMode ? "text-gray-200" : "text-gray-900"
             }`}
           >
@@ -109,7 +109,7 @@ function Container1() {
           </p>
 
           <div
-            className={`flex items-center gap-1 text-[12px] sm:text-[13px] md:text-[14px] ${
+            className={`flex items-center gap-1 text-[10px] sm:text-[11px] md:text-[14px] ${
               darkMode ? "text-gray-400" : "text-gray-600"
             }`}
           >
@@ -117,7 +117,7 @@ function Container1() {
             <span>Naga City, Camarines Sur, Philippines</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-max pt-3 sm:pt-4 items-center sm:items-start">
+          <div className="flex flex-row gap-3 w-[70%] sm:w-max pt-3 sm:pt-4 items-center sm:items-start">
             <a
               href="Resume.pdf"
               target="_blank"
@@ -145,19 +145,19 @@ function Container1() {
             </a>
           </div>
         </div>
-        <div className="pt-2 lg:self-start self-center sm:pt-10">
+        <div className="pt-2 md:self-start self-center lg:pt-10">
           <button
             ref={toggleBtnRef}
             onClick={handleThemeToggle}
             aria-label="Toggle Theme"
-            className={`relative w-14 h-7 cursor-pointer rounded-full flex items-center px-1 shadow-inner transition-colors ${
+            className={`relative w-10 h-5 lg:w-14 lg:h-7 cursor-pointer rounded-full flex items-center px-1 shadow-inner transition-colors ${
               darkMode ? "bg-zinc-800" : "bg-zinc-200"
             }`}
           >
             <div
-              className={`w-5 h-5 rounded-full shadow-md transform flex items-center justify-center text-[11px] transition-transform duration-300 ${
+              className={`w-4 h-4 lg:w-5 lg:h-5 rounded-full shadow-md transform flex items-center justify-center text-[11px] transition-transform duration-300 ${
                 darkMode
-                  ? "translate-x-7 bg-zinc-900"
+                  ? "lg:translate-x-7 translate-x-4.5 bg-zinc-900"
                   : "translate-x-0 bg-white"
               }`}
             >
