@@ -91,7 +91,7 @@ function ChatBot() {
                 src={profilePic}
               />
               <div className="flex flex-col">
-                <span>Ehrvayn Rayven Olivera</span>
+                <span className="text-sm sm:text-base">Ehrvayn Rayven Olivera</span>
                 <span className="flex items-center gap-1 text-xs font-normal">
                   <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
                   Online

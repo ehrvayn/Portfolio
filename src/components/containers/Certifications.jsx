@@ -38,13 +38,13 @@ function Certifications() {
         darkMode
           ? "bg-[#17171a] border-gray-500/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
           : "bg-white border-gray-500/40 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
-      } w-full flex-1 min-h-0 shadow-[0_0_6px_rgba(0,0,0,0.25)] border  p-6 flex flex-col gap-4`}
+      } w-full flex-1 min-h-0 shadow-[0_0_6px_rgba(0,0,0,0.25)] border p-6 flex flex-col gap-4`}
     >
       <div className="flex items-center gap-2 shrink-0">
-        <strong className="text-base uppercase font-mono tracking-tight">Certifications</strong>
+        <strong className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl  uppercase font-mono font-bold tracking-tight">Certifications</strong>
       </div>
 
-      <div className="flex flex-col p-2 gap-3 max-h-[214px] overflow-y-auto ">
+      <div className="flex flex-col p-2 gap-3 max-h-[210px] overflow-y-auto ">
         {certifications.map((cert, index) => (
           <div
             onClick={() => setSelectedImg(cert.img)}
@@ -55,7 +55,9 @@ function Certifications() {
                 : "bg-gray-500/10 hover:bg-gray-500/20 border border-gray-600/30 text-gray-800"
             }`}
           >
-            <strong className="text-sm">{cert.name}</strong>
+            <strong className="text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base">
+              {cert.name}
+            </strong>
             <p
               className={`text-[12px] font-mono ${darkMode ? "text-gray-400" : "text-gray-500"}`}
             >

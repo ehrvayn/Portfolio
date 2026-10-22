@@ -25,7 +25,8 @@ function App() {
     <>
       <StickyHeader sentinelRef={heroRef} />
       <div
-        className={`${darkMode ? "bg-[#0e0e11] text-gray-200" : "bg-white"} w-full min-h-screen flex flex-col gap-5 px-1 md:px-[100px] lg:px-[150px] xl:px-[180px] 2xl:px-[350px] py-6 md:py-8 lg:py-10`}
+        className={`${darkMode ? "bg-[#0e0e11] text-gray-200" : "bg-white"} w-full min-h-screen flex flex-col 
+        gap-5 px-1 md:px-[100px] lg:px-[200px] xl:px-[300px] 2xl:px-[450px] py-6 md:py-8 lg:py-10`}
       >
         <div ref={heroRef}>
           <Container1 />
@@ -35,7 +36,7 @@ function App() {
         <div className="flex items-center w-full opacity-80">
           <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-gray-500/70" />
           <span className="px-4 text-[8px] lg:text-[10px] font-mono tracking-[0.4em] uppercase whitespace-nowrap text-gray-400">
-            ITERATE. BUILD. DEPLOY.
+            BUILD. DEPLOY.
           </span>
           <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-gray-500/70" />
         </div>

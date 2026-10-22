@@ -3,24 +3,16 @@ import { useDarkMode } from "../../context/DarkmodeProvider";
 function Experience() {
   const { darkMode } = useDarkMode();
 
-  const startYear = 2022;
-
   const experiences = [
     {
-      title: "BS Information System - 4th Year",
-      sub: "Naga College Foundation Inc.",
-      year: "2026",
-      active: true,
-    },
-    {
-      title: "OJT / Internship",
+      title: "Internship",
       sub: "Actively seeking",
       year: "2026",
       active: false,
     },
     {
       title: "Capstone UI/UX developer",
-      sub: "Intelligent Queue Management System for Wait Transparency",
+      sub: "QueuEx: A Computer Vision-Based Smart Queue Management and Predictive Service Delivery System",
       year: "2026",
       active: false,
     },
@@ -40,26 +32,13 @@ function Experience() {
           <div>
             <div className="flex items-center gap-3 mb-1">
               <h2
-                className={`text-lg uppercase font-bold tracking-tight ${
+                className={`text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl  uppercase font-bold tracking-tight ${
                   darkMode ? "text-gray-200" : "text-gray-900"
                 }`}
               >
                 Experience
               </h2>
             </div>
-          </div>
-
-          <div
-            className={`flex justify-center items-center gap-2 px-3 py-2 rounded text-center shrink-0`}
-          >
-            <span
-              className={`text-xs uppercase font-mono ${
-                darkMode ? "text-gray-200" : "text-gray-900"
-              }`}
-            >
-              Coding since
-            </span>
-            <span className="text-lg font-bold font-mono">{startYear}</span>
           </div>
         </div>
 
@@ -96,7 +75,7 @@ function Experience() {
                   <div className="flex justify-between items-start gap-3">
                     <div className="flex-1 min-w-0">
                       <h3
-                        className={`font-bold text-xs mb-0.5 ${
+                        className={`font-bold text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base mb-0.5 ${
                           darkMode ? "text-gray-200" : "text-gray-900"
                         }`}
                       >

@@ -5,7 +5,7 @@ import Experience from "../containers/Experience";
 
 function Container2() {
   return (
-    <div className="container2 grid grid-cols-1 lg:grid-cols-[35fr_65fr] gap-4">
+    <div className="container2 grid grid-cols-1 lg:grid-cols-[40fr_60fr] gap-4">
       <div className="flex flex-col gap-4 lg:min-h-0">
         <Experience />
         <Education />

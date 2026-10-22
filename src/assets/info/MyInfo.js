@@ -40,7 +40,7 @@ Personal Info:
 - Email: ehrvayn@gmail.com
 
 Education:
-- 3rd year BS Information Systems student at Naga College Foundation Inc.
+- 4th year BS Information Systems student at Naga College Foundation Inc.
 - 2023-2024 Dean's Lister (1st and 2nd Semester)
 - 2025-2026 Dean's Lister (2nd Semester)
 
@@ -123,7 +123,7 @@ Social:
 - Messenger: m.me/ehrvayn.rayven
 
 Hobbies:
-- Playing Guitar
+- Playing Guitar & flute
 - Online Gaming
 - Watching and Reading series
 - Gym and Cycling

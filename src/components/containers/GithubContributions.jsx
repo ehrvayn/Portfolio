@@ -71,15 +71,15 @@ export default function GithubContributions() {
 
   return (
     <div
-      className={`p-6 md:p-8 border ${
+      className={`py-6 px-0 sm:px-8 md:py-8 border ${
         darkMode
           ? "bg-[#17171a] border-gray-500/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
           : "bg-white border-gray-500/40 shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
       }`}
     >
-      <div className="flex justify-between items-center pb-5 gap-3">
+      <div className="flex px-6 sm:px-0 justify-between items-center pb-5 gap-3">
         <h2
-          className={`text-lg uppercase font-mono font-bold tracking-tight ${
+          className={`text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl  uppercase font-mono font-bold tracking-tight ${
             darkMode ? "text-gray-200" : "text-gray-900"
           }`}
         >

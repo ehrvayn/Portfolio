@@ -120,7 +120,7 @@ function FeaturedProjects() {
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <h2
-              className={`text-lg uppercase font-mono font-bold tracking-tight ${darkMode ? "text-gray-200" : "text-gray-900"}`}
+              className={`text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl  uppercase font-mono font-bold tracking-tight ${darkMode ? "text-gray-200" : "text-gray-900"}`}
             >
               Featured Projects
             </h2>
@@ -158,7 +158,7 @@ function FeaturedProjects() {
 
               <div className="flex flex-col gap-3 flex-1 min-w-0">
                 <div>
-                  <h3 className={`text-lg font-bold mb-2 ${darkMode ? "text-gray-200" : "text-gray-900"}`}>
+                  <h3 className={`text-base sm:text-lg md:text-lg lg:text-lg xl:text-xl  font-bold mb-2 ${darkMode ? "text-gray-200" : "text-gray-900"}`}>
                     {project.name}
                   </h3>
                   <p

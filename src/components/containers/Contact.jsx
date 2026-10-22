@@ -46,7 +46,7 @@ function Contact() {
           <div>
             <div className="flex items-center gap-3 mb-1">
               <h2
-                className={`text-lg uppercase font-mono font-bold tracking-tight ${
+                className={`text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl  uppercase font-mono font-bold tracking-tight ${
                   darkMode ? "text-gray-200" : "text-gray-900"
                 }`}
               >
@@ -89,7 +89,7 @@ function Contact() {
           <div>
             <div className="flex items-center gap-3 mb-1">
               <h2
-                className={`text-lg uppercase font-mono font-bold tracking-tight ${
+                className={`text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl  uppercase font-mono font-bold tracking-tight ${
                   darkMode ? "text-gray-200" : "text-gray-900"
                 }`}
               >

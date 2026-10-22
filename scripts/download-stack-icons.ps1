@@ -28,6 +28,13 @@ $icons = [ordered]@{
   "groq"              = "logos:groq"
   "anthropic"         = "simple-icons:anthropic"
   "openai"            = "logos:openai-icon"
+  "nativewind"        = "thesvg-color:nativewind"
+  "jsonwebtokens"     = "simple-icons:jsonwebtokens"
+  "bcrypt"            = "lucide:lock"
+  "oauth"             = "tabler:brand-oauth"
+  "auth0"             = "simple-icons:auth0"
+  "opencode"          = "simple-icons:opencode"
+  "googlecloud"       = "simple-icons:googlecloud"
 }
 
 foreach ($name in $icons.Keys) {

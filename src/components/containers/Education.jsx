@@ -29,7 +29,7 @@ function Education() {
         <div className="shrink-0">
           <div className="flex items-center gap-3 mb-1">
             <h2
-              className={`text-lg uppercase font-mono font-bold tracking-tight ${
+              className={`text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl  uppercase font-mono font-bold tracking-tight ${
                 darkMode ? "text-gray-200" : "text-gray-900"
               }`}
             >
@@ -59,7 +59,7 @@ function Education() {
             <div className="flex justify-between w-full">
               <div className="min-w-0">
                 <h3
-                  className={`font-bold text-xs mb-0.5 ${
+                  className={`font-bold text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base mb-0.5 ${
                     darkMode ? "text-gray-200" : "text-gray-900"
                   }`}
                 >
@@ -106,7 +106,7 @@ function Education() {
               <div className="flex justify-between w-full">
                 <div className="min-w-0">
                   <h3
-                    className={`font-bold text-xs mb-0.5 ${
+                    className={`font-bold text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base mb-0.5 ${
                       darkMode ? "text-gray-200" : "text-gray-900"
                     }`}
                   >

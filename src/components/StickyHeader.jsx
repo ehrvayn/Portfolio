@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDarkMode } from "../context/DarkmodeProvider";
+import ProfilePic from "../assets/img/originalProfilePicture.png";
 
 function StickyHeader({ sentinelRef }) {
   const { darkMode } = useDarkMode();
@@ -9,7 +10,6 @@ function StickyHeader({ sentinelRef }) {
     const sentinel = sentinelRef.current;
     if (!sentinel) return;
 
-    // Hide while the hero header is still on screen, reveal once it scrolls past.
     const observer = new IntersectionObserver(
       ([entry]) => setVisible(!entry.isIntersecting),
       { threshold: 0, rootMargin: "-64px 0px 0px 0px" },
@@ -28,9 +28,10 @@ function StickyHeader({ sentinelRef }) {
       `}
     >
       <div className="px-4 md:px-[100px] lg:px-[150px] xl:px-[180px] 2xl:px-[350px]">
-        <div className="py-3 md:py-4">
+        <div className="flex items-center gap-2 py-2 md:py-4">
+          <img className="w-auto h-7 sm:h-8 md:h-10" src={ProfilePic}/>
           <span
-            className={`font-display text-sm md:text-base tracking-tight
+            className={`font-display text-sm sm:text-base md:text-base lg:text-lg xl:text-lg 2xl:text-xl tracking-tight
               ${darkMode ? "text-gray-200" : "text-gray-900"}
             `}
           >
