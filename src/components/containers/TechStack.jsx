@@ -115,7 +115,7 @@ function TechStack() {
               {section.techs.map((tech) => (
                 <div
                   key={tech.name}
-                  className="group flex flex-col items-center gap-1 w-[58px] sm:w-[64px]"
+                  className="group flex flex-col items-center gap-1 w-[40px] sm:w-[64px]"
                   title={tech.name}
                 >
                   <div
@@ -128,7 +128,7 @@ function TechStack() {
                     <StackIcon name={tech.icon} />
                   </div>
                   <span
-                    className={`w-full truncate text-center text-[12px] leading-tight font-mono uppercase tracking-tight ${
+                    className={`w-full truncate text-center text-[10px] sm:text-[12px] leading-tight font-mono uppercase tracking-tight ${
                       darkMode ? "text-gray-400" : "text-gray-600"
                     }`}
                   >

@@ -150,14 +150,14 @@ function Container1() {
             ref={toggleBtnRef}
             onClick={handleThemeToggle}
             aria-label="Toggle Theme"
-            className={`relative w-10 h-5 sm:w-11 sm:h-6 md:w-12 md:h-6 lg:w-14 lg:h-7 xl:w-16 xl:h-8 2xl:w-[72px] 2xl:h-9 cursor-pointer rounded-full flex items-center px-1 shadow-inner transition-colors ${
+            className={`relative w-10 h-5 sm:w-11 sm:h-6 md:w-12 md:h-6 lg:w-14 lg:h-7 xl:w-16 xl:h-8  cursor-pointer rounded-full flex items-center px-1 shadow-inner transition-colors ${
               darkMode ? "bg-zinc-800" : "bg-zinc-200"
             }`}
           >
             <div
-              className={`w-4 h-4 sm:w-[18px] sm:h-[18px] md:w-5 md:h-5 lg:w-[22px] lg:h-[22px] xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 rounded-full shadow-md transform flex items-center justify-center text-[11px] sm:text-[12px] md:text-[13px] lg:text-[15px] xl:text-[17px] 2xl:text-[19px] transition-transform duration-300 ${
+              className={`w-4 h-4 sm:w-[18px] sm:h-[18px] md:w-5 md:h-5 lg:w-[22px] lg:h-[22px] xl:w-6 xl:h-6  rounded-full shadow-md transform flex items-center justify-center text-[11px] sm:text-[12px] md:text-[13px] lg:text-[15px] xl:text-[17px] ] transition-transform duration-300 ${
                 darkMode
-                  ? "translate-x-4 sm:translate-x-[18px] md:translate-x-5 lg:translate-x-[26px] xl:translate-x-8 2xl:translate-x-9 bg-zinc-900"
+                  ? "translate-x-4 sm:translate-x-[18px] md:translate-x-5 lg:translate-x-[26px] xl:translate-x-8 bg-zinc-900"
                   : "translate-x-0 bg-white"
               }`}
             >
