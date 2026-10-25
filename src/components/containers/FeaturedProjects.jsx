@@ -10,7 +10,6 @@ import MochikuImg from "../../assets/img/Mochiku-Img.png";
 function FeaturedProjects() {
   const { darkMode } = useDarkMode();
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  // On small screens descriptions are clamped behind a "View Details" toggle.
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const projects = [
@@ -19,7 +18,7 @@ function FeaturedProjects() {
       description:
         "An offline-first mobile app that turns photos of bills, receipts, and notices into structured, reviewable data. A vision-AI backend extracts each item's title, category, and deadline with a confidence score per field, flagging low-confidence results for review instead of silently trusting them. Deadline items require confirmation before a local reminder is scheduled; the rest auto-files into a photo grid, filterable by category. Photos save instantly to on-device SQLite regardless of connectivity, and failed uploads retry automatically once the device is back online.",
       link: "",
-      code: "",
+      code: "https://github.com/ehrvayn/mochiku",
       image: MochikuImg,
       tech: [
         "TypeScript",
@@ -49,13 +48,14 @@ function FeaturedProjects() {
       ],
     },
     {
-      name: "NavSumaro",
+      name: "InterviewSpark",
       description:
-        "NavSumaro is the all-in-one student platform that replaces multiple fragmented campus tools. Access a verified academic Q&A forum, secure peer-to-peer marketplace for textbooks and supplies, and built-in collaboration tools all powered by institutional email verification for trust and safety. Connect with real classmates, buy and sell with confidence, and get academic help from verified students in your university community.",
-      link: "navsumaro.vercel.app",
-      code: "github.com/ehrvayn/navSumaro",
-      image: NavsumaroImg,
+        "InterviewSpark is an AI-powered interview coaching platform that simulates real-world technical and behavioral interviews. Get instant AI-driven feedback on every answer with detailed scoring across 6 performance metrics: clarity, confidence, relevance, communication, conciseness, and technical depth. Track your progress with an analytics dashboard that visualizes your improvement over time, identifies skill gaps, and provides actionable insights. Perfect for job seekers preparing for interviews at top tech companies.",
+      link: "interviewsparks.netlify.app",
+      code: "github.com/ehrvayn/InterviewSpark",
+      image: InterviewSparkImg,
       tech: [
+        "Groq AI",
         "TypeScript",
         "React",
         "Tailwind",
@@ -65,14 +65,22 @@ function FeaturedProjects() {
       ],
     },
     {
-      name: "InterviewSpark",
+      name: "My Portfolio",
       description:
-        "InterviewSpark is an AI-powered interview coaching platform that simulates real-world technical and behavioral interviews. Get instant AI-driven feedback on every answer with detailed scoring across 6 performance metrics: clarity, confidence, relevance, communication, conciseness, and technical depth. Track your progress with an analytics dashboard that visualizes your improvement over time, identifies skill gaps, and provides actionable insights. Perfect for job seekers preparing for interviews at top tech companies.",
-      link: "interviewsparks.netlify.app",
-      code: "github.com/ehrvayn/InterviewSpark",
-      image: InterviewSparkImg,
+        "My Portfolio showcases my full-stack development work with a clean, responsive design highlighting my projects, certifications, and technical skills. It features an AI-powered chatbot built with Groq API integration, demonstrating my ability to create engaging interfaces and implement advanced technologies.",
+      link: "ehrvayn.vercel.app",
+      code: "github.com/ehrvayn/Portfolio",
+      image: PortfolioImg,
+      tech: ["Groq AI", "JavaScript", "React", "Tailwind"],
+    },
+    {
+      name: "NavSumaro",
+      description:
+        "NavSumaro is the all-in-one student platform that replaces multiple fragmented campus tools. Access a verified academic Q&A forum, secure peer-to-peer marketplace for textbooks and supplies, and built-in collaboration tools all powered by institutional email verification for trust and safety. Connect with real classmates, buy and sell with confidence, and get academic help from verified students in your university community.",
+      link: "navsumaro.vercel.app",
+      code: "github.com/ehrvayn/navSumaro",
+      image: NavsumaroImg,
       tech: [
-        "Groq AI",
         "TypeScript",
         "React",
         "Tailwind",
@@ -96,15 +104,6 @@ function FeaturedProjects() {
         "Node.js",
         "ExpressJS",
       ],
-    },
-    {
-      name: "My Portfolio",
-      description:
-        "My Portfolio showcases my full-stack development work with a clean, responsive design highlighting my projects, certifications, and technical skills. It features an AI-powered chatbot built with Groq API integration, demonstrating my ability to create engaging interfaces and implement advanced technologies.",
-      link: "ehrvayn.vercel.app",
-      code: "github.com/ehrvayn/Portfolio",
-      image: PortfolioImg,
-      tech: ["Groq AI", "JavaScript", "React", "Tailwind"],
     },
   ];
 
@@ -158,12 +157,16 @@ function FeaturedProjects() {
 
               <div className="flex flex-col gap-3 flex-1 min-w-0">
                 <div>
-                  <h3 className={`text-base sm:text-lg md:text-lg lg:text-lg xl:text-xl  font-bold mb-2 ${darkMode ? "text-gray-200" : "text-gray-900"}`}>
+                  <h3
+                    className={`text-base sm:text-lg md:text-lg lg:text-lg xl:text-xl  font-bold mb-2 ${darkMode ? "text-gray-200" : "text-gray-900"}`}
+                  >
                     {project.name}
                   </h3>
                   <p
                     className={`text-sm text-justify leading-relaxed ${
-                      expandedIndex === index ? "" : "line-clamp-3 sm:line-clamp-none"
+                      expandedIndex === index
+                        ? ""
+                        : "line-clamp-3 sm:line-clamp-none"
                     } ${darkMode ? "text-gray-200" : "text-gray-900"}`}
                   >
                     {project.description}
