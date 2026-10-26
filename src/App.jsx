@@ -55,7 +55,7 @@ function App() {
           className={`mt-10 pt-6 border-t text-center text-[11px] font-mono 
             ${darkMode ? "border-[#333333] text-gray-300" : "border-gray-200 text-gray-900"}`}
         >
-          © Ehrvayn Rayven P. Olivera | Personal Portfolio 2026
+          © Ehrvayn Rayven P. Olivera | Portfolio 2026
         </footer>
       </div>
     </>

@@ -59,9 +59,9 @@ function FeaturedProjects() {
         "TypeScript",
         "React",
         "Tailwind",
-        "Node.js",
-        "ExpressJS",
+        "Next.js",
         "Postgres",
+        "OAuth",
       ],
     },
     {

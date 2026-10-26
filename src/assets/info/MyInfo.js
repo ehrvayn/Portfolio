@@ -99,7 +99,7 @@ Live: techhub.vercel.app
    - Real-time AI feedback on interview answers
    - 6-metric scoring system (clarity, confidence, relevance, communication, conciseness, technical depth)
    - Features: Session recording, performance analytics, feedback reports
-   - Tech Stack: React 18, TypeScript, Tailwind CSS, Node.js, Express, PostgreSQL
+   - Tech Stack: React 18, TypeScript, Tailwind CSS, Next.js, Express, PostgreSQL, OAuth
    - Payment Integration: PayMongo
    - Status: Completed
    - Live: interviewing-spark.vercel.app

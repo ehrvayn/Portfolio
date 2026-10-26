@@ -5,16 +5,29 @@ function Education() {
 
   const data = [
     {
+      title: "BS Information Systems",
+      school: "Naga College Foundation Inc.",
+      year: "2026",
+      active: true,
+    },
+    {
       title: "Senior High School - ICT",
       school: "Camarines Sur National High School",
       year: "2023",
+      active: false,
     },
     {
       title: "Junior High School - BEP",
       school: "Camarines Sur National High School",
       year: "2021",
+      active: false,
     },
-    { title: "Elementary", school: "Sta Cruz Elementary School", year: "2016" },
+    {
+      title: "Elementary",
+      school: "Sta Cruz Elementary School",
+      year: "2016",
+      active: false,
+    },
   ];
 
   return (
@@ -36,73 +49,36 @@ function Education() {
               Education
             </h2>
           </div>
-
         </div>
 
         <div className="relative flex flex-1 min-h-0 flex-col px-1 overflow-y-auto custom-scroll">
-          <div
-            className={`absolute left-[9px] top-7 bottom-4 w-0.5 ${
-              darkMode ? "bg-gray-700" : "bg-gray-300"
-            }`}
-          />
-
-          <div className="flex gap-3 relative pb-3">
-            <div className="shrink-0 pt-4">
-              <div
-                className={`relative z-10 w-3 h-3 rounded-full ring-2 ${
-                  darkMode
-                    ? "bg-gray-300 ring-gray-500/30"
-                    : "bg-gray-700 ring-gray-400"
-                }`}
-              />
-            </div>
-            <div className="flex justify-between w-full">
-              <div className="min-w-0">
-                <h3
-                  className={`font-bold text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base mb-0.5 ${
-                    darkMode ? "text-gray-200" : "text-gray-900"
-                  }`}
-                >
-                  BS Information Systems 4th-Year
-                </h3>
-                <p
-                  className={`text-xs font-mono leading-tight ${
-                    darkMode ? "text-gray-200" : "text-gray-900"
-                  }`}
-                >
-                  Naga College Foundation Inc.
-                </p>
-              </div>
-              <span
-                className={`text-xs font-mono pl-3 shrink-0 ${
-                  darkMode ? "text-gray-200" : "text-gray-900"
-                }`}
-              >
-                2026
-              </span>
-            </div>
-          </div>
-
           {data.map((item, index) => (
-            <div
-              key={index}
-              className={`flex gap-3 relative ${
-                index === data.length - 1 ? "pb-0" : "pb-3"
-              }`}
-            >
-              <div className="shrink-0 pt-4">
-                <div
-                  className={`relative z-10 w-3 h-3 rounded-full ring-2 ${
-                    item.active
-                      ? darkMode
-                        ? "bg-gray-300 ring-gray-500/30"
-                        : "bg-blue-500 ring-blue-500/30"
-                      : darkMode
-                        ? "bg-[#17171a] ring-gray-700/90"
-                        : "bg-white ring-gray-300"
-                  }`}
-                />
+            <div key={index} className={`relative pl-6 py-1 `}>
+              <div className="absolute -left-1 top-0 bottom-0 w-6 flex flex-col items-center">
+                {item.title && (
+                  <>
+                    <div
+                      className={`w-3 h-3 rounded-full mt-4 shrink-0 ring-2 ${
+                        item.active
+                          ? darkMode
+                            ? "bg-gray-300 ring-gray-500/30"
+                            : "bg-gray-400 ring-gray-400/80"
+                          : darkMode
+                            ? " ring-gray-700/90"
+                            : " ring-gray-600/30"
+                      }`}
+                    />
+                    {index !== data.length - 1 && (
+                      <div
+                        className={`w-0.5 flex-1 -mb-4 ${
+                          darkMode ? "bg-gray-700" : "bg-gray-300"
+                        }`}
+                      />
+                    )}
+                  </>
+                )}
               </div>
+
               <div className="flex justify-between w-full">
                 <div className="min-w-0">
                   <h3

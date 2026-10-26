@@ -8,7 +8,7 @@ function Experience() {
       title: "Internship",
       sub: "Actively seeking",
       year: "2026",
-      active: false,
+      active: true,
     },
     {
       title: "Capstone UI/UX developer",
@@ -91,31 +91,19 @@ function Experience() {
                     </div>
 
                     <div className="text-right shrink-0">
-                      {item.active ? (
-                        <span
-                          className={`inline-block px-1.5 py-0.5 text-xs font-mono ${
-                            darkMode
-                              ? "bg-gray-500/25 text-gray-200"
-                              : "bg-gray-300 text-black"
-                          }`}
-                        >
-                          Current
-                        </span>
-                      ) : (
-                        <span
-                          className={`text-xs font-mono ${
-                            item.year === "Ongoing"
-                              ? darkMode
-                                ? "text-gray-500"
-                                : "text-gray-500"
-                              : darkMode
-                                ? "text-gray-300"
-                                : "text-gray-600"
-                          }`}
-                        >
-                          {item.year}
-                        </span>
-                      )}
+                      <span
+                        className={`text-xs font-mono ${
+                          item.year === "Ongoing"
+                            ? darkMode
+                              ? "text-gray-500"
+                              : "text-gray-500"
+                            : darkMode
+                              ? "text-gray-300"
+                              : "text-gray-600"
+                        }`}
+                      >
+                        {item.year}
+                      </span>
                     </div>
                   </div>
                 )}
