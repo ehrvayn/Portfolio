@@ -102,7 +102,7 @@ Live: techhub.vercel.app
    - Tech Stack: React 18, TypeScript, Tailwind CSS, Next.js, Express, PostgreSQL, OAuth
    - Payment Integration: PayMongo
    - Status: Completed
-   - Live: interviewing-spark.vercel.app
+   - Live: interview-spark.vercel.app
 
 - NavSumaro — Integrated Academic Platform (Team Lead - CTO)
    - All-in-one student platform for universities
