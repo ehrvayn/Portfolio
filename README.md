@@ -12,7 +12,7 @@ A personal portfolio website built with React, Vite, and Tailwind CSS. Features 
 
 (https://ehrvayn.vercel.app/)
 
-https://res.cloudinary.com/dlvcjwfjm/image/upload/v1792997591/PortfolioSample.png
+![Portfolio setup screen](https://res.cloudinary.com/dlvcjwfjm/image/upload/v1792997591/PortfolioSample.png)
 
 ## License
 
