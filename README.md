@@ -8,7 +8,7 @@ A personal portfolio website built with React, Vite, and Tailwind CSS. Features 
 - AI chatbot powered by Groq (GPT OSS 120B)
 - Project showcase
 
-## Live Demo ![view setup screen](https://ehrvayn.vercel.app/)
+## Live Demo [view](https://ehrvayn.vercel.app/)
 
 ![Portfolio setup screen](https://res.cloudinary.com/dlvcjwfjm/image/upload/v1792997591/PortfolioSample.png)
 
