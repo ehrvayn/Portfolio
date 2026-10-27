@@ -17,7 +17,7 @@ function FeaturedProjects() {
       name: "Mochiku",
       description:
         "An offline-first mobile app that turns photos of bills, receipts, and notices into structured, reviewable data. A vision-AI backend extracts each item's title, category, and deadline with a confidence score per field, flagging low-confidence results for review instead of silently trusting them. Deadline items require confirmation before a local reminder is scheduled; the rest auto-files into a photo grid, filterable by category. Photos save instantly to on-device SQLite regardless of connectivity, and failed uploads retry automatically once the device is back online.",
-      link: "",
+      link: "expo.dev/accounts/ehrvayn/projects/mochiku/builds/42831a64-da9c-455c-b9c8-9a74fbc17ab1",
       code: "https://github.com/ehrvayn/mochiku",
       image: MochikuImg,
       tech: [
