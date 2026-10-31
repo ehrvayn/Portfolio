@@ -74,22 +74,6 @@ function FeaturedProjects() {
       tech: ["Groq AI", "JavaScript", "React", "Tailwind"],
     },
     {
-      name: "NavSumaro",
-      description:
-        "NavSumaro is the all-in-one student platform that replaces multiple fragmented campus tools. Access a verified academic Q&A forum, secure peer-to-peer marketplace for textbooks and supplies, and built-in collaboration tools all powered by institutional email verification for trust and safety. Connect with real classmates, buy and sell with confidence, and get academic help from verified students in your university community.",
-      link: "navsumaro.vercel.app",
-      code: "github.com/ehrvayn/navSumaro",
-      image: NavsumaroImg,
-      tech: [
-        "TypeScript",
-        "React",
-        "Tailwind",
-        "Node.js",
-        "ExpressJS",
-        "Postgres",
-      ],
-    },
-    {
       name: "StartSmart",
       description:
         "StartSmart is an AI-powered business idea analyzer that breaks down any concept into a full viability report no sign-up needed. Just type your idea and instantly get a viability score, startup cost breakdown, launch timeline, market and risk assessment, and a legal compliance checklist. Plus, an AI chatbot that knows your idea and can answer any follow-up questions. Turn your idea into a roadmap in seconds.",
@@ -101,10 +85,25 @@ function FeaturedProjects() {
         "TypeScript",
         "React",
         "Tailwind",
-        "Node.js",
-        "ExpressJS",
+        "Next.js",
       ],
     },
+    // {
+    //   name: "NavSumaro",
+    //   description:
+    //     "NavSumaro is the all-in-one student platform that replaces multiple fragmented campus tools. Access a verified academic Q&A forum, secure peer-to-peer marketplace for textbooks and supplies, and built-in collaboration tools all powered by institutional email verification for trust and safety. Connect with real classmates, buy and sell with confidence, and get academic help from verified students in your university community.",
+    //   link: "navsumaro.vercel.app",
+    //   code: "github.com/ehrvayn/navSumaro",
+    //   image: NavsumaroImg,
+    //   tech: [
+    //     "TypeScript",
+    //     "React",
+    //     "Tailwind",
+    //     "Node.js",
+    //     "ExpressJS",
+    //     "Postgres",
+    //   ],
+    // },
   ];
 
   return (
