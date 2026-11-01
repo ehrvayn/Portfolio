@@ -65,6 +65,15 @@ function FeaturedProjects() {
       ],
     },
     {
+      name: "StartSmart",
+      description:
+        "StartSmart is an AI-powered business idea analyzer that breaks down any concept into a full viability report no sign-up needed. Just type your idea and instantly get a viability score, startup cost breakdown, launch timeline, market and risk assessment, and a legal compliance checklist. Plus, an AI chatbot that knows your idea and can answer any follow-up questions. Turn your idea into a roadmap in seconds.",
+      link: "startsmartgo.vercel.app",
+      code: "github.com/ehrvayn/StartSmart",
+      image: StartSmartImg,
+      tech: ["Groq AI", "TypeScript", "React", "Tailwind", "Next.js"],
+    },
+    {
       name: "My Portfolio",
       description:
         "My Portfolio showcases my full-stack development work with a clean, responsive design highlighting my projects, certifications, and technical skills. It features an AI-powered chatbot built with Groq API integration, demonstrating my ability to create engaging interfaces and implement advanced technologies.",
@@ -72,21 +81,6 @@ function FeaturedProjects() {
       code: "github.com/ehrvayn/Portfolio",
       image: PortfolioImg,
       tech: ["Groq AI", "JavaScript", "React", "Tailwind"],
-    },
-    {
-      name: "StartSmart",
-      description:
-        "StartSmart is an AI-powered business idea analyzer that breaks down any concept into a full viability report no sign-up needed. Just type your idea and instantly get a viability score, startup cost breakdown, launch timeline, market and risk assessment, and a legal compliance checklist. Plus, an AI chatbot that knows your idea and can answer any follow-up questions. Turn your idea into a roadmap in seconds.",
-      link: "startsmartgo.vercel.app",
-      code: "github.com/ehrvayn/StartSmart",
-      image: StartSmartImg,
-      tech: [
-        "Groq AI",
-        "TypeScript",
-        "React",
-        "Tailwind",
-        "Next.js",
-      ],
     },
     // {
     //   name: "NavSumaro",

@@ -91,7 +91,7 @@ Live: techhub.vercel.app
 - StartSmart — AI-powered business idea analyzer
    - Instant viability analysis with score, cost breakdown, timeline, and risk assessment
    - AI chatbot powered by Groq's API with full business idea context
-   - Tech: React, Tailwind, Node.js, Express.js, Groq API, TypeScript
+   - Tech: React, Tailwind, Next.js, Groq API, TypeScript
    - Status: Completed
    - Live: startsmartgo.vercel.app
 
@@ -104,12 +104,12 @@ Live: techhub.vercel.app
    - Status: Completed
    - Live: interview-spark.vercel.app
 
-- NavSumaro — Integrated Academic Platform (Team Lead - CTO)
-   - All-in-one student platform for universities
-   - Features: Forums & Q&A, Messaging, Marketplace, Email verification
-   - Tech Stack: React, Node.js, PostgreSQL, Prisma
-   - Status: Completed (PACUCOA Level 2 Presentation)
-   - Team: 7 members (CEO, CIO, CMO, CFO, CHRO, COO, CTO)
+// - NavSumaro — Integrated Academic Platform (Team Lead - CTO)
+//    - All-in-one student platform for universities
+//    - Features: Forums & Q&A, Messaging, Marketplace, Email verification
+//    - Tech Stack: React, Node.js, PostgreSQL, Prisma
+//    - Status: Completed (PACUCOA Level 2 Presentation)
+//    - Team: 7 members (CEO, CIO, CMO, CFO, CHRO, COO, CTO)
 
 - Portfolio Website — personal portfolio with AI assistant
    - Custom chatbot powered by Groq's API
