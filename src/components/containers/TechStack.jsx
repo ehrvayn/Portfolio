@@ -13,8 +13,7 @@ const SECTIONS = [
       { name: "Tailwind", icon: "tailwindcss" },
       { name: "Bootstrap", icon: "bootstrap" },
       { name: "Next.js", icon: "nextdotjs" },
-    ],g
-    
+    ],
   },
   {
     label: "Backend",
